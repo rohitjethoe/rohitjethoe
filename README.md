@@ -2,6 +2,6 @@
 
 - 🔭 I’m currently working on a [Radio Application](https://github.com/rohitjethoe/radios/).
 - 🌱 I’m interested in JavaScript's Node.js and Vue.
-- 📫 Mail me at info@rohit.nl or message me on [LinkedIn](https://www.linkedin.com/in/rohitjethoe/).
+- 📫 Mail me at rohitchai@icloud.cp, or message me on [LinkedIn](https://www.linkedin.com/in/rohitjethoe/).
 
 My pinned projects as follows: 👇🏽
