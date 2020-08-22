@@ -1,16 +1,21 @@
 <template>
   <div id="app">
     <Header />
+    <div class="container">
+      <Introduction />
+    </div>
   </div>
 </template>
 
 <script>
 import Header from '@/components/Header';
+import Introduction from '@/views/Introduction';
 
 export default {
   name: 'App',
   components: {
-    Header
+    Header,
+    Introduction
   }
 }
 </script>
