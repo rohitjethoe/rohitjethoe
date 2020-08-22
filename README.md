@@ -1,24 +1,8 @@
-# rohitjethoe
+### Hi there 👋 I'm Rohit Jethoe
+I'm a Software Developer from the Netherlands.
 
-## Project setup
-```
-npm install
-```
+- 🔭 I’m currently contributing to more [Open Source Projects](https://github.com/rohitjethoe?tab=repositories).
+- 🌱 I’m interested in JavaScript's Node.js and Vue.
+- 📫 Mail me at rohitchai@icloud.com or message me on [LinkedIn](https://www.linkedin.com/in/rohitjethoe/).
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+My pinned projects as follows: 👇🏽
