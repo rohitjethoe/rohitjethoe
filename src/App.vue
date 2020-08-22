@@ -17,7 +17,7 @@ export default {
 
 <style>
 /* Importing fonts from Google Fonts. */
-@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap');
 
 * {
   margin: 0;
