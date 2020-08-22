@@ -144,6 +144,8 @@ export default {
             display: block;
             padding: 0px;
             margin-top: 5px;
+            width: 100vw;
+            padding-bottom: 5px;
         }
 
         .nav a:link, .nav a:visited {
