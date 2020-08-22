@@ -3,19 +3,22 @@
     <Header />
     <div class="container">
       <Introduction />
+      <Projects />
     </div>
   </div>
 </template>
 
 <script>
 import Header from '@/components/Header';
-import Introduction from '@/views/Introduction';
+import Introduction from '@/components/Introduction';
+import Projects from '@/components/Projects';
 
 export default {
   name: 'App',
   components: {
     Header,
-    Introduction
+    Introduction,
+    Projects
   }
 }
 </script>
@@ -27,6 +30,7 @@ export default {
 * {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 #app {
