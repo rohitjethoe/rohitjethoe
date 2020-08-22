@@ -48,6 +48,57 @@ export default {
         padding: 1px 2px; 
     }
 
+    @media only screen and (min-width: 1200px) {
+        .introduction {
+            margin-top: 80px;
+            margin-left: 12%;
+        }
+        .short-intro {
+            font-size: 52px;
+        }
+    }
+
+    @media only screen and (max-width: 1200px) {
+        .introduction {
+            margin-top: 80px;
+            margin-left: 12%;
+        }
+        .short-intro {
+            font-size: 48px;
+        }
+    }
+
+    @media only screen and (max-width: 1000px) {
+        .introduction {
+            margin-top: 60px;
+        }
+        .short-intro {
+            font-size: 38px;
+        }
+    }
+
+    @media only screen and (max-width: 800px) {
+        .introduction {
+            margin-left: 12%;
+        }
+
+        .short-intro {
+            font-size: 36px;
+        }
+    }
+
+    @media only screen and (min-width: 500px) and (max-width: 600px) {
+        .short-intro {
+            font-size: 30px;
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        .short-intro {
+            font-size: 27px;
+        }
+    }
+
     @media only screen and (max-width: 395px) {
         .introduction {
             margin-left: 7.6%;
