@@ -18,7 +18,7 @@ export default {
         }
     },
     mounted() {
-        const typeOfDeveloper = ['front end', 'vue.js', 'node.js', 'back end', 'php/mysql', 'full stack'];
+        const typeOfDeveloper = ['front end', 'vue.js', 'node.js', 'back end', 'php/mysql', 'automation', 'full stack'];
 
         setInterval(() => {
             if (this.typeOfDevIndex < typeOfDeveloper.length) {
