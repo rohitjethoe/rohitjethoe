@@ -16,8 +16,8 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#about">
-                        about <div class="rect"></div>
+                    <a href="#skills">
+                        skills <div class="rect"></div>
                     </a>
                 </li>
             </ul>
