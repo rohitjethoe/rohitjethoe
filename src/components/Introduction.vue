@@ -3,7 +3,10 @@
         <div class="short-intro">
             Hello! 👋 <br>
             I am Rohit Jethoe, <br>
-            a <span class="short-intro-bgcolor">@{{ typeOfDeveloper }}</span> developer.
+            a <span class="short-intro-bgcolor">@{{ typeOfDeveloper }}</span> developer. <br>
+        </div>
+        <div class="contact">
+             Do you have any project ideas? Let's have a talk together <a href="mailto:info@rohit.nl">info@rohit.nl</a> 
         </div>
         <div class="arrow">
             <i class="fa fa-chevron-down"></i>
@@ -44,6 +47,33 @@ export default {
     .short-intro {
         font-size: 28px;
         font-weight: 600;
+    }
+
+    .contact {
+        font-size: 12px;
+        width: 80%;
+    }
+
+    .contact a:link, .contact a:visited {
+        color: #b2b2fa;
+    }
+
+    @media only screen and (min-width: 800px) {
+        .contact {
+            font-size: 14px;
+        }
+    }
+
+    @media only screen and (min-width: 1000px) {
+        .contact {
+            font-size: 16px;
+        }
+    }
+
+    @media only screen and (min-width: 1200px) {
+        .contact {
+            font-size: 18px;
+        }
     }
 
     .short-intro-bgcolor {

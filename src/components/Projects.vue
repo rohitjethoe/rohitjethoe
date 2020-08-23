@@ -11,7 +11,7 @@
                         Corona Counter
                     </div>
                     <div class="project-description">
-                        Corona Counter gathers and shows data about the coronavirus (COVID-19).
+                        Corona Counter gathers and shows data about the coronavirus.
                     </div>
                     <div class="project-url">
                         <a href="https://rohit.nl/coronacounter/" target="_blank" rel="noopener"  noreferrer>
@@ -27,7 +27,7 @@
                         Profile Grabber
                     </div>
                     <div class="project-description">
-                        ProfileGrabber allows you to view IG profile pictures. 
+                        ProfileGrabber allows you to download IG profile pictures. 
                     </div>
                     <div class="project-url">
                         <a href="https://profilegrabber.netlify.app/" target="_blank" rel="noopener"  noreferrer>
@@ -48,54 +48,111 @@ export default {
 </script>
 
 <style scoped>
-.section {
-  margin-top: 60px;
-}
+    .section-title {
+        font-weight: 600;
+        color: #797d7f;
+        text-transform: uppercase;
+        margin-left: 7.5%;
+        margin-bottom: 20px;
+    }
 
-.section .section-title {
-  text-transform: uppercase;
-  font-weight: 600;
-  color: #818587;
-  margin-left: 7.5%;
-}
+    .project {
+        margin-left: 7.5%;
+        margin-bottom: 25px;
+    }
 
-.project {
-    margin-top: 20px;
-    margin-bottom: 60px;
-}
+    .project img {
+        width: 300px;
+    }
 
-.project img {
-    width: 300px;
-    display: block;
-    margin-left: 7.5%;
-}
+    .project-title {
+        font-size: 24px;
+        font-weight: 600;
+        color: #1B1919;
+    }
 
-.project-details {
-    width: 84%;
-    margin-left: 7.5%;
-    margin-top: 40px;
-}
+    .project-details {
+        color: #585858;
+        width: 300px;
+        font-size: 14px;
+    }
 
-.project-title {
-    font-size: 24px;
-    font-weight: 600;
-    color: #1B1919;
-}
+    .project a:link, .project a:visited {
+        color: #b2b2fa;
+    }
 
-.project-details {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    color: #585858;
-    width: 300px;
-    font-size: 14px;
-}
+    @media only screen and (min-width: 395px) {
+        .section-title {
+            margin-left: 12.5%;
+        }
 
-.project-url {
-    margin: 2px 0px;
-}
+        .project {
+            margin-left: 12.5%;
+        }
+    }
 
-.project-url a:link, .project-url a:visited {
-    color: #b2b2fa;
-}
+
+    @media only screen and (min-width: 600px) {
+        .project {
+            margin-bottom: 60px;
+        }
+
+        .project img {
+            width: 400px;
+        }
+
+        .project-title {
+            font-size: 28px;
+        }
+
+        .project-details {
+            font-size: 16px;
+        }
+    }
+
+    @media only screen and (min-width: 800px) {
+        .section-title {
+            margin-left: 12%;
+        }
+
+        .project {
+            margin-left: 12%;
+            display: flex;
+            align-items: center;
+        }
+
+        .project img {
+            width: 340px;
+        }
+
+        .project-details {
+            margin-left: 40px;
+        }
+    }
+
+    @media only screen and (min-width: 1000px) {
+        .section-title {
+            font-size: 18px;
+        }
+
+        .project img {
+            width: 400px;
+        }
+        
+        .project-title {
+            font-size: 32px;
+        }
+
+        .project-details {
+            font-size: 18px;
+            margin-left: 50px;
+        }
+    }
+
+    @media only screen and (min-width: 1200px) {
+        .project img {
+            width: 500px;
+        }
+    }
 </style>
 

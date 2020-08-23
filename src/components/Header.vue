@@ -144,7 +144,7 @@ export default {
             display: block;
             padding: 0px;
             margin-top: 5px;
-            width: 100vw;
+            width: 97.5vw;
             padding-bottom: 5px;
         }
 

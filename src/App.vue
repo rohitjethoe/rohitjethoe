@@ -4,6 +4,7 @@
     <div class="container">
       <Introduction />
       <Projects />
+      <Experience />
     </div>
   </div>
 </template>
@@ -12,13 +13,14 @@
 import Header from '@/components/Header';
 import Introduction from '@/components/Introduction';
 import Projects from '@/components/Projects';
-
+import Experience from '@/components/Experience.vue';
 export default {
   name: 'App',
   components: {
     Header,
     Introduction,
-    Projects
+    Projects,
+    Experience
   }
 }
 </script>
