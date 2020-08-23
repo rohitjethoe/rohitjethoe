@@ -15,10 +15,6 @@
         <div class="job-description">
           I’ve contributed to the Open Source COVID-19 Notification App by working on the front end finding and fixing issues.
         </div>
-        <div class="job-tags">
-          <div class="job-tag">open source</div>
-          <div class="job-tag">front end</div>
-        </div>
       </div>
     </div>
   </div>
@@ -30,9 +26,9 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .section {
-  margin-top: 10%;
+  margin-top: 18%;
 }
 
 .section-title {
@@ -43,15 +39,150 @@ export default {
   margin-left: 7.5%;
 }
 
-@media only screen and (min-width: 395px) {
+.job {
+  width: 320px;
+  margin-left: 7.5%;
+}
+
+.job::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.job-title {
+  font-size: 14px;
+}
+
+.job-details {
+  width: 200px;
+  font-size: 12px;
+}
+
+.job img {
+  width: 100px;
+  float: left;
+}
+
+.job .job-details {
+  float: right;
+}
+
+.job-title {
+  font-weight: 600;
+}
+
+.job-company {
+  font-weight: 600;
+  color: #797d7f;
+}
+
+.job-description {
+  color: #4D4D4D;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 440px) {
   .section-title {
     margin-left: 12.5%;
+  }
+  .job {
+    margin-left: 12.5%;
+    width: 380px;
+  }
+
+  .job img {
+    width: 120px;
+  }
+
+  .job-title {
+    font-size: 18px;
+  }
+
+  .job-details {
+    font-size: 14px;
+    width: 240px;
+  }
+}
+
+@media only screen and (min-width: 395px) {
+  .job {
+    margin-left: 12.5%;
+  }
+
+  .section-title {
+    margin-left: 12.5%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .section {
+    margin-top: 10%;
+  }
+
+  .job {
+    width: 480px;
+  }
+  
+  .job img {
+    width: 140px;
+  }
+  
+  .job-title {
+    font-size: 20px;
+  }
+
+  .job-details {
+    width: 320px;
+    font-size: 16px;
   }
 }
 
 @media only screen and (min-width: 800px) {
   .section-title {
     margin-left: 10%;
+  }
+  .job {
+    margin-left: 10%;
+    width: 540px;
+  }
+
+  .job img {
+    width: 180px;
+  }
+
+  .job-title {
+    font-size: 24px;
+  }
+  
+  .job-details {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .section-title {
+    font-size: 18px;
+    margin-left: 12%;
+  }
+
+  .job {
+    width: 600px;
+    margin-left: 12%;
+  }
+
+  .job img {
+    width: 200px;
+  }
+
+  .job-title {
+    font-size: 28px;
+  }
+
+  .job-details {
+    font-size: 20px;
+    width: 360px;
   }
 }
 </style>
