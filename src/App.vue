@@ -6,6 +6,7 @@
       <Projects />
       <Experience />
     </div>
+    <Footer />
   </div>
 </template>
 
@@ -14,13 +15,16 @@ import Header from '@/components/Header';
 import Introduction from '@/components/Introduction';
 import Projects from '@/components/Projects';
 import Experience from '@/components/Experience.vue';
+import Footer from '@/components/Footer.vue';
+
 export default {
   name: 'App',
   components: {
     Header,
     Introduction,
     Projects,
-    Experience
+    Experience,
+    Footer
   }
 }
 </script>
@@ -37,5 +41,9 @@ export default {
 
 #app {
   font-family: 'Sarabun', sans-serif;
+}
+
+.container {
+  margin-bottom: 10%;
 }
 </style>
