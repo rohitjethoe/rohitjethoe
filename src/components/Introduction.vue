@@ -5,6 +5,9 @@
             I am Rohit Jethoe, <br>
             a <span class="short-intro-bgcolor">@{{ typeOfDeveloper }}</span> developer.
         </div>
+        <div class="arrow">
+            <i class="fa fa-chevron-down"></i>
+        </div>
     </div>
 </template>
 
@@ -34,7 +37,7 @@ export default {
 
 <style>
     .introduction {
-        margin-top: 40px;
+        margin-top: 60px;
         margin-left: 10%;
     }
 
@@ -48,9 +51,27 @@ export default {
         padding: 1px 2px; 
     }
 
+    .arrow {
+        margin: 12.5% 0px;
+    }
+
+    .arrow .fa {
+        font-size: 20px;
+    }
+
+    @media only screen and (min-width: 800px) {
+        .arrow .fa {
+            font-size: 24px;
+        }
+
+        .arrow {
+            margin: 7.5% 0px;
+        }
+    }
+
     @media only screen and (min-width: 1200px) {
         .introduction {
-            margin-top: 80px;
+            margin-top: 100px;
             margin-left: 12%;
         }
         .short-intro {
