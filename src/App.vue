@@ -5,6 +5,7 @@
       <Introduction />
       <Projects />
       <Experience />
+      <Skills />
     </div>
     <Footer />
   </div>
@@ -15,6 +16,7 @@ import Header from '@/components/Header';
 import Introduction from '@/components/Introduction';
 import Projects from '@/components/Projects';
 import Experience from '@/components/Experience.vue';
+import Skills from '@/components/Skills.vue';
 import Footer from '@/components/Footer.vue';
 
 export default {
@@ -24,6 +26,7 @@ export default {
     Introduction,
     Projects,
     Experience,
+    Skills,
     Footer
   }
 }

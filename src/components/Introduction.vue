@@ -33,7 +33,7 @@ export default {
             } else {
                 clearInterval();
             }
-        }, 150);
+        }, 165);
     }
 }
 </script>
