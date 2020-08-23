@@ -1,8 +1,5 @@
 <template>
   <div class="skills section" id="skills">
-      <div class="section-title">
-          My skills
-      </div>
       <div class="skill-legend">
         <div class="skill-legend-level level-medium" @mouseover="hover0 = true" @mouseleave="hover0 = false">
           <div class="skill-legend-square medium"></div>
@@ -228,9 +225,9 @@ export default {
 </script>
 
 <style scoped>
-.section {
+/* .section {
   margin-top: 10%;
-}
+} */
 
 .section-title {
   font-weight: 600;
@@ -263,7 +260,6 @@ export default {
 .skill .technology {
   font-size: 16px;
   color: #fff;
-  flex: 1 0 auto;
   font-weight: 300;
 }
 
@@ -407,10 +403,31 @@ export default {
   }
 }
 
-@media only screen and (max-width: 400px) {
-  .skill-legend-level {
-    font-size: 12px;
-    margin: 0 5px;
+@media only screen and (max-width: 600px) {
+  .section {
+    display: none;
   }
+
+  .skill-legend-level {
+    margin-top: 8%;
+    font-size: 12px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+  }
+
+  .skill {
+    padding: 2px 7px;
+    padding-top: 0px;
+    margin: 2px;
+  }
+
+  .skill .type {
+    font-size: 8px;
+  }
+
+  .skill .technology {
+    font-size: 10px;
+  }
+
 }
 </style>
