@@ -79,7 +79,7 @@
                   <li>
                     <a href="https://github.com/rohitjethoe" class="list-item" target="_blank" rel="noopener" noreferrer>
                         terminal
-                    </a> | coders fastest friend.
+                    </a> | i like the cli :)
                   </li>
                   <li>
                     <a href="https://apple.com/" class="list-item" target="_blank" rel="noopener" noreferrer>
