@@ -17,6 +17,20 @@
         </div>
       </div>
     </div>
+    <div class="job">
+      <img src="@/assets/datenanfragen.png" alt="Datenanfragen.de">
+      <div class="job-details">
+        <div class="job-title">
+          Open Source Contribution - Data Requests Website
+        </div>
+        <div class="job-company">
+          Datenanfragen - Your Right to Privacy.
+        </div>
+        <div class="job-description">
+          I have worked on <a href="https://datenanfragen.de">Datenanfragen.de</a> and worked on fixing bugs and issues on the front end with JavaScript.
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -41,6 +55,8 @@ export default {
 
 .job {
   width: 320px;
+  margin-bottom: 5%;
+  margin-top: 40px;
   margin-left: 7.5%;
 }
 

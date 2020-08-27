@@ -24,7 +24,7 @@ export default {
         }
     },
     mounted() {
-        const typeOfDeveloper = ['front end', 'vue.js', 'node.js', 'back end', 'php/mysql', 'mobile 📱', 'desktop 🖥', 'dutch 🇳🇱', 'full stack'];
+        const typeOfDeveloper = ['front end', 'vue.js', 'node.js', 'back end', 'php/mysql', 'mobile', 'desktop', 'web', 'full stack'];
 
         setInterval(() => {
             if (this.typeOfDevIndex < typeOfDeveloper.length) {
@@ -33,7 +33,7 @@ export default {
             } else {
                 clearInterval();
             }
-        }, 165);
+        }, 155);
     }
 }
 </script>

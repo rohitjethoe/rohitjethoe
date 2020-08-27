@@ -5,8 +5,7 @@
       <Introduction />
       <Projects />
       <Experience />
-      <About />
-      <Skills />
+      <Stack />
     </div>
     <Footer />
   </div>
@@ -16,10 +15,9 @@
 import Header from '@/components/Header';
 import Introduction from '@/components/Introduction';
 import Projects from '@/components/Projects';
-import Experience from '@/components/Experience.vue';
-import About from '@/components/About.vue';
-import Skills from '@/components/Skills.vue';
-import Footer from '@/components/Footer.vue';
+import Experience from '@/components/Experience';
+import Stack from '@/components/Stack';
+import Footer from '@/components/Footer';
 
 export default {
   name: 'App',
@@ -28,8 +26,7 @@ export default {
     Introduction,
     Projects,
     Experience,
-    About,
-    Skills,
+    Stack,
     Footer
   }
 }

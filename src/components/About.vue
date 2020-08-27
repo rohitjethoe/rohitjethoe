@@ -50,8 +50,17 @@ export default {
             margin-bottom: 5%;
         }
 
+        .section-title {
+            font-size: 18px;
+        }
+
         .about-me {
             width: 480px;
+            font-size: 18px;
+        }
+
+        .about-me-title {
+            font-size: 28px;
         }
     }
 
