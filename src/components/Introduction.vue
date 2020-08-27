@@ -3,7 +3,7 @@
         <div class="short-intro">
             Hello! 👋 <br>
             I am Rohit Jethoe, <br>
-            a <span class="short-intro-bgcolor">@{{ typeOfDeveloper }}</span> developer. <br>
+            a <span @click="typeOfDevIndex = 0" class="short-intro-bgcolor">@{{ typeOfDeveloper }}</span> developer. <br>
         </div>
         <div class="contact">
              Do you have any project ideas? Let's have a talk together <a href="mailto:info@rohit.nl">info@rohit.nl</a> 
