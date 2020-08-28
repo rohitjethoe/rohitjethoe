@@ -59,6 +59,13 @@
           color: #b2b2fa;
         }
       }
+
+      @media only screen and (max-width: 500px) {
+        .experience {
+          margin-top: 20%;
+          padding-bottom: 5%;
+        }
+      }
       
       @media only screen and (min-width: 440px) {
         .section-title {

@@ -56,9 +56,17 @@
             width: 280px;
             margin-right: 60px;
         }
-    
+        
+        .skill .skill-title {
+            font-size: 32px;
+        }
+
         .skill-rect {
             width: 110%;
+        }
+
+        ul li {
+            font-size: 18px;
         }
     }
     
@@ -124,6 +132,10 @@
             width: 100%;
             flex-direction: none;
             flex-wrap: nowrap;
+        }
+
+        .stack {
+            margin-top: 20%;
         }
     }
     

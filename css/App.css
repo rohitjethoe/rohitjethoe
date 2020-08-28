@@ -418,6 +418,13 @@
   color: #b2b2fa;
 }
 
+@media only screen and (max-width: 500px) {
+  #app .experience {
+    margin-top: 20%;
+    padding-bottom: 5%;
+  }
+}
+
 @media only screen and (min-width: 440px) {
   #app .section-title {
     margin-left: 12.5%;
@@ -561,8 +568,14 @@
     width: 280px;
     margin-right: 60px;
   }
+  #app .skill .skill-title {
+    font-size: 32px;
+  }
   #app .skill-rect {
     width: 110%;
+  }
+  #app ul li {
+    font-size: 18px;
   }
 }
 
@@ -634,6 +647,9 @@
             flex-direction: none;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+  }
+  #app .stack {
+    margin-top: 20%;
   }
 }
 
