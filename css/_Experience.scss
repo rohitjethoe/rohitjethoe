@@ -55,6 +55,9 @@
         color: #4D4D4D;
         margin-top: 5px;
         margin-bottom: 10px;
+        a:link, a:visited {
+          color: #b2b2fa;
+        }
       }
       
       @media only screen and (min-width: 440px) {
