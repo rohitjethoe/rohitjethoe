@@ -1,0 +1,135 @@
+#app {
+    .stack {
+        margin-top: 10%;
+    }
+    
+    .section-title-stack {
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #797d7f;
+        margin-bottom: 10px;
+    }
+        
+    .skill {
+        width: 80%;
+        margin: 8px 0px;
+    }
+        
+    .skill .skill-title {
+        font-size: 24px;
+        font-weight: 600;
+    }
+        
+    .skill-rect {
+        width: 280px;
+        height: 2px;
+        background-color: #c2c2c2;
+        margin: 4px 0px;
+    }
+    
+    .stack {
+        ul li {
+            list-style-type: none;
+            margin-top: 1px;
+            margin-bottom: 1px;
+        }
+            
+        ul li a:link, ul li a:visited {
+            font-weight: 600;
+            color: #1b1919;
+            text-decoration: none;
+            border-bottom: 3px solid #b1b1b1;
+            transition: 0.5s all;
+        }
+            
+        ul li a:hover {
+            border-bottom-color: #1b1919;
+        }    
+    }
+
+    @media only screen and (min-width: 1000px) {
+        .stack {
+            margin-left: 12.5%;
+        }
+    
+        .skill {
+            width: 280px;
+            margin-right: 60px;
+        }
+    
+        .skill-rect {
+            width: 110%;
+        }
+    }
+    
+    @media only screen and (max-width: 1000px) {
+        .stack {
+            margin-left: 10%;
+        }
+    
+        .skill {
+            width: 250px;
+            margin-right: 60px;
+        }
+    
+        .skill-rect {
+            width: 110%;
+        }
+    }
+
+    @media only screen and (min-width: 800px) {
+        .projects {
+            margin-left: 2%;
+        }
+    }
+    
+    @media only screen and (max-width: 800px) {
+        .stack {
+            margin-left: 12.5%;
+        }
+    
+        .skill {
+            width: 38%;
+            margin-right: 60px;
+        }
+    
+        .skill-rect {
+            width: 110%;
+        }
+    }
+    
+    @media only screen and (max-width: 650px) {
+        .skill {
+            margin: 20px 0px;
+        }
+    }
+
+    @media only screen and (min-width: 650px) {
+        .stack .skills {
+            display: flex;
+            flex-direction: row;
+            flex-flow: wrap;
+        }
+    }
+
+    @media only screen and (max-width: 650px) {
+        .skill {
+            width: 75%;
+        }
+    }
+    
+    @media only screen and (max-width: 500px) {
+        .skills {
+            display: block;
+            width: 100%;
+            flex-direction: none;
+            flex-wrap: nowrap;
+        }
+    }
+    
+    @media only screen and (max-width: 395px) {
+        .stack {
+            margin-left: 7.5%;
+        }
+    }
+}

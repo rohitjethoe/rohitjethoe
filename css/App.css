@@ -1,0 +1,650 @@
+/* Importing fonts from Google Fonts. */
+@import url("https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+#app {
+  font-family: 'Sarabun', sans-serif;
+}
+
+.container {
+  margin-bottom: 10%;
+}
+
+#app .header {
+  display: fixed;
+  top: 0;
+}
+
+#app .logo {
+  float: left;
+  font-size: 24px;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+#app .nav {
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+#app .nav ul li {
+  display: inline;
+  list-style-type: none;
+  padding-left: 24px;
+}
+
+#app .nav a:link, #app .nav a:visited {
+  color: #000;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+#app .rect {
+  display: none;
+}
+
+#app .burger-icon {
+  display: none;
+}
+
+#app .burger-icon .bar {
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+#app .burger-icon:hover {
+  cursor: pointer;
+}
+
+#app .burger-icon .bar {
+  width: 26px;
+  height: 3px;
+  background-color: #000;
+  margin-bottom: 5px;
+}
+
+@media only screen and (min-width: 1000px) {
+  #app .logo {
+    font-size: 32px;
+  }
+  #app .nav {
+    margin-top: 15px;
+    margin-right: 15px;
+  }
+  #app .nav ul li {
+    padding-left: 37px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #app .nav {
+    display: none;
+    float: none;
+    position: absolute;
+    top: 37px;
+    padding-left: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  #app .opened .nav {
+    display: block;
+  }
+  #app .nav .rect {
+    margin-left: 10px;
+    -webkit-transition: 0.3s all;
+    transition: 0.3s all;
+  }
+  #app .nav a:hover .rect {
+    width: 40px;
+    height: 3px;
+    background-color: #3a3a3a;
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+  #app .nav ul li {
+    display: block;
+    padding: 0px;
+    margin-top: 5px;
+    width: 97.5vw;
+    padding-bottom: 5px;
+  }
+  #app .nav a:link, #app .nav a:visited {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 24px;
+    font-weight: 300;
+    color: #3a3a3a;
+  }
+  #app .burger-icon {
+    display: block;
+    float: right;
+    margin-top: 13px;
+    margin-right: 10px;
+  }
+  #app .opened .bar-1 {
+    -webkit-transform: translateY(8px);
+            transform: translateY(8px);
+  }
+  #app .opened .bar-3 {
+    -webkit-transform: translateY(-8px);
+            transform: translateY(-8px);
+  }
+}
+
+#app .header::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+#app .introduction {
+  margin-top: 60px;
+  margin-left: 10%;
+}
+
+#app .short-intro {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+#app .contact {
+  font-size: 12px;
+  width: 80%;
+}
+
+#app .contact a:link, #app .contact a:visited {
+  color: #b2b2fa;
+}
+
+@media only screen and (min-width: 800px) {
+  #app .contact {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  #app .contact {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #app .contact {
+    font-size: 18px;
+  }
+}
+
+#app .short-intro-bgcolor {
+  background-color: #b2b2fa;
+  padding: 1px 2px;
+}
+
+#app .arrow {
+  margin: 12.5% 0px;
+}
+
+#app .arrow .fa {
+  font-size: 20px;
+}
+
+@media only screen and (min-width: 800px) {
+  #app .arrow .fa {
+    font-size: 24px;
+  }
+  #app .arrow {
+    margin: 7.5% 0px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #app .introduction {
+    margin-top: 100px;
+    margin-left: 12%;
+  }
+  #app .short-intro {
+    font-size: 52px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  #app .introduction {
+    margin-top: 80px;
+    margin-left: 12%;
+  }
+  #app .short-intro {
+    font-size: 48px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #app .introduction {
+    margin-top: 60px;
+  }
+  #app .short-intro {
+    font-size: 38px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #app .introduction {
+    margin-left: 12%;
+  }
+  #app .short-intro {
+    font-size: 36px;
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 600px) {
+  #app .short-intro {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #app .short-intro {
+    font-size: 27px;
+  }
+}
+
+@media only screen and (max-width: 395px) {
+  #app .introduction {
+    margin-left: 7.6%;
+  }
+}
+
+#app .section-title {
+  font-weight: 600;
+  color: #797d7f;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+#app .project {
+  margin-left: 7.5%;
+  margin-bottom: 25px;
+}
+
+#app .project img {
+  width: 300px;
+}
+
+#app .project-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1B1919;
+}
+
+#app .project-details {
+  color: #585858;
+  width: 300px;
+  font-size: 14px;
+}
+
+#app .project a:link, #app .project a:visited {
+  color: #b2b2fa;
+}
+
+@media only screen and (min-width: 395px) {
+  #app .project {
+    margin-left: 12.5%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  #app .project {
+    margin-bottom: 60px;
+  }
+  #app .project img {
+    width: 400px;
+  }
+  #app .project-title {
+    font-size: 28px;
+  }
+  #app .project-details {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  #app .project {
+    margin-left: 6%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #app .project img {
+    width: 340px;
+  }
+  #app .project-details {
+    margin-left: 40px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  #app .section-title {
+    font-size: 18px;
+  }
+  #app .project {
+    margin-left: 12%;
+  }
+  #app .project img {
+    width: 400px;
+  }
+  #app .project-title {
+    font-size: 32px;
+  }
+  #app .project-details {
+    font-size: 18px;
+    margin-left: 50px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #app .project img {
+    width: 500px;
+  }
+}
+
+#app .section {
+  margin-top: 18%;
+}
+
+#app .section-title {
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #797d7f;
+  margin-left: 7.5%;
+}
+
+#app .job {
+  width: 320px;
+  margin-bottom: 5%;
+  margin-top: 40px;
+  margin-left: 7.5%;
+}
+
+#app .job::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+#app .job-title {
+  font-size: 14px;
+}
+
+#app .job-details {
+  width: 200px;
+  font-size: 12px;
+}
+
+#app .job img {
+  width: 100px;
+  float: left;
+}
+
+#app .job .job-details {
+  float: right;
+}
+
+#app .job-title {
+  font-weight: 600;
+}
+
+#app .job-company {
+  font-weight: 600;
+  color: #797d7f;
+}
+
+#app .job-description {
+  color: #4D4D4D;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 440px) {
+  #app .section-title {
+    margin-left: 12.5%;
+  }
+  #app .job {
+    margin-left: 12.5%;
+    width: 380px;
+  }
+  #app .job img {
+    width: 120px;
+  }
+  #app .job-title {
+    font-size: 18px;
+  }
+  #app .job-details {
+    font-size: 14px;
+    width: 240px;
+  }
+}
+
+@media only screen and (min-width: 395px) {
+  #app .job {
+    margin-left: 12.5%;
+  }
+  #app .section-title {
+    margin-left: 12.5%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  #app .section {
+    margin-top: 10%;
+  }
+  #app .job {
+    width: 480px;
+  }
+  #app .job img {
+    width: 140px;
+  }
+  #app .job-title {
+    font-size: 20px;
+  }
+  #app .job-details {
+    width: 320px;
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  #app .section-title {
+    margin-left: 10%;
+  }
+  #app .job {
+    margin-left: 10%;
+    width: 540px;
+  }
+  #app .job img {
+    width: 180px;
+  }
+  #app .job-title {
+    font-size: 24px;
+  }
+  #app .job-details {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  #app .section-title {
+    font-size: 18px;
+    margin-left: 12%;
+  }
+  #app .job {
+    width: 600px;
+    margin-left: 12%;
+  }
+  #app .job img {
+    width: 200px;
+  }
+  #app .job-title {
+    font-size: 28px;
+  }
+  #app .job-details {
+    font-size: 20px;
+    width: 360px;
+  }
+}
+
+#app .stack {
+  margin-top: 10%;
+}
+
+#app .section-title-stack {
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #797d7f;
+  margin-bottom: 10px;
+}
+
+#app .skill {
+  width: 80%;
+  margin: 8px 0px;
+}
+
+#app .skill .skill-title {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+#app .skill-rect {
+  width: 280px;
+  height: 2px;
+  background-color: #c2c2c2;
+  margin: 4px 0px;
+}
+
+#app .stack ul li {
+  list-style-type: none;
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+#app .stack ul li a:link, #app .stack ul li a:visited {
+  font-weight: 600;
+  color: #1b1919;
+  text-decoration: none;
+  border-bottom: 3px solid #b1b1b1;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+#app .stack ul li a:hover {
+  border-bottom-color: #1b1919;
+}
+
+@media only screen and (min-width: 1000px) {
+  #app .stack {
+    margin-left: 12.5%;
+  }
+  #app .skill {
+    width: 280px;
+    margin-right: 60px;
+  }
+  #app .skill-rect {
+    width: 110%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #app .stack {
+    margin-left: 10%;
+  }
+  #app .skill {
+    width: 250px;
+    margin-right: 60px;
+  }
+  #app .skill-rect {
+    width: 110%;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  #app .projects {
+    margin-left: 2%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #app .stack {
+    margin-left: 12.5%;
+  }
+  #app .skill {
+    width: 38%;
+    margin-right: 60px;
+  }
+  #app .skill-rect {
+    width: 110%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  #app .skill {
+    margin: 20px 0px;
+  }
+}
+
+@media only screen and (min-width: 650px) {
+  #app .stack .skills {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-flow: wrap;
+        flex-flow: wrap;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  #app .skill {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #app .skills {
+    display: block;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: none;
+            flex-direction: none;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+@media only screen and (max-width: 395px) {
+  #app .stack {
+    margin-left: 7.5%;
+  }
+}
+
+.footer {
+  text-align: center;
+  padding: 6px;
+}
+
+.footer-heart {
+  color: #db0000;
+}
+/*# sourceMappingURL=App.css.map */

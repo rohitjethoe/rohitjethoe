@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Rohit Jethoe | Software Engineer</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />  
+    <link rel="stylesheet" href="./css/App.css">
+</head>    
+<body>
+    <div id="app">
+        <div class="header">
+            <div class="logo">
+                Rohit Jethoe
+            </div>
+            <div class="nav">
+                <ul>
+                    <li>
+                        <a href="#projects">
+                            projects <div class="rect"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#experience">
+                            experience <div class="rect"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#skills">
+                            skills <div class="rect"></div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="burger-icon" onclick="navActionBtn()">
+                <div class="bar bar-1"></div>
+                <div class="bar bar-2"></div>
+                <div class="bar bar-3"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="introduction">
+                <div class="short-intro">
+                    Hello! 👋 <br>
+                    I am Rohit Jethoe, <br>
+                    a <span @click="typeOfDevIndex = 0" class="short-intro-bgcolor">front end</span> developer. <br>
+                </div>
+                <div class="contact">
+                     Do you have any project ideas? Let's have a talk together <a href="mailto:info@rohit.nl">info@rohit.nl</a> 
+                </div>
+                <div class="arrow">
+                    <i class="fa fa-chevron-down"></i>
+                </div>
+            </div>
+            <div class="projects" id="projects">
+                <div class="projects section">
+                    <div class="section-title">
+                        Featured Projects
+                    </div>
+                    <div class="project">
+                        <img src="./assets/coronacounter.png" alt="Corona Counter">
+                        <div class="project-details">
+                            <div class="project-title">
+                                Corona Counter
+                            </div>
+                            <div class="project-description">
+                                Corona Counter gathers and shows data about the coronavirus.
+                            </div>
+                            <div class="project-url">
+                                <a href="https://rohit.nl/coronacounter/" target="_blank" rel="noopener"  noreferrer>
+                                    https://rohit.nl/coronacounter/
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <img src="./assets/profilegrabber.png" alt="Profile Grabber">
+                        <div class="project-details">
+                            <div class="project-title">
+                                Profile Grabber
+                            </div>
+                            <div class="project-description">
+                                ProfileGrabber allows you to download IG profile pictures. 
+                            </div>
+                            <div class="project-url">
+                                <a href="https://profilegrabber.netlify.app/" target="_blank" rel="noopener"  noreferrer>
+                                    https://profilegrabber.netlify.app/
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="experience section" id="experience">
+                <div class="section-title">
+                  Work Experiences
+                </div>
+                <div class="job">
+                    <img src="./assets/government.png" alt="Government">
+                    <div class="job-details">
+                        <div class="job-title">
+                            Open Source Contribution - COVID-19 Notification App Website
+                        </div>
+                        <div class="job-company">
+                        Ministry of Health, Welfare and Sports.
+                        </div>
+                        <div class="job-description">
+                            I’ve contributed to the Open Source COVID-19 Notification App by working on the front end finding and fixing issues.
+                        </div>
+                    </div>
+                </div>
+                <div class="job">
+                    <img src="./assets/datenanfragen.png" alt="Datenanfragen.de">
+                    <div class="job-details">
+                        <div class="job-title">
+                            Open Source Contribution - Data Requests Website
+                        </div>
+                        <div class="job-company">
+                            Datenanfragen - Your Right to Privacy.
+                        </div>
+                        <div class="job-description">
+                            I have worked on <a href="https://datenanfragen.de">Datenanfragen.de</a> and worked on fixing bugs and issues on the front end with JavaScript.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="stack section" id="skills">
+                <div class="section-title-stack">
+                    My Skills
+                </div>
+                <div class="skills">
+                    <div class="skill">
+                        <div class="skill-title">
+                          👨‍💻 Languages
+                        </div>
+                        <div class="skill-rect"></div>
+                        <ul>
+                            <li>
+                              <a href="https://www.w3.org/html/" class="list-item" target="_blank" rel="noopener" noreferrer>
+                                  html and css
+                              </a> | it's like lego's
+                            </li>
+                            <li>
+                              <a href="https://developer.mozilla.org/nl/docs/Web/JavaScript" class="list-item" target="_blank" rel="noopener" noreferrer>
+                                  javascript
+                              </a> | i'm a big fan
+                            </li>
+                            <li>
+                              <a href="https://www.php.net/" class="list-item" target="_blank" rel="noopener" noreferrer>
+                                  php
+                              </a> | simple and fun syntax
+                            </li>
+                            <li>
+                              <a href="https://www.mongodb.com/" class="list-item" target="_blank" rel="noopener" noreferrer>
+                                  (no)sql
+                              </a> | SELECT * FROM users WHERE id=1
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-title">
+                          🚀 Technologies
+                        </div>
+                        <div class="skill-rect"></div>
+                        <ul>
+                            <li>
+                              <a href="https://nodejs.org/en/" class="list-item" target="_blank" rel="noopener" noreferrer>
+                                  node.js
+                              </a> | made javascript great again
+                            </li>
+                            <li>
+                              <a href="https://expressjs.com/" class="list-item" target="_blank" rel="noopener" noreferrer>
+                                  express.js
+                              </a> | listening on port 5000
+                            </li>
+                            <li>
+                              <a href="https://vuejs.org/" class="list-item" target="_blank" rel="noopener" noreferrer>
+                                  vue.js
+                              </a> | favorite framework
+                            </li>
+                            <li>
+                              <a href="https://mongodb.com/" class="list-item" target="_blank" rel="noopener" noreferrer>
+                                  mongodb
+                              </a> | flexable data
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-title">
+                          🔨 Toolkit
+                        </div>
+                        <div class="skill-rect"></div>
+                        <ul>
+                            <li>
+                              <a href="https://code.visualstudio.com/" class="list-item" target="_blank" rel="noopener" noreferrer>
+                                  vscode
+                              </a> | best editor ever
+                            </li>
+                            <li>
+                              <a href="https://github.com/rohitjethoe" class="list-item" target="_blank" rel="noopener" noreferrer>
+                                  devops
+                              </a> | git & github.
+                            </li>
+                            <li>
+                              <a href="https://github.com/rohitjethoe" class="list-item" target="_blank" rel="noopener" noreferrer>
+                                  terminal
+                              </a> | i like the cli :)
+                            </li>
+                            <li>
+                              <a href="https://apple.com/" class="list-item" target="_blank" rel="noopener" noreferrer>
+                                  macbook
+                              </a> | macOS & intel i7
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            Developed with <span class="footer-heart">❤</span> by Rohit.️ 
+        </div>
+    </div>
+  </body>
+  <script src="./js/App.js"></script>
+</html>

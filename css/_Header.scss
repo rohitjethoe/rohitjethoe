@@ -1,52 +1,4 @@
-<template>
-    <div class="header">
-        <div class="logo">
-            Rohit Jethoe
-        </div>
-        <div class="nav">
-            <ul>
-                <li>
-                    <a href="#projects">
-                        projects <div class="rect"></div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#experience">
-                        experience <div class="rect"></div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#skills">
-                        skills <div class="rect"></div>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="burger-icon" @click="openNavByIcon">
-            <div class="bar bar-1"></div>
-            <div class="bar bar-2"></div>
-            <div class="bar bar-3"></div>
-        </div>
-    </div>
-</template>
-
-<script>
-export default {
-    name: 'Header',
-    methods: {
-        openNavByIcon() {
-            const nav = document.querySelector('.header');
-            if (!nav.classList.contains('opened')) {
-                nav.classList.add('opened');
-            } else {
-                nav.classList.remove('opened');
-            }
-        }
-    }
-}
-</script>
-
-<style>
+#app {
     .header {
         display: fixed;
         top: 0;
@@ -177,4 +129,4 @@ export default {
         content: "";
         display: table;
     }
-</style>
+}
