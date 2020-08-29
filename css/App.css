@@ -314,8 +314,11 @@
 }
 
 @media only screen and (min-width: 800px) {
+  #app .projects.section {
+    margin-left: 0%;
+  }
   #app .project {
-    margin-left: 6%;
+    margin-left: 10%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -332,11 +335,17 @@
 }
 
 @media only screen and (min-width: 1000px) {
+  #app .projects .section-title {
+    margin-left: 10%;
+  }
+  #app .projects.section {
+    margin-left: 0%;
+  }
   #app .section-title {
     font-size: 18px;
   }
   #app .project {
-    margin-left: 12%;
+    margin-left: 10%;
   }
   #app .project img {
     width: 400px;
