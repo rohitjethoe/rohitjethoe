@@ -20,3 +20,7 @@ setInterval(() => {
         clearInterval();
     }
 }, 255);
+
+const resetTypeOfDev = () => {
+    typeOfDevIndex = 0;
+}
