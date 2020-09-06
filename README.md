@@ -5,4 +5,4 @@ I'm a Software Developer from the Netherlands.
 - 🌱 I’m interested in JavaScript's Node.js and Vue.
 - 📫 Mail me at rohitchai@icloud.com or message me on [LinkedIn](https://www.linkedin.com/in/rohitjethoe/).
 
-My pinned projects as follows: 👇🏽
+My projects and projects I've contributed to as follows: 👇🏽
