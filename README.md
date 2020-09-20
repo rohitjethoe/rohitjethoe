@@ -4,7 +4,7 @@ I'm a <strong>Software Developer</strong> from the Netherlands 👨🏽‍💻, 
 
 - 🌿 Interested in <strong>Machine Learning</strong>, <strong>Automation</strong> and <strong>Software Development</strong>.
 - 🔭 I’m currently learning Machine Learning.
-- 🗣 Also love using `.ts`, `.py` and `$ npx create-react-app {app_name}`.
+- 🗣 Also love using `.ts`, `.py` and `$ npx create-react-app`.
 - 📫 Mail me at rohitchai@icloud.com or message me on [LinkedIn](https://www.linkedin.com/in/rohitjethoe/). 
 
 My projects and projects I've contributed to as follows: 👇🏼
