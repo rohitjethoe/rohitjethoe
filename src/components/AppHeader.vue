@@ -55,6 +55,9 @@ export default {
     align-items: center;
     justify-content: space-between;
     user-select: none;
+    @media (max-width: 768px) {
+        padding: 0 math-clamp(16);
+    }
     &__logo {
         position: relative;
         z-index: 20;
