@@ -1,0 +1,92 @@
+@use "sass:math";
+
+// Variables
+$primaryFont: 'Inter', sans-serif;
+$primaryColor: #000;
+$secondaryColor: #4266E7;
+
+// Functions
+$browser-context: 16;
+$screenWidth: 1440;
+
+@function rem($pixels, $context: $browser-context) {
+	@if (unitless($pixels)) {
+		$pixels: $pixels * 1px;
+	}
+
+	@if (unitless($context)) {
+		$context: $context * 1px;
+	}
+
+	@return math.div($pixels, $context) * 1rem;
+}
+
+@function math-clamp($min-size, $max-size:"") {
+	$val: math.div($min-size, $screenWidth) * 100 * 1vw;
+
+	@if($max-size == "") {
+		$max-size: calc($min-size * 2);
+	}
+
+	@return clamp(#{rem($min-size)}, #{$val}, #{rem($max-size)});
+}
+
+// Grid
+$columns: 16;
+$gap: math-clamp(15,15);
+$breakpoints: (
+        xs: 480px,
+        sm: 768px,
+        md: 960px,
+        lg: 1170px,
+        xl: 1280px∑
+);
+
+@mixin create-selectors($breakpoint: null) {
+  $infix: if($breakpoint == null, '', '#{$breakpoint}\\:');
+
+  @for $i from 1 through $columns {
+    .#{$infix}col-#{$i} {
+      grid-column-end: span $i;
+    }
+    .#{$infix}col-offset-#{$i} {
+      grid-column-start: $i + 1;
+    }
+    .#{$infix}row-#{$i} {
+      grid-row-end: span $i;
+    }
+    .#{$infix}row-offset-#{$i} {
+      grid-row-start: $i + 1;
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0 math-clamp(126, 126);
+  box-sizing:border-box;
+  @media (max-width: 768px) {
+    padding: 0 math-clamp(16);
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  grid-gap: $gap;
+  gap: $gap;
+  @media (min-width: 1920px) {
+    width: 1920px;
+    margin: 0 auto;
+  }
+}
+
+@include create-selectors;
+
+@each $breakpoint, $width in $breakpoints {
+  @media (min-width: $width) {
+    @include create-selectors($breakpoint);
+  }
+}
