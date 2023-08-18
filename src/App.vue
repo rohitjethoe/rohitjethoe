@@ -4,10 +4,12 @@
     <div class="cursor"></div>
     <router-view></router-view>
   </main>
+  <AppFooter />
 </template>
 
 <script>
 import AppHeader from '@/components/AppHeader.vue';
+import AppFooter from './components/AppFooter.vue';
 
 export default {
   name: "App",
@@ -39,7 +41,7 @@ export default {
       mouseX = e.pageX;
     });
   },
-  components: { AppHeader }
+  components: { AppHeader, AppFooter }
 }
 </script>
 
