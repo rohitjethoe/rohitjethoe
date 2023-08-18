@@ -18,7 +18,7 @@ export default {
     let mouseX = 0;
     let cursorX = 0;
     let cursorY = 0;
-    let speed = 0.1;
+    let speed = 0.15;
 
     const cursor = document.querySelector('.cursor');
 
