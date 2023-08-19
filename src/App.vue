@@ -1,8 +1,8 @@
 <template>
   <AppHeader />
   <main>
-    <div class="cursor"></div>
     <router-view></router-view>
+    <div class="cursor"></div>
   </main>
   <AppFooter />
 </template>
