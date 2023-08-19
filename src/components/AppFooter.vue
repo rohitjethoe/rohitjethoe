@@ -18,10 +18,49 @@ export default {
     name: "AppFooter",
     data() {
         return {
-            response: null
+            bearer: null,
+            playing: null
         }
     },
-    async mounted() {
+    methods: {
+        getSpotifyPlaying: function (bearer) {
+            console.log(bearer);
+            return fetch(`${import.meta.env.VITE_API_ENDPOINT}/me/player/currently-playing`, {
+                headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer ${bearer.access_token}`
+                }
+            })        
+        }
+    },
+    mounted() {
+        fetch(`${import.meta.env.VITE_TOKEN_ENDPOINT}/api/token`, {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+                Authorization: "Basic " + btoa(`${import.meta.env.VITE_CLIENT_ID}:${import.meta.env.VITE_CLIENT_SECRET}`)
+            },
+            body: new URLSearchParams({
+                grant_type: 'refresh_token',
+                refresh_token: import.meta.env.VITE_REFRESH_TOKEN
+            }).toString()
+        })
+        .then(async (res) => {
+            const bearer = await res.json();
+            console.log(res);
+            this.getSpotifyPlaying(bearer)
+            .then(async (res) => {
+                this.playing = await res.json();
+            })
+            .catch((err) => {
+                this.playing = null;
+            })
+        })
+        .catch((err) => {
+            this.playing = null;
+        })
+
         const links = document.querySelectorAll('a');
         const cursor = document.querySelector('.cursor');
 
@@ -36,36 +75,6 @@ export default {
                 cursor.style.width = '18px';
             })
         })
-
-        const clientId = "d39a4a65f68849c792163cb28588b585";
-        const clientSecret = "e133cd0cb2914c26ba642744f9dfdb21";
-        const refresh_token = "AQDPWIm3XwP8JhRQKDVjXeI44zM2tse16DddlKqD4pJm_bPHeztriPFoA7n1NzI6uqf6-5OWf_T_Tvjb1_P8qsGgVYynbnY64mZLxaoDKqZVfmji5l0jX8gbz4HAdpq8IHU";
-        const TOKEN_ENDPOINT = "https://accounts.spotify.com/api/token";
-
-        const getBearer = await fetch(TOKEN_ENDPOINT, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/x-www-form-urlencoded",
-                Authorization: "Basic " + btoa(`${clientId}:${clientSecret}`)
-            },
-            body: new URLSearchParams({
-                grant_type: "refresh_token",
-                refresh_token: refresh_token
-            }).toString()
-        });
-
-        let bearer = await getBearer.json();
-
-        const getCurrentlyPlaying = await fetch("https://api.spotify.com/v1/me/player/currently-playing", {
-            headers: {
-                Accept: "application/json",
-                "Content-Type": "application/json",
-                Authorization: `Bearer ${bearer.access_token}`
-            }
-        });
-
-        const response = await getCurrentlyPlaying.json();
-        console.log(response)
     }
 }
 </script>

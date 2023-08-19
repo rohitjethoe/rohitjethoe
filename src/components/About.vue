@@ -39,7 +39,14 @@
                             May 2023 - Present 
                         </div>
                         <div class="about__details">
-                            <p>Fullstack Developer · Relay</p>
+                            <p>
+                                <a href="https://www.monostatic.com" target="_blank">
+                                    Fullstack Developer · Monostatic
+                                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.85103 0.973656C6.83651 0.697896 6.6012 0.486113 6.32544 0.500627L1.83166 0.737142C1.5559 0.751656 1.34411 0.98697 1.35863 1.26273C1.37314 1.53849 1.60846 1.75027 1.88422 1.73576L5.87869 1.52552L6.08892 5.52C6.10344 5.79576 6.33875 6.00754 6.61451 5.99303C6.89027 5.97851 7.10206 5.7432 7.08754 5.46744L6.85103 0.973656ZM1.37165 7.28077L6.72337 1.33442L5.98007 0.665454L0.628353 6.61181L1.37165 7.28077Z" fill="black"/>
+                                    </svg> 
+                                </a>
+                            </p>
                             <span>Developed and styled interactive web apps at Relay/Monostatic, including their websites. Also developed for many wonderful clients such as VirtuFit and Hodl Finance.</span>
                         </div>
                     </div>
@@ -76,7 +83,23 @@
 
 <script>
 export default {
-    name: "About"
+    name: "About",
+    mounted() {
+        const links = document.querySelectorAll('a');
+        const cursor = document.querySelector('.cursor');
+
+        links.forEach((link) => {
+            link.addEventListener('mouseover', () => {
+                cursor.style.height = '36px';
+                cursor.style.width = '36px';
+            })
+
+            link.addEventListener('mouseleave', () => {
+                cursor.style.height = '18px';
+                cursor.style.width = '18px';
+            })
+        })
+    }
 }
 </script>
 
@@ -125,6 +148,13 @@ export default {
         p {
             font-weight: 500;
             color: $primaryColor;
+            a:link, a:visited {
+                display: flex;
+                gap: math-clamp(8);
+                color: $primaryColor;
+                text-decoration: none;
+                align-items: center;
+            }
         }
         span {
             color: $primaryColor;

@@ -13,8 +13,8 @@ export default {
     name: "Heading",
     props: {
         content: String,
-        width: Number,
-        start: Number
+        width: String,
+        start: String
     }
 }
 </script>
