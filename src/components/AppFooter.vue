@@ -1,12 +1,12 @@
 <template>
     <footer class="footer">
         <div class="container grid">
-            <div class="footer__title col-16">
+            <div class="footer__title col-14 col-offset-1 sm:col-16">
                 LET’S TALK <br>
                 ABOUT THE NEXT <br>
                 BIG THING. <br>
             </div>
-            <div class="footer__mail col-16">
+            <div class="footer__mail col-14 col-offset-1 sm:col-16">
                 <a href="mailto:rohitjethoe@proton.me">rohitjethoe@proton.me</a>
             </div>
         </div>
@@ -90,7 +90,8 @@ export default {
     padding-top: math-clamp(120);
     padding-bottom: math-clamp(96);
     @media (max-width: 768px) {
-        margin-top: math-clamp(60)
+        margin-top: math-clamp(60);
+        padding: math-clamp(80) 0;
     }
     &__title {
         color: #fff;
