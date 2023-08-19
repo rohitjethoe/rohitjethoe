@@ -5,7 +5,7 @@
                 <span>Capabilities</span><br>
                 And Degrees
             </div>
-            <div class="about__column col-12 sm:col-4">
+            <div class="about__column col-14 sm:col-4">
                 <div class="about__column--title">
                     Professional Expertises
                 </div>
@@ -36,7 +36,7 @@
                 <div class="about__column--content">
                     <div class="about__row">
                         <div class="about__date">
-                            <span>May</span> 2023 - Present 
+                            <span>May</span> 2023 - <span>Present</span> 
                         </div>
                         <div class="about__details">
                             <p>
@@ -52,10 +52,10 @@
                     </div>
                     <div class="about__row">
                         <div class="about__date">
-                            <span>Sep</span> 2022 - Present 
+                            <span>Sep</span> 2022 - <span>Present</span> 
                         </div>
                         <div class="about__details">
-                            <p>VWO (Pre-University Education) · Vellesan</p>
+                            <p>VWO <span>(Pre-University Education)</span> · Vellesan</p>
                            
                         </div>
                     </div>
@@ -64,7 +64,7 @@
                             <span>Sep</span> 2020 - <span>Jun</span> 2022 
                         </div>
                         <div class="about__details">
-                            <p>HAVO (Higher General Continued Education) · Vellesan</p>
+                            <p>HAVO <span>(Higher General Continued Education)</span> · Vellesan</p>
                         </div>
                     </div>
                     <div class="about__row">
@@ -72,7 +72,7 @@
                             <span>Sep</span> 2017 - <span>Jun</span> 2020 
                         </div>
                         <div class="about__details">
-                            <p>MAVO (General Secondary Education)  · Vellesan</p>
+                            <p>MAVO <span>(General Secondary Education)</span>  · Vellesan</p>
                         </div>
                     </div>
                 </div>
@@ -153,6 +153,7 @@ export default {
         text-transform: uppercase;
         font-weight: 500;
         @media (max-width: 768px) {
+            width: 30vw;
             span {
                 display: none;
             }
@@ -161,9 +162,17 @@ export default {
     &__details {
         width: math-clamp(435);
         padding-bottom: math-clamp(12);
+        @media (max-width: 768px) {
+            width: 54vw;
+        }
         p {
             font-weight: 500;
             color: $primaryColor;
+            @media (max-width: 768px) {
+                span {
+                    display: none;
+                }
+            }
             a:link, a:visited {
                 display: flex;
                 gap: math-clamp(8);

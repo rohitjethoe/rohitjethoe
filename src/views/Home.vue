@@ -94,7 +94,7 @@ export default {
 .work {
     font-family: $primaryFont;
     @media (max-width: 768px) {
-        margin-top: math-clamp(240);
+        margin-top: math-clamp(80);
     }
     &__heading {
         font-size: math-clamp(48, 64);

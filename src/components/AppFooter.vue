@@ -89,6 +89,9 @@ export default {
     background-color: $primaryColor;
     padding-top: math-clamp(120);
     padding-bottom: math-clamp(96);
+    @media (max-width: 768px) {
+        margin-top: math-clamp(60)
+    }
     &__title {
         color: #fff;
         font-size: math-clamp(48);

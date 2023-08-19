@@ -22,10 +22,13 @@ export default {
 <style lang="scss" scoped>
 .cover-image {
     @media (max-width: 768px) {
-        margin: math-clamp(30) 0;
+        margin: math-clamp(60) 0;
     }
     &__wrapper {
         margin: math-clamp(160) 0;
+        @media (max-width: 768px) {
+            margin: math-clamp(30) 0 math-clamp(15) 0;
+        }
         img {
             width: 100%;
             height: 100%;
@@ -34,7 +37,7 @@ export default {
     &__project {
         margin: math-clamp(56) 0;
         img {
-            border-radius: math-clamp(16);
+            border-radius: math-clamp(12);
         }   
     }
 }

@@ -119,7 +119,7 @@ export default {
     }
     &__bar {
         width: 54px;
-        height: 2px;
+        height: 1px;
         background-color: $primaryColor;
         margin: math-clamp(6) 0;
     }
