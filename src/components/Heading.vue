@@ -22,11 +22,15 @@ export default {
 <style lang="scss" scoped>
 .heading {
     font-family: $primaryFont;
-    margin-top: math-clamp(160);
+    margin-top: math-clamp(160, 200);
     &__content {
-        font-size: math-clamp(48);
+        font-size: math-clamp(48, 64);
         font-weight: 300;
-        line-height: math-clamp(58.09);
+        line-height: math-clamp(58.09, 77.45);
+        @media (max-width: 768px) {
+            font-size: math-clamp(24);
+            line-height: math-clamp(30);
+        }
     }
 }
 </style>

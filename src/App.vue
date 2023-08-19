@@ -50,10 +50,10 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
-  width: math-clamp(18);
-  height: math-clamp(18);
+  width: math-clamp(18, 24);
+  height: math-clamp(18, 24);
   border-radius: 100%;
-  margin-left: math-clamp(-4);
+  margin-left: math-clamp(-4, -6);
   background-color: $secondaryColor;
   pointer-events: none;
   transition: width 0.25s, height 0.25s;

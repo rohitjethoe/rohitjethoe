@@ -3,51 +3,59 @@
     <CoverImage source="/background.webp"/>
     <section class="work">
         <div class="container grid">
-            <div class="work__heading col-5 col-offset-10">
+            <div class="work__heading col-16 sm:col-5 sm:col-offset-10">
                 Selected Works
             </div>
             <div class="work__cases col-16">
                 <div class="work__case work__case--monostatic">
-                    <img src="/monostatic.webp" alt="Monostatic">
+                    <a href="/projects/monostatic">
+                        <img src="/monostatic.webp" alt="Monostatic">
+                    </a>
                     <div class="work__expand">
                         <img class="work__arrow work__arrow--top"  src="../assets/arrow.svg" alt="">
                         <img class="work__arrow work__arrow--bottom" src="../assets/arrow.svg" alt="">
                     </div>
-                    <span>
-                        Monostatic
-                    </span>
+                    <div>
+                        <a href="/projects/monostatic">Monostatic</a> 
+                    </div>
                 </div>
                 <div class="work__case work__case--virtufit">
-                    <img src="/virtufit.webp" alt="VirtuFit">
+                    <a href="/projects/virtufit">
+                        <img src="/virtufit.webp" alt="VirtuFit">
+                    </a>
                     <div class="work__expand">
                         <img class="work__arrow work__arrow--top"  src="../assets/arrow.svg" alt="">
                         <img class="work__arrow work__arrow--bottom" src="../assets/arrow.svg" alt="">
                     </div>
-                    <span>
-                        Virtufit
-                    </span>
+                    <div>
+                        <a href="/projects/virtufit">VirtuFit</a> 
+                    </div>
                 </div>
             </div>
             <div class="work__cases work__cases--bottom col-16">
                 <div class="work__case work__case--relay">
-                    <img src="/relay.webp" alt="Relay">
+                    <a href="#">
+                        <img src="/relay.webp" alt="Relay">
+                    </a>
                     <div class="work__expand">
                         <img class="work__arrow work__arrow--top"  src="../assets/arrow.svg" alt="">
                         <img class="work__arrow work__arrow--bottom" src="../assets/arrow.svg" alt="">
                     </div>
-                    <span>
-                        Build by Relay
-                    </span>
+                    <div>
+                        <a href="#">Build by Relay</a> 
+                    </div>
                 </div>
                 <div class="work__case work__case--fjg-online">
-                    <img src="/fjg-online.webp" alt="FJG Online">
+                    <a href="#">
+                        <img src="/fjg-online.webp" alt="FJG Online">
+                    </a>
                     <div class="work__expand">
                         <img class="work__arrow work__arrow--top"  src="../assets/arrow.svg" alt="">
                         <img class="work__arrow work__arrow--bottom" src="../assets/arrow.svg" alt="">
                     </div>
-                    <span>
-                        FJG Online
-                    </span>
+                    <div>
+                        <a href="#">FJG Online</a> 
+                    </div>
                 </div>
             </div>
         </div>
@@ -62,6 +70,22 @@ import Heading from '../components/Heading.vue';
 
 export default {
     name: "Home",
+    mounted() {
+        const links = document.querySelectorAll('a');
+        const cursor = document.querySelector('.cursor');
+
+        links.forEach((link) => {
+            link.addEventListener('mouseover', () => {
+                cursor.style.height = '36px';
+                cursor.style.width = '36px';
+            })
+
+            link.addEventListener('mouseleave', () => {
+                cursor.style.height = '18px';
+                cursor.style.width = '18px';
+            })
+        })
+    },
     components: { Heading, CoverImage, About }
 }
 </script>
@@ -69,62 +93,85 @@ export default {
 <style lang="scss" scoped>
 .work {
     font-family: $primaryFont;
+    @media (max-width: 768px) {
+        margin-top: math-clamp(240);
+    }
     &__heading {
-        font-size: math-clamp(48);
+        font-size: math-clamp(48, 64);
         font-weight: 300;
         text-align: right;
+        @media (max-width: 768px) {
+            font-size: math-clamp(24);
+        }
     }
     &__cases {
-        margin-top: math-clamp(80);
+        margin-top: math-clamp(80, 106.666);
         display: flex;
         flex-flow: wrap;
-        gap: math-clamp(16);
+        gap: math-clamp(16, 21.333);
+        @media (max-width: 768px) {
+            display: block;
+            margin-top: math-clamp(30);
+        }
         &--bottom {
             align-items: baseline;
-            transform: translateY(math-clamp(-180));
+            transform: translateY(math-clamp(-180, -240));
+            @media (max-width: 768px) {
+                transform: none;
+            }
         }
     }
     &__case {
         display: flex;
-        gap: math-clamp(16);
+        gap: math-clamp(16, 21.333);
         flex-flow: column;
         position: relative;
+        a:link, a:visited {
+            text-decoration: none;
+            color: #000;
+        }
         &--monostatic {
             img {
-                width: math-clamp(670);
+                width: math-clamp(670, 893.333);
                 height: auto;
             }
         }
         &--virtufit {
             img {
-                width: math-clamp(498);
+                width: math-clamp(498, 664);
             }
         }
         &--relay {
             img {
-                width: math-clamp(670);
+                width: math-clamp(670, 893.333);
             }
         }
         &--fjg-online {
             img {
-                width: math-clamp(498);
+                width: math-clamp(498, 664);
             }
         }
         &:hover {
             .work__arrow {
                 &--top {
-                    transform: rotate(180deg) translateY(math-clamp(-5)) translateX(math-clamp(-1));
+                    transform: rotate(180deg) translateY(math-clamp(-5, -6.666)) translateX(math-clamp(-1, -1.333));
                 }
                 &--bottom {
-                    transform: translateY(math-clamp(-5));
+                    transform: translateY(math-clamp(-5, -6.666));
                 }
+            }
+        }
+        @media (max-width: 768px) {
+            padding-bottom: math-clamp(30);
+            img {
+                width: 100%;
             }
         }
     }
     &__expand {
-        margin: math-clamp(16);
-        width: math-clamp(40);
-        height: math-clamp(40);
+        margin: math-clamp(16, 21.333);
+        width: math-clamp(40, 53.333);
+        height: math-clamp(40, 53.333);
         display: flex;
         justify-content: center;
         position: absolute;
@@ -133,16 +180,16 @@ export default {
         background-color: #fff;
         border-radius: 100%;
         img {
-            width: math-clamp(8);
+            width: math-clamp(8, 10.666);
         }
     }
     &__arrow {
         transition: 0.25s all;
         &--top {
-            transform: rotate(180deg) translateY(math-clamp(-3)) translateX(math-clamp(-1.5));
+            transform: rotate(180deg) translateY(math-clamp(-3, -4)) translateX(math-clamp(-1.5, -2));
         }
         &--bottom {
-            transform: translateY(math-clamp(-3)) translateX(math-clamp(-1.5));
+            transform: translateY(math-clamp(-3, -4)) translateX(math-clamp(-1.5, -2));
         }
     }
 }

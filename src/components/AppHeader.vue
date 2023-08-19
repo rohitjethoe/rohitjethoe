@@ -1,25 +1,33 @@
 <template>
     <header class="header">
-        <div class="header__logo">
-            <a class="header__logo--link" href="/">
-                Rohit Jethoe
-            </a>
-        </div>
-        <div class="header__nav">
-            <ul>
-                <li>
-                    <router-link to="/">
-                        Work
-                        <div></div>
-                    </router-link>
-                </li>
-                <li>
-                    <router-link to="/contact">
-                        Contact
-                        <div></div>
-                    </router-link>
-                </li>
-            </ul>
+        <div class="container">
+            <div class="header__wrapper">
+                <div class="header__logo">
+                    <a class="header__logo--link" href="/">
+                        Rohit Jethoe
+                    </a>
+                </div>
+                <div class="header__nav">
+                    <div class="header__burger-icon">
+                        <div class="header__bar header__bar--top"></div>
+                        <div class="header__bar header__bar--bottom"></div>
+                    </div>
+                    <ul>
+                        <li>
+                            <router-link to="/">
+                                Work
+                                <div></div>
+                            </router-link>
+                        </li>
+                        <li>
+                            <router-link to="/contact">
+                                Contact
+                                <div></div>
+                            </router-link>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </header>
 </template>
@@ -49,14 +57,20 @@ export default {
 <style lang="scss" scoped>
 .header {
     font-family: $primaryFont;
-    padding: 0 math-clamp(126);
-    padding-top: math-clamp(60);  
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    user-select: none;
+    padding-top: math-clamp(60, 80);  
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        user-select: none;
+    }
     @media (max-width: 768px) {
-        padding: 0 math-clamp(16);
+        padding-top: math-clamp(16);
+    }
+    &__burger-icon {
+        @media (min-width: 768px) {
+            display: none;
+        }
     }
     &__logo {
         position: relative;
@@ -74,6 +88,9 @@ export default {
         ul {
             display: flex;
             gap: math-clamp(30);
+            @media (max-width: 768px) {
+                display: none;
+            }
             li {
                 position: relative;
                 a:link, a:visited {
@@ -99,6 +116,12 @@ export default {
                 }
             }
         }
+    }
+    &__bar {
+        width: 54px;
+        height: 2px;
+        background-color: $primaryColor;
+        margin: math-clamp(6) 0;
     }
 }
 </style>

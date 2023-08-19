@@ -5,7 +5,7 @@
                 <span>Capabilities</span><br>
                 And Degrees
             </div>
-            <div class="about__column col-4">
+            <div class="about__column col-12 sm:col-4">
                 <div class="about__column--title">
                     Professional Expertises
                 </div>
@@ -29,14 +29,14 @@
                 </div>
             </div>
 
-            <div class="about__column col-offset-6 col-9">
+            <div class="about__column col-16 sm:col-offset-6 sm:col-9">
                 <div class="about__column--title">
                     Experiences & Degrees
                 </div>
                 <div class="about__column--content">
                     <div class="about__row">
                         <div class="about__date">
-                            May 2023 - Present 
+                            <span>May</span> 2023 - Present 
                         </div>
                         <div class="about__details">
                             <p>
@@ -52,7 +52,7 @@
                     </div>
                     <div class="about__row">
                         <div class="about__date">
-                            Sep 2022 - Present 
+                            <span>Sep</span> 2022 - Present 
                         </div>
                         <div class="about__details">
                             <p>VWO (Pre-University Education) · Vellesan</p>
@@ -61,7 +61,7 @@
                     </div>
                     <div class="about__row">
                         <div class="about__date">
-                            Sep 2020 - Jun 2022 
+                            <span>Sep</span> 2020 - <span>Jun</span> 2022 
                         </div>
                         <div class="about__details">
                             <p>HAVO (Higher General Continued Education) · Vellesan</p>
@@ -69,7 +69,7 @@
                     </div>
                     <div class="about__row">
                         <div class="about__date">
-                            Sep 2017 - Jun 2020 
+                            <span>Sep</span> 2017 - <span>Jun</span> 2020 
                         </div>
                         <div class="about__details">
                             <p>MAVO (General Secondary Education)  · Vellesan</p>
@@ -107,10 +107,17 @@ export default {
 .about {
     font-family: 'Inter', sans-serif;
     margin-top: math-clamp(30);
+    @media (max-width: 768px) {
+        margin-top: math-clamp(120);
+    }
     &__heading {
         font-size: math-clamp(48);
         font-weight: 300;
         line-height: math-clamp(60);
+        @media (max-width: 768px) {
+            font-size: math-clamp(24);
+            line-height: math-clamp(32);
+        }
         span {
             color: #686868;
         }
@@ -118,6 +125,10 @@ export default {
     &__column {
         font-weight: 300;
         margin-top: math-clamp(80);
+        @media (max-width: 768px) {
+            margin-top: math-clamp(45);
+            margin-bottom: math-clamp(35);
+        }
         &--title {
             color: $primaryColor;
             font-size: math-clamp(24);
@@ -141,6 +152,11 @@ export default {
     &__date {
         text-transform: uppercase;
         font-weight: 500;
+        @media (max-width: 768px) {
+            span {
+                display: none;
+            }
+        }
     }
     &__details {
         width: math-clamp(435);
