@@ -24,7 +24,6 @@ export default {
     },
     methods: {
         getSpotifyPlaying: function (bearer) {
-            console.log(bearer);
             return fetch(`${import.meta.env.VITE_API_ENDPOINT}/me/player/currently-playing`, {
                 headers: {
                     Accept: "application/json",
@@ -48,17 +47,21 @@ export default {
         })
         .then(async (res) => {
             const bearer = await res.json();
-            console.log(res);
             this.getSpotifyPlaying(bearer)
             .then(async (res) => {
                 this.playing = await res.json();
+                console.log(res);
             })
             .catch((err) => {
-                this.playing = null;
+                if (err) {
+                    this.playing = null;
+                }
             })
         })
         .catch((err) => {
-            this.playing = null;
+            if (err) {
+                this.playing = null;
+            }
         })
 
         const links = document.querySelectorAll('a');
