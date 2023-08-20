@@ -1,13 +1,6 @@
 <template>
     <footer id="footer" class="footer">
         <div class="container grid">
-            <div class="footer__scroll col-16">
-                <a href="#">
-                    <div class="footer__circle">
-                        <img src="../assets/arrow-2px.svg" alt="">
-                    </div>
-                </a>
-            </div>
             <div class="footer__content col-7">
                 <div class="footer__heading">
                     LET’S TALK <br>
@@ -45,6 +38,13 @@
                     </li>
                 </ul>
             </div>
+            <div class="footer__scroll col-16">
+                <a href="#">
+                    <div class="footer__circle">
+                        <img src="../assets/arrow-2px.svg" alt="">
+                    </div>
+                </a>
+            </div>
         </div>
     </footer>
 </template>
@@ -60,7 +60,8 @@ export default {
     background-color: #000;
     font-family: "Inter", sans-serif;
     color: #fff;
-    padding: math-clamp(100) 0;
+    padding-top: math-clamp(100);
+    padding-bottom: math-clamp(50);
     margin-top: math-clamp(120);
     &__scroll {
         position: relative;
