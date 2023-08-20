@@ -62,7 +62,6 @@ export default {
     color: #fff;
     padding-top: math-clamp(100);
     padding-bottom: math-clamp(50);
-    margin-top: math-clamp(120);
     &__scroll {
         position: relative;
         width: 100%;

@@ -44,4 +44,9 @@ table {
 
 html {
   scroll-behavior: smooth;
+  background-color: #000;
+}
+
+header, main {
+  background-color: #fff;
 }

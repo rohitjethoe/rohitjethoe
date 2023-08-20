@@ -22,7 +22,7 @@ export default {
 <style lang="scss" scoped>
 .heading {
     font-family: $primaryFont;
-    margin-top: math-clamp(160, 200);
+    padding-top: math-clamp(160, 200);
     @media (max-width: 768px) {
         margin-top: math-clamp(80);
     }

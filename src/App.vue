@@ -60,4 +60,7 @@ export default {
   opacity: 0;
 }
 
+main {
+  padding-bottom: math-clamp(120);
+}
 </style>
