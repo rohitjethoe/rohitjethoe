@@ -26,8 +26,8 @@ export default {
       let distX = mouseX - cursorX;
       let distY = mouseY - cursorY;
       
-      cursorX = cursorX + (distX * speed);
-      cursorY = cursorY + (distY * speed);
+      cursorX = (cursorX + (distX * speed)) - 2;
+      cursorY = (cursorY + (distY * speed)) - 2;
       
       cursor.style.transform = `translate3d(${cursorX}px, ${cursorY}px, 0)`;
       requestAnimationFrame(moveCursor);
@@ -53,7 +53,6 @@ export default {
   width: math-clamp(18, 24);
   height: math-clamp(18, 24);
   border-radius: 100%;
-  margin-left: math-clamp(-4, -6);
   background-color: $secondaryColor;
   pointer-events: none;
   transition: width 0.25s, height 0.25s;

@@ -8,9 +8,12 @@
             </div>
             <div class="work__cases col-16">
                 <div class="work__case work__case--monostatic">
-                    <a href="/projects/monostatic">
-                        <img src="/monostatic.webp" alt="Monostatic">
-                    </a>
+                    <div class="work__case--image">
+                        <a href="/projects/monostatic">
+                            <img src="/monostatic.webp" alt="Monostatic">
+                        </a>
+                        <div class="work__case--overlay"></div>
+                    </div>
                     <div class="work__expand">
                         <img class="work__arrow work__arrow--top"  src="../assets/arrow.svg" alt="">
                         <img class="work__arrow work__arrow--bottom" src="../assets/arrow.svg" alt="">
@@ -20,9 +23,12 @@
                     </div>
                 </div>
                 <div class="work__case work__case--virtufit">
-                    <a href="/projects/virtufit">
-                        <img src="/virtufit.webp" alt="VirtuFit">
-                    </a>
+                    <div class="work__case--image">
+                        <a href="/projects/virtufit">
+                            <img src="/virtufit.webp" alt="VirtuFit">
+                        </a>
+                        <div class="work__case--overlay"></div>
+                    </div>
                     <div class="work__expand">
                         <img class="work__arrow work__arrow--top"  src="../assets/arrow.svg" alt="">
                         <img class="work__arrow work__arrow--bottom" src="../assets/arrow.svg" alt="">
@@ -34,21 +40,27 @@
             </div>
             <div class="work__cases work__cases--bottom col-16">
                 <div class="work__case work__case--relay">
-                    <a href="#">
-                        <img src="/relay.webp" alt="Relay">
-                    </a>
+                    <div class="work__case--image">
+                        <a href="/projects/relay">
+                            <img src="/relay.webp" alt="Relay">
+                        </a>
+                        <div class="work__case--overlay"></div>
+                    </div>
                     <div class="work__expand">
                         <img class="work__arrow work__arrow--top"  src="../assets/arrow.svg" alt="">
                         <img class="work__arrow work__arrow--bottom" src="../assets/arrow.svg" alt="">
                     </div>
-                    <div>
+                    <div class="work__case--name">
                         <a href="#">Build by Relay</a> 
                     </div>
                 </div>
                 <div class="work__case work__case--fjg-online">
-                    <a href="#">
-                        <img src="/fjg-online.webp" alt="FJG Online">
-                    </a>
+                    <div class="work__case--image">
+                        <a href="#">
+                            <img src="/fjg-online.webp" alt="FJG Online">
+                        </a>
+                        <div class="work__case--overlay"></div>
+                    </div>
                     <div class="work__expand">
                         <img class="work__arrow work__arrow--top"  src="../assets/arrow.svg" alt="">
                         <img class="work__arrow work__arrow--bottom" src="../assets/arrow.svg" alt="">
@@ -126,45 +138,100 @@ export default {
         gap: math-clamp(16, 21.333);
         flex-flow: column;
         position: relative;
+        @media (max-width: 768px) {
+            padding-bottom: math-clamp(30);
+        }
         a:link, a:visited {
             text-decoration: none;
             color: #000;
         }
+        &--image {
+            position: relative;
+            overflow: hidden;
+            border-radius: math-clamp(8);
+            img {
+                transform: scale(1.01);
+                transition: 0.5s all;
+            }
+            a:link, a:visited {
+                display: inline-block;
+                height: 0px;
+            }
+        }
+        &--overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0,0,0, 0.05);
+            opacity: 0;
+            transition: 0.5s all;
+            pointer-events: none;
+        }
         &--monostatic {
             img {
                 width: math-clamp(670, 893.333);
-                height: auto;
+            }
+            @media (max-width: 768px) {
+                width: 100%;
+                img {
+                    width: 100%;
+                }
             }
         }
         &--virtufit {
             img {
                 width: math-clamp(498, 664);
             }
+            @media (max-width: 768px) {
+                width: 80%;
+                margin-left: 20%;
+                img {
+                    width: 100%;
+                }
+            }
         }
         &--relay {
             img {
                 width: math-clamp(670, 893.333);
+            }
+            @media (max-width: 768px) {
+                width: 100vw;
+                transform: translateX(math-clamp(-16)) translateY(math-clamp(-40));
+                .work__case--image {
+                    border-radius: 0px;
+                }
+                .work__case--name {
+                    transform: translateX(math-clamp(16));
+                }
+                img {
+                    width: 100%;
+                }
             }
         }
         &--fjg-online {
             img {
                 width: math-clamp(498, 664);
             }
+            @media (max-width: 768px) {
+                display: none;
+            }
         }
         &:hover {
+            img {
+                transform: scale(1.1);
+            }
             .work__arrow {
                 &--top {
                     transform: rotate(180deg) translateY(math-clamp(-5, -6.666)) translateX(math-clamp(-1, -1.333));
                 }
                 &--bottom {
-                    transform: translateY(math-clamp(-5, -6.666));
+                    transform: translateY(math-clamp(-4, -6.666));
                 }
             }
-        }
-        @media (max-width: 768px) {
-            padding-bottom: math-clamp(30);
-            img {
-                width: 100%;
+            .work__case--overlay {
+                opacity: 1;
             }
         }
     }

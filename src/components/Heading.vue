@@ -1,7 +1,7 @@
 <template>
     <section class="heading">
         <div class="container grid">
-            <div class="heading__content col-12" :class="`sm:col-${width} sm:col-offset-${start}`">
+            <div class="heading__content col-12 xs:col-10" :class="`sm:col-${width} sm:col-offset-${start}`">
                 <span v-html="content"></span>
             </div>
         </div>

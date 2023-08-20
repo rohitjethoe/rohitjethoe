@@ -4,12 +4,14 @@ import './style.css'
 import Home from '@/views/Home.vue'
 import Monostatic from "@/views/projects/Monostatic.vue"
 import Virtufit from "@/views/projects/Virtufit.vue"
+import Relay from "@/views/projects/Relay.vue"
 import App from './App.vue'
 
 const routes = [
     { path: '/', component: Home },
     { path: '/projects/monostatic', component: Monostatic },
-    { path: '/projects/virtufit', component: Virtufit }
+    { path: '/projects/virtufit', component: Virtufit },
+    { path: '/projects/relay', component: Relay }
 ]
 
 const router = createRouter({
