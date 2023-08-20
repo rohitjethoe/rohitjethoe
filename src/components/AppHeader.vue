@@ -1,5 +1,5 @@
 <template>
-    <header class="header">
+    <header id="header" class="header">
         <div class="container">
             <div class="header__wrapper">
                 <div class="header__logo">
@@ -20,10 +20,10 @@
                             </router-link>
                         </li>
                         <li>
-                            <router-link to="/contact">
+                            <a href="#footer">
                                 Contact
                                 <div></div>
-                            </router-link>
+                            </a>
                         </li>
                     </ul>
                 </div>

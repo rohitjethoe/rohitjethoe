@@ -14,7 +14,7 @@ export default {
     props: {
         content: String,
         width: String,
-        start: String
+        start: String,
     }
 }
 </script>

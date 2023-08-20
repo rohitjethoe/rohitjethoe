@@ -1,5 +1,5 @@
 <template>
-    <CoverImage source="/virtufit-mobile.webp" project="true"/>
+    <CoverImage source="/virtufit-mobile.webp" project="true" contain="true"/>
     <ProjectDetails title="VirtuFit Service Request Form" :team="team" :tools="tools" :disciplines="disciplines" description="Crafted a creative agency's online presence through an interactive website with a user-friendly CMS, showcasing their portfolio and services dynamically." />
 </template>
 

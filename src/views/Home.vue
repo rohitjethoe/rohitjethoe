@@ -1,6 +1,6 @@
 <template>
     <Heading content="Crafting Digital Experiences, as a Fullstack Developer." width="9" start="0"/>
-    <CoverImage source="/background.webp"/>
+    <CoverImage source="/background.webp" contain="true"/>
     <section class="work">
         <div class="container grid">
             <div class="work__heading col-16 sm:col-5 sm:col-offset-10">

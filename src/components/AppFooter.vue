@@ -1,13 +1,49 @@
 <template>
-    <footer class="footer">
+    <footer id="footer" class="footer">
         <div class="container grid">
-            <div class="footer__title col-14 col-offset-1 sm:col-16">
-                LET’S TALK <br>
-                ABOUT THE NEXT <br>
-                BIG THING. <br>
+            <div class="footer__scroll col-16">
+                <a href="#">
+                    <div class="footer__circle">
+                        <img src="../assets/arrow-2px.svg" alt="">
+                    </div>
+                </a>
             </div>
-            <div class="footer__mail col-14 col-offset-1 sm:col-16">
-                <a href="mailto:rohitjethoe@proton.me">rohitjethoe@proton.me</a>
+            <div class="footer__content col-7">
+                <div class="footer__heading">
+                    LET’S TALK <br>
+                    ABOUT THE NEXT <br>
+                    BIG THING. <br>
+                </div>
+                <div class="footer__copyright">
+                    © {{ new Date().getFullYear() }} · Rohit Jethoe
+                </div>
+            </div>
+            <div class="footer__map col-2 col-offset-13">
+                <ul>
+                    <li class="footer__map--title">
+                        <span>Explore</span>
+                    </li>
+                    <li class="footer__map--link">
+                        <a href="/">Work</a>
+                    </li>
+                    <li class="footer__map--link">
+                        <a href="/about">About</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="footer__map--title">
+                        <span>Socials</span>
+                    </li>
+                    <li class="footer__map--link">
+                        <a href="/">LinkedIn</a>
+                    </li>
+                    <li class="footer__map--link">
+                        <a href="/about">Twitter</a>
+                    </li>
+                    <li class="footer__map--link">
+                        <a href="/about">Mail</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </footer>
@@ -15,97 +51,67 @@
 
 <script>
 export default {
-    name: "AppFooter",
-    data() {
-        return {
-            bearer: null,
-            playing: null
-        }
-    },
-    methods: {
-        getSpotifyPlaying: function (bearer) {
-            return fetch(`${import.meta.env.VITE_API_ENDPOINT}/me/player/currently-playing`, {
-                headers: {
-                    Accept: "application/json",
-                    "Content-Type": "application/json",
-                    Authorization: `Bearer ${bearer.access_token}`
-                }
-            })        
-        }
-    },
-    mounted() {
-        fetch(`${import.meta.env.VITE_TOKEN_ENDPOINT}/api/token`, {
-            method: 'POST',
-            headers: {
-                "Content-Type": "application/x-www-form-urlencoded",
-                Authorization: "Basic " + btoa(`${import.meta.env.VITE_CLIENT_ID}:${import.meta.env.VITE_CLIENT_SECRET}`)
-            },
-            body: new URLSearchParams({
-                grant_type: 'refresh_token',
-                refresh_token: import.meta.env.VITE_REFRESH_TOKEN
-            }).toString()
-        })
-        .then(async (res) => {
-            const bearer = await res.json();
-            this.getSpotifyPlaying(bearer)
-            .then(async (res) => {
-                this.playing = await res.json();
-                console.log(res);
-            })
-            .catch((err) => {
-                if (err) {
-                    this.playing = null;
-                }
-            })
-        })
-        .catch((err) => {
-            if (err) {
-                this.playing = null;
-            }
-        })
-
-        const links = document.querySelectorAll('a');
-        const cursor = document.querySelector('.cursor');
-
-        links.forEach((link) => {
-            link.addEventListener('mouseover', () => {
-                cursor.style.height = '36px';
-                cursor.style.width = '36px';
-            })
-
-            link.addEventListener('mouseleave', () => {
-                cursor.style.height = '18px';
-                cursor.style.width = '18px';
-            })
-        })
-    }
+    name: "Footer"
 }
 </script>
 
 <style lang="scss" scoped>
 .footer {
-    font-family: 'Inter', sans-serif;
-    margin-top: math-clamp(240);
-    background-color: $primaryColor;
-    padding-top: math-clamp(120);
-    padding-bottom: math-clamp(96);
-    @media (max-width: 768px) {
-        margin-top: math-clamp(60);
-        padding: math-clamp(80) 0;
+    background-color: #000;
+    font-family: "Inter", sans-serif;
+    color: #fff;
+    padding: math-clamp(100) 0;
+    margin-top: math-clamp(120);
+    &__scroll {
+        position: relative;
+        width: 100%;
+        height: math-clamp(100);
+        margin-bottom: math-clamp(30);
     }
-    &__title {
-        color: #fff;
+    &__circle {
+        position: absolute;
+        width: math-clamp(100);
+        height: math-clamp(100);
+        background-color: $secondaryColor;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        right: 0;
+        top: 0;
+        z-index: 20;
+    }
+    &__heading {
         font-size: math-clamp(48);
         font-weight: 700;
+        line-height: math-clamp(59);
+        letter-spacing: 0.02em;
     }
-    &__mail {
-        padding-top: math-clamp(72);
-        padding-bottom: math-clamp(30);
-        font-size: math-clamp(24);
-        a:link, a:visited {
-            color: #fff;
-            font-weight: 300;
-            text-decoration: underline;
+    &__copyright {
+        margin-top: math-clamp(20);
+        font-size: math-clamp(16);
+    }
+    &__map {
+        display: flex;
+        gap: math-clamp(67);
+        li {
+            display: block;
+            span {
+                font-size: math-clamp(12);
+            }
+            a:link, a:visited {
+                position: relative;
+                z-index: 20;
+                font-size: math-clamp(16);
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+        &--title {
+            padding-bottom: math-clamp(12);
+        }
+        &--link {
+            padding-bottom: math-clamp(8);
         }
     }
 }

@@ -1,6 +1,6 @@
 <template>
     <section class="cover-image">
-        <div class="container grid">
+        <div class="grid" :class="contain ? 'container' : ''">
             <div class="cover-image__wrapper col-16" :class="project ? 'cover-image__project' : ''">
                 <img :src="source" :alt="altText">
             </div>
@@ -14,7 +14,8 @@ export default {
     props: {
         source: String,
         altText: String,
-        project: Boolean
+        project: Boolean,
+        contain: Boolean
     }
 }
 </script>
@@ -24,6 +25,11 @@ export default {
     @media (max-width: 768px) {
         margin: math-clamp(60) 0;
     }
+    .container {
+        img {
+            border-radius: math-clamp(10);
+        }
+    }
     &__wrapper {
         margin: math-clamp(160) 0;
         @media (max-width: 768px) {
@@ -32,13 +38,12 @@ export default {
         img {
             width: 100%;
             height: 100%;
-            border-radius: math-clamp(8);
         }
     }
     &__project {
         margin: math-clamp(56) 0;
         img {
-            border-radius: math-clamp(12);
+            // border-radius: math-clamp(12);
         }   
     }
 }
