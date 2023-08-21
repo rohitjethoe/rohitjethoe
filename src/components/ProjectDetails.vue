@@ -4,23 +4,23 @@
             <div class="project-details__title col-12">
                 {{ title }}
             </div>
-            <div class="project-details__description col-12">
+            <div class="project-details__description col-16 xs:col-12">
                 {{ description }} 
             </div>
-            <div class="col-4"></div>
-            <div class="project-details__disciplines col-4">
+            <div class="project-details__breakerBlock col-4"></div>
+            <div class="project-details__disciplines col-8 sm:col-4">
                 <span>Team</span>
                 <ul>
                     <li v-for="item in team">{{ item }}</li>
                 </ul>
             </div>
-            <div class="project-details__disciplines col-4">
+            <div class="project-details__disciplines col-8 sm:col-4">
                 <span>Disciplines</span>
                 <ul>
                     <li v-for="item in disciplines">{{ item }}</li>
                 </ul>
             </div>
-            <div class="project-details__tools col-4">
+            <div class="project-details__tools col-12 sm:col-4">
                 <span>Tools</span>
                 <ul>
                     <li v-for="item in tools">{{ item }}</li>
@@ -60,6 +60,11 @@ export default {
             font-weight: 500;
         }
         line-height: math-clamp(24, 32);
+    }
+    &__breakerBlock {
+        @media (max-width: 768px) {
+            display: none;
+        }
     }
 }
 </style>

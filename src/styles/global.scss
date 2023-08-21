@@ -90,3 +90,7 @@ $breakpoints: (
     @include create-selectors($breakpoint);
   }
 }
+
+body {
+  overflow-x: hidden;
+}
