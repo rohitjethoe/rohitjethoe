@@ -47,7 +47,7 @@
                                     </svg> 
                                 </a>
                             </p>
-                            <span>Developed and styled interactive web apps at Relay/Monostatic, including their websites. Also developed for many wonderful clients such as VirtuFit and Hodl Finance.</span>
+                            <span class="about__details--description">Developed and styled interactive web apps at Relay/Monostatic, including their websites. Also developed for many wonderful clients such as VirtuFit and Hodl Finance.</span>
                         </div>
                     </div>
                     <div class="about__row">
@@ -107,10 +107,17 @@ export default {
 .about {
     font-family: 'Inter', sans-serif;
     margin-top: math-clamp(30);
+    @media (max-width: 768px) {
+        padding-bottom: math-clamp(30);
+    }
     &__heading {
         font-size: math-clamp(48);
         font-weight: 300;
         line-height: math-clamp(60);
+        @media (max-width: 768px) {
+            font-size: math-clamp(24);
+            line-height: math-clamp(32);
+        }
         span {
             color: #686868;
         }
@@ -118,10 +125,17 @@ export default {
     &__column {
         font-weight: 300;
         margin-top: math-clamp(80);
+        @media (max-width: 768px) {
+            margin-top: math-clamp(20);
+        }
         &--title {
             color: $primaryColor;
             font-size: math-clamp(24);
             padding-bottom: math-clamp(30);
+            @media (max-width: 768px) {
+                font-size: math-clamp(20);
+                padding-bottom: math-clamp(16);
+            }
         }
         &--content {
             p {
@@ -140,6 +154,9 @@ export default {
         @media (max-width: 768px) {
             span {
                 display: none;
+            }
+            span.about__details--description {
+                display: block;
             }
         }
     }
@@ -167,10 +184,13 @@ export default {
                 align-items: center;
             }
         }
-        span {
+        &--description {
             color: #686868;
             letter-spacing: 0.02em;
             line-height: math-clamp(20);
+            @media (max-width: 768px) {
+                display: block;
+            }
         }
     }
 }

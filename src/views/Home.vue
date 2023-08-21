@@ -198,7 +198,7 @@ export default {
             }
             @media (max-width: 768px) {
                 width: 100vw;
-                transform: translateX(math-clamp(-16)) translateY(math-clamp(-40));
+                transform: translateX(math-clamp(-16)) translateY(math-clamp(-48));
                 .work__case--image {
                     border-radius: 0px;
                 }

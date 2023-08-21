@@ -107,6 +107,10 @@ export default {
         font-weight: 700;
         line-height: math-clamp(59);
         letter-spacing: 0.02em;
+        @media (max-width: 768px) {
+            font-size: math-clamp(36);
+            line-height: math-clamp(42);
+        }
     }
     &__copyright {
         margin-top: math-clamp(20);
