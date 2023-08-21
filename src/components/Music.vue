@@ -27,6 +27,7 @@ export default {
     &__heading {
         font-size: math-clamp(24, 32);
         padding: math-clamp(20, 40) 0;
+        font-weight: 300;
     }
 }
 </style>

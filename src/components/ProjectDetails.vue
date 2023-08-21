@@ -47,6 +47,7 @@ export default {
 .project-details {
     font-family: 'Inter', sans-serif;
     letter-spacing: 0.02em;
+    font-weight: 300;
     &__title {
         font-size: math-clamp(24, 32);
     }
