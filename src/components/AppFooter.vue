@@ -1,7 +1,7 @@
 <template>
     <footer id="footer" class="footer">
         <div class="container grid">
-            <div class="footer__content col-7">
+            <div class="footer__content col-offset-1 col-15 sm:col-7">
                 <div class="footer__heading">
                     LET’S TALK <br>
                     ABOUT THE NEXT <br>
@@ -11,7 +11,7 @@
                     © {{ new Date().getFullYear() }} · Rohit Jethoe
                 </div>
             </div>
-            <div class="footer__map col-2 col-offset-13">
+            <div class="footer__map col-offset-1 col-15 sm:col-2 sm:col-offset-13">
                 <ul>
                     <li class="footer__map--title">
                         <span>Explore</span>
@@ -38,7 +38,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="footer__scroll col-16">
+            <div class="footer__scroll col-4 col-offset-1 sm:col-16">
                 <a href="#">
                     <div class="footer__circle">
                         <img src="../assets/arrow-2px.svg" alt="">
@@ -58,15 +58,26 @@ export default {
 <style lang="scss" scoped>
 .footer {
     background-color: #000;
+    position: relative;
     font-family: "Inter", sans-serif;
     color: #fff;
     padding-top: math-clamp(100);
     padding-bottom: math-clamp(50);
+    @media (max-width: 768px) {
+        padding-top: math-clamp(80);
+        padding-bottom: math-clamp(30);
+    }
     &__scroll {
         position: relative;
         width: 100%;
         height: math-clamp(100);
         margin-bottom: math-clamp(30);
+        @media (max-width: 768px) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translate(0, math-clamp(-36));
+        }
     }
     &__circle {
         position: absolute;
@@ -80,6 +91,16 @@ export default {
         right: 0;
         top: 0;
         z-index: 20;
+        @media (max-width: 768px) {
+            width: math-clamp(80);
+            height: math-clamp(80);
+            right: math-clamp(48);
+            // left: 50%;
+            // transform: translateX(-50%);
+            img {
+                width: math-clamp(12);
+            }
+        }
     }
     &__heading {
         font-size: math-clamp(48);
@@ -90,10 +111,16 @@ export default {
     &__copyright {
         margin-top: math-clamp(20);
         font-size: math-clamp(16);
+        @media (max-width: 768px) {
+            margin-top: math-clamp(10);
+        }
     }
     &__map {
         display: flex;
         gap: math-clamp(67);
+        @media (max-width: 768px) {
+            padding: math-clamp(30) 0;
+        }
         li {
             display: block;
             span {

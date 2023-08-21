@@ -24,7 +24,7 @@ export default {
     font-family: $primaryFont;
     padding-top: math-clamp(160, 200);
     @media (max-width: 768px) {
-        margin-top: math-clamp(80);
+        padding-top: math-clamp(80);
     }
     &__content {
         font-size: math-clamp(48, 64);

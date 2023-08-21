@@ -5,7 +5,7 @@
                 <span>Capabilities</span><br>
                 And Degrees
             </div>
-            <div class="about__column col-4">
+            <div class="about__column col-14 sm:col-4">
                 <div class="about__column--title">
                     Professional Expertises
                 </div>
@@ -29,14 +29,14 @@
                 </div>
             </div>
 
-            <div class="about__column col-offset-6 col-9">
+            <div class="about__column col-16 sm:col-offset-6 sm:col-9">
                 <div class="about__column--title">
                     Experiences & Degrees
                 </div>
                 <div class="about__column--content">
                     <div class="about__row">
                         <div class="about__date">
-                            May 2023 - Present 
+                            <span>May</span> 2023 - <span>Present</span> 
                         </div>
                         <div class="about__details">
                             <p>
@@ -52,27 +52,27 @@
                     </div>
                     <div class="about__row">
                         <div class="about__date">
-                            Sep 2022 - Present 
+                            <span>Sep</span> 2022 - <span>Present</span> 
                         </div>
                         <div class="about__details">
-                            <p>VWO (Pre-University Education) · Vellesan</p>
+                            <p>VWO <span>(Pre-University Education)</span> · Vellesan</p>
                            
                         </div>
                     </div>
                     <div class="about__row">
                         <div class="about__date">
-                            Sep 2020 - Jun 2022 
+                            <span>Sep</span> 2020 - <span>Jun</span> 2022 
                         </div>
                         <div class="about__details">
-                            <p>HAVO (Higher General Continued Education) · Vellesan</p>
+                            <p>HAVO <span>(Higher General Continued Education)</span> · Vellesan</p>
                         </div>
                     </div>
                     <div class="about__row">
                         <div class="about__date">
-                            Sep 2017 - Jun 2020 
+                            <span>Sep</span> 2017 - <span></span> 2020 
                         </div>
                         <div class="about__details">
-                            <p>MAVO (General Secondary Education)  · Vellesan</p>
+                            <p>MAVO <span>(General Secondary Education)</span>  · Vellesan</p>
                         </div>
                     </div>
                 </div>
@@ -137,14 +137,25 @@ export default {
     &__row {
         display: flex;
         justify-content: space-between;
+        @media (max-width: 768px) {
+            span {
+                display: none;
+            }
+        }
     }
     &__date {
         text-transform: uppercase;
         font-weight: 500;
+        @media (max-width: 768px) {
+            width: 30vw;
+        }
     }
     &__details {
         width: math-clamp(435);
         padding-bottom: math-clamp(12);
+        @media (max-width: 768px) {
+            width: 60vw;
+        }
         p {
             font-weight: 500;
             color: $primaryColor;

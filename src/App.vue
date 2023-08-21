@@ -58,6 +58,9 @@ export default {
   transition: width 0.25s, height 0.25s;
   z-index: 10;
   opacity: 0;
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 main {
