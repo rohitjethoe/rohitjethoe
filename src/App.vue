@@ -1,10 +1,11 @@
 <template>
-  <AppHeader />
+  <span style="color: red">coming soon...</span>
+  <!-- <AppHeader />
   <main>
     <router-view></router-view>
     <div class="cursor"></div>
   </main>
-  <AppFooter />
+  <AppFooter /> -->
 </template>
 
 <script>
