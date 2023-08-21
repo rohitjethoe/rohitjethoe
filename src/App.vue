@@ -65,5 +65,8 @@ export default {
 
 main {
   padding-bottom: math-clamp(120);
+  @media (max-width: 768px) {
+    padding-bottom: math-clamp(60);
+  }
 }
 </style>

@@ -22,6 +22,7 @@ export default {
 
 <style lang="scss" scoped>
 .cover-image {
+    overflow-x: hidden;
     @media (max-width: 768px) {
         padding: math-clamp(12) 0;
     }

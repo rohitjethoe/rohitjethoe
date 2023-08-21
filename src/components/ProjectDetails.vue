@@ -1,7 +1,7 @@
 <template>
     <section class="project-details">
         <div class="container grid">
-            <div class="project-details__title col-12">
+            <div class="project-details__title col-16 sm:col-12">
                 {{ title }}
             </div>
             <div class="project-details__description col-16 xs:col-12">
@@ -54,6 +54,9 @@ export default {
         letter-spacing: 0.02em;
         line-height: math-clamp(24, 32);
         padding: math-clamp(20, 26.666) 0;
+        @media (max-width: 768px) {
+            padding: math-clamp(10) 0;
+        }
     }
     &__disciplines, &__tools {
         span {

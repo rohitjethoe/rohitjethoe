@@ -1,7 +1,7 @@
 <template>
     <footer id="footer" class="footer">
         <div class="container grid">
-            <div class="footer__content col-offset-1 col-15 sm:col-7">
+            <div class="footer__content col-15 sm:col-7">
                 <div class="footer__heading">
                     LET’S TALK <br>
                     ABOUT THE NEXT <br>
@@ -11,7 +11,7 @@
                     © {{ new Date().getFullYear() }} · Rohit Jethoe
                 </div>
             </div>
-            <div class="footer__map col-offset-1 col-15 sm:col-2 sm:col-offset-13">
+            <div class="footer__map col-15 sm:col-2 sm:col-offset-13">
                 <ul>
                     <li class="footer__map--title">
                         <span>Explore</span>
@@ -38,7 +38,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="footer__scroll col-4 col-offset-1 sm:col-16">
+            <div class="footer__scroll col-4 sm:col-16">
                 <a href="#">
                     <div class="footer__circle">
                         <img src="../assets/arrow-2px.svg" alt="">
