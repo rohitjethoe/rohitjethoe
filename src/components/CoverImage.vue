@@ -76,6 +76,7 @@ export default {
         @media (max-width: 768px) {
             margin-top: 0;
             margin-right: 0;
+            transform: translateY(math-clamp(-16));
         }
     }
     &__line {
