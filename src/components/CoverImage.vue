@@ -73,14 +73,10 @@ export default {
         margin-top: math-clamp(30);
         margin-right: math-clamp(30);
         z-index: 20;
-        // &:hover {
-        //     .cover-image__line--top {
-        //         transform: translateY(math-clamp(1)) rotate(-45deg);
-        //     }
-        //     .cover-image__line--bottom {
-        //         transform: translateY(math-clamp(-1)) rotate(45deg);
-        //     }
-        // }
+        @media (max-width: 768px) {
+            margin-top: 0;
+            margin-right: 0;
+        }
     }
     &__line {
         width: math-clamp(20);
