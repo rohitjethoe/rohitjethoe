@@ -8,7 +8,7 @@
                     </a>
                 </div>
                 <div class="header__nav">
-                    <div class="header__burger-icon" @click="navHandler()">
+                    <div class="header__burger-icon" :class="navOpened ? 'header__burger-icon--opened' : ''" @click="navHandler()">
                         <div class="header__bar header__bar--top"></div>
                         <div class="header__bar header__bar--bottom"></div>
                     </div>
@@ -153,11 +153,22 @@ export default {
         &:hover {
             cursor: pointer;
         }
+        &--opened {
+            .header__bar {
+                &--top {
+                    transform: translateY(math-clamp(-3));
+                }
+                &--bottom {
+                    transform: translateY(math-clamp(3));
+                }
+            }
+        }
     }
     &__bar {
         width: 54px;
         height: 1px;
         background-color: $primaryColor;
+        transition: 0.25s all;
         margin: math-clamp(6) 0;
     }
     &__mobile {

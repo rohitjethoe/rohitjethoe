@@ -50,12 +50,12 @@
                         <div class="form__title">
                             Bericht*
                         </div>
-                        <textarea placeholder="Type your message in here...."></textarea>
+                        <textarea v-model="message" placeholder="Type your message in here...."></textarea>
                     </div>
                     <div class="form__details">
-                        <input class="form__details--field form__details--firstname" placeholder="Firstname*" type="text">
-                        <input class="form__details--field form__details--lastname" placeholder="Lastname*" type="text">
-                        <input class="form__details--field form__details--email" placeholder="Email*" type="text">
+                        <input v-model="firstName" class="form__details--field form__details--firstname" placeholder="Firstname*" type="text">
+                        <input v-model="lastName" class="form__details--field form__details--lastname" placeholder="Lastname*" type="text">
+                        <input v-model="email" class="form__details--field form__details--email" placeholder="Email*" type="text">
                     </div>
                 </div>
                 <div class="form__image">
@@ -71,6 +71,10 @@ export default {
     name: "Form",
     data() {
         return {
+            message: '',
+            firstName: '',
+            lastName: '',
+            email: '',
             newYork: {
                 hours: new Date(new Date().toLocaleString('en-US', { timeZone: 'America/New_York' })).getHours(),
                 minutes: new Date(new Date().toLocaleString('en-US', { timeZone: 'America/New_York' })).getMinutes()
@@ -88,6 +92,7 @@ export default {
 .form {
     font-family: 'Inter', sans-serif;
     padding: math-clamp(60) 0;
+    padding-bottom: 0;
     padding-left: math-clamp(126, 126);
     @media (max-width: 768px) {
         padding: math-clamp(0);
