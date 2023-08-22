@@ -20,7 +20,7 @@
                         <a href="/">Work</a>
                     </li>
                     <li class="footer__map--link">
-                        <a href="/about">About</a>
+                        <a href="/contact">Contact</a>
                     </li>
                 </ul>
                 <ul>
@@ -31,7 +31,7 @@
                         <a href="https://linkedin.com/in/rohitjethoe" target="_blank">LinkedIn</a>
                     </li>
                     <li class="footer__map--link">
-                        <a href="https://twitter.com/rohitjethoe" target="_blank">Twitter</a>
+                        <a href="https://github.com/rohitjethoe" target="_blank">GitHub</a>
                     </li>
                     <li class="footer__map--link">
                         <a href="mailto:rohitjethoe@proton.me">Mail</a>
