@@ -3,9 +3,9 @@
         <div class="container">
             <div class="header__wrapper">
                 <div class="header__logo">
-                    <a class="header__logo--link" href="/">
+                    <router-link class="header__logo--link" to="/">
                         Rohit Jethoe
-                    </a>
+                    </router-link>
                 </div>
                 <div class="header__nav">
                     <div class="header__burger-icon" :class="navOpened ? 'header__burger-icon--opened' : ''" @click="navHandler()">
