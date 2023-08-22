@@ -207,6 +207,8 @@ export default {
             padding: math-clamp(9) math-clamp(14);
             margin-right: math-clamp(10);
             margin-bottom: math-clamp(10);
+            border-radius: 0;
+            -webkit-appearance: none;
             @media (max-width: 768px) {
                 margin: 0;
                 margin-right: math-clamp(10);
