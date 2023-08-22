@@ -16,13 +16,13 @@
                         <div class="form__social">
                             <ul>
                                 <li>
-                                    <a href="https://github.com/rohitjethoe">GitHub</a>
+                                    <a href="https://github.com/rohitjethoe" target="_blank">GitHub</a>
                                 </li>
                                 <li>
-                                    <a href="https://linkedin.com/in/rohitjethoe">LinkedIn</a>
+                                    <a href="https://linkedin.com/in/rohitjethoe" target="_blank">LinkedIn</a>
                                 </li>
                                 <li>
-                                    <a href="https://twitter.com/rohitjethoe">Twitter</a>
+                                    <a href="https://twitter.com/rohitjethoe" target="_blank">Twitter</a>
                                 </li>
                             </ul>
                         </div>
