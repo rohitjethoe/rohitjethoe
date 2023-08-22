@@ -55,7 +55,7 @@ export default {
         margin: math-clamp(56) 0;
         @media (max-width: 768px) {
             img {
-                transform: scale(1.3);
+                transform: scale(1.5);
             }
         }
     }
