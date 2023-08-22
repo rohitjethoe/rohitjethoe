@@ -189,6 +189,9 @@ export default {
             font-size: math-clamp(36);
             font-weight: 300;
             resize: none;
+            @supports (-webkit-touch-callout: none) {
+                transform: translateX(math-clamp(-19));
+            }
             &:focus {
                 border: none;
                 outline: none;
