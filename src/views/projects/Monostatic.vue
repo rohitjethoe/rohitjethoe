@@ -1,14 +1,14 @@
 <template>
-    <CoverImage source="/monostatic-mobile.webp" project="true" contain="true"/>
+    <CoverImage source="/monostatic-mobile.webp" project="true" contain="true" return="true"/>
     <ProjectDetails title="Monostatic Website" :team="team" :tools="tools" :disciplines="disciplines" description="Crafted a creative agency's online presence through an interactive website with a user-friendly CMS, showcasing their portfolio and services dynamically." />
     <CoverImage source="/monostatic-website.webp" project="true"/>
     <Music :songs="songs" />
 </template>
 
 <script>
-import CoverImage from '../../components/CoverImage.vue';
-import Music from '../../components/Music.vue';
-import ProjectDetails from '../../components/ProjectDetails.vue';
+import CoverImage from '@/components/CoverImage.vue';
+import Music from '@/components/Music.vue';
+import ProjectDetails from '@/components/ProjectDetails.vue';
 
 export default {
     name: "Monostatic",

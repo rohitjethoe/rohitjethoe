@@ -28,13 +28,13 @@
                         <span>Socials</span>
                     </li>
                     <li class="footer__map--link">
-                        <a href="/">LinkedIn</a>
+                        <a href="https://linkedin.com/in/rohitjethoe" target="_blank">LinkedIn</a>
                     </li>
                     <li class="footer__map--link">
-                        <a href="/about">Twitter</a>
+                        <a href="https://twitter.com/rohitjethoe" target="_blank">Twitter</a>
                     </li>
                     <li class="footer__map--link">
-                        <a href="/about">Mail</a>
+                        <a href="mailto:rohitjethoe@proton.me">Mail</a>
                     </li>
                 </ul>
             </div>
@@ -51,7 +51,23 @@
 
 <script>
 export default {
-    name: "Footer"
+    name: "Footer",
+    mounted() {
+        const links = document.querySelectorAll('a');
+        const cursor = document.querySelector('.cursor');
+
+        links.forEach((link) => {
+            link.addEventListener('mouseover', () => {
+                cursor.style.height = '36px';
+                cursor.style.width = '36px';
+            })
+
+            link.addEventListener('mouseleave', () => {
+                cursor.style.height = '18px';
+                cursor.style.width = '18px';
+            })
+        })
+    }
 }
 </script>
 
@@ -95,8 +111,6 @@ export default {
             width: math-clamp(80);
             height: math-clamp(80);
             right: math-clamp(48);
-            // left: 50%;
-            // transform: translateX(-50%);
             img {
                 width: math-clamp(12);
             }

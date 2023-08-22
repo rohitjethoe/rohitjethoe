@@ -76,9 +76,9 @@
 </template>
 
 <script>
-import About from '../components/About.vue';
-import CoverImage from '../components/CoverImage.vue';
-import Heading from '../components/Heading.vue';
+import About from '@/components/About.vue';
+import CoverImage from '@/components/CoverImage.vue';
+import Heading from '@/components/Heading.vue';
 
 export default {
     name: "Home",
@@ -224,10 +224,10 @@ export default {
             }
             .work__arrow {
                 &--top {
-                    transform: rotate(180deg) translateY(math-clamp(-5, -6.666)) translateX(math-clamp(-1, -1.333));
+                    transform: translateX(math-clamp(9)) translateY(math-clamp(-5));
                 }
                 &--bottom {
-                    transform: translateY(math-clamp(-4, -6.666));
+                    transform: translateX(math-clamp(-8)) rotate(180deg) translateY(math-clamp(-5));
                 }
             }
             .work__case--overlay {
@@ -253,12 +253,13 @@ export default {
     &__arrow {
         transition: 0.25s all;
         &--top {
-            transform: rotate(180deg) translateY(math-clamp(-3, -4)) translateX(math-clamp(-1.5, -2));
+            // transform: rotate(180deg) translateY(math-clamp(-3, -4)) translateX(math-clamp(-1.5, -2));
+            transform: translateX(math-clamp(7)) translateY(math-clamp(-3));
         }
         &--bottom {
-            transform: translateY(math-clamp(-3, -4)) translateX(math-clamp(-1.5, -2));
+            // transform: translateY(math-clamp(-3, -4)) translateX(math-clamp(-1.5, -2));
+            transform: translateX(math-clamp(-6)) rotate(180deg) translateY(math-clamp(-3));
         }
     }
 }
-
 </style>

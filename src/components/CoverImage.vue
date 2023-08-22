@@ -3,6 +3,14 @@
         <div class="grid" :class="contain ? 'container' : ''">
             <div class="cover-image__wrapper col-16" :class="project ? 'cover-image__project' : ''">
                 <img :src="source" :alt="altText">
+                <router-link v-if="return" to="/">
+                    <div class="cover-image__close">
+                        <div class="cover-image__close--wrapper">
+                            <div class="cover-image__line cover-image__line--top"></div>
+                            <div class="cover-image__line cover-image__line--bottom"></div>
+                        </div>
+                    </div>
+                </router-link>
             </div>
         </div>
     </section>
@@ -15,7 +23,8 @@ export default {
         source: String,
         altText: String,
         project: Boolean,
-        contain: Boolean
+        contain: Boolean,
+        return: Boolean
     }
 }
 </script>
@@ -33,6 +42,7 @@ export default {
     }
     &__wrapper {
         margin: math-clamp(160) 0;
+        position: relative;
         @media (max-width: 768px) {
             margin: math-clamp(30) 0 math-clamp(15) 0;
         }
@@ -48,9 +58,43 @@ export default {
                 transform: scale(1.3);
             }
         }
-        img {
-            // border-radius: math-clamp(12);
-        }   
+    }
+    &__close {
+        width: math-clamp(40);
+        height: math-clamp(40);
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-radius: 100%;
+        margin-top: math-clamp(30);
+        margin-right: math-clamp(30);
+        z-index: 20;
+        // &:hover {
+        //     .cover-image__line--top {
+        //         transform: translateY(math-clamp(1)) rotate(-45deg);
+        //     }
+        //     .cover-image__line--bottom {
+        //         transform: translateY(math-clamp(-1)) rotate(45deg);
+        //     }
+        // }
+    }
+    &__line {
+        width: math-clamp(20);
+        height: math-clamp(2);
+        background-color: #000;
+        border-radius: 1px;
+        &--top {
+            transition: 0.25s all;
+            transform: translateY(math-clamp(1)) rotate(45deg);
+        }
+        &--bottom {
+            transition: 0.25s all;
+            transform: translateY(math-clamp(-1)) rotate(-45deg);
+        }
     }
 }
 </style>

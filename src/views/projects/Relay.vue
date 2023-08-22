@@ -1,14 +1,14 @@
 <template>
-    <CoverImage source="/relay-website.webp" project="true" contain="true"/>
+    <CoverImage source="/relay-website.webp" project="true" contain="true" return="true"/>
     <ProjectDetails title="Relay Website" :team="team" :tools="tools" :disciplines="disciplines" description="Crafted a creative agency's online presence through an interactive website with a user-friendly CMS, showcasing their portfolio and services dynamically." />
     <CoverImage source="/relay-mobile.webp" project="true"/>
     <Music :songs="songs"/>
 </template>
 
 <script>
-import CoverImage from '../../components/CoverImage.vue';
-import ProjectDetails from '../../components/ProjectDetails.vue';
-import Music from '../../components/Music.vue';
+import CoverImage from '@/components/CoverImage.vue';
+import ProjectDetails from '@/components/ProjectDetails.vue';
+import Music from '@/components/Music.vue';
 
 export default {
     name: "Relay",

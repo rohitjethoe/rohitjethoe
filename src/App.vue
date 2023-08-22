@@ -1,7 +1,8 @@
 <template>
   <AppHeader />
-  <main>
-    <router-view></router-view>
+  <main :class="this.$route.path === '/contact' ? 'contact' : ''">
+    <router-view>
+    </router-view>
     <div class="cursor"></div>
   </main>
   <AppFooter />
@@ -68,5 +69,9 @@ main {
   @media (max-width: 768px) {
     padding-bottom: math-clamp(60);
   }
+}
+
+.contact {
+  padding-bottom: 0;
 }
 </style>
