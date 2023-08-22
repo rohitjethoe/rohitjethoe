@@ -246,6 +246,7 @@ export default {
         right: 0;
         background-color: #fff;
         border-radius: 100%;
+        pointer-events: none;
         img {
             width: math-clamp(8, 10.666);
         }

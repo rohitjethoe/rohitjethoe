@@ -69,7 +69,7 @@
                     </div>
                     <div class="about__row">
                         <div class="about__date">
-                            <span>Sep</span> 2017 - <span></span> 2020 
+                            <span>Sep</span> 2017 - <span>Jun</span> 2020
                         </div>
                         <div class="about__details">
                             <p>MAVO <span>(General Secondary Education)</span>  · Vellesan</p>

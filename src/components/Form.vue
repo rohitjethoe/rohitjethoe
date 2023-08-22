@@ -56,6 +56,7 @@
                         <input v-model="firstName" class="form__details--field form__details--firstname" placeholder="Firstname*" type="text">
                         <input v-model="lastName" class="form__details--field form__details--lastname" placeholder="Lastname*" type="text">
                         <input v-model="email" class="form__details--field form__details--email" placeholder="Email*" type="text">
+                        <button @click="submitMessage()" class="form__details--submit">Send</button>
                     </div>
                 </div>
                 <div class="form__image">
@@ -67,6 +68,10 @@
 </template>
 
 <script>
+import { db } from '@/helpers/firebase.js';
+import { doc, setDoc } from 'firebase/firestore';
+import { v4 as uuidv4 } from 'uuid';
+
 export default {
     name: "Form",
     data() {
@@ -84,6 +89,47 @@ export default {
                 minutes: new Date(new Date().toLocaleString('en-US', { timeZone: 'Europe/Amsterdam' })).getMinutes()
             }
         }
+    },
+    methods: {
+        submitMessage: async function () {
+            if (this.message.trim() !== "" && this.firstName.trim() !== "" && this.lastName.trim() !== "" && this.email.trim() !== "") {
+                await setDoc(doc(db, "messages", uuidv4()), {
+                    message: this.message,
+                    firstName: this.firstName,
+                    lastName: this.lastName,
+                    email: this.email,
+                    date: new Date()
+                });
+
+                this.message = "";
+                this.firstName = "";
+                this.lastName = "";
+                this.email = "";
+            }
+        }
+    },
+    mounted() {
+        setInterval(() => {
+            this.newYork.hours = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/New_York' })).getHours();
+            this.amsterdam.hours = new Date(new Date().toLocaleString('en-US', { timeZone: 'Europe/Amsterdam' })).getHours();
+            this.newYork.minutes = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/New_York' })).getMinutes();
+            this.amsterdam.minutes = new Date(new Date().toLocaleString('en-US', { timeZone: 'Europe/Amsterdam' })).getMinutes()
+        }, 1000);
+
+        const links = document.querySelectorAll('a, button');
+        const cursor = document.querySelector('.cursor');
+
+        links.forEach((link) => {
+            link.addEventListener('mouseover', () => {
+                cursor.style.height = '36px';
+                cursor.style.width = '36px';
+            })
+
+            link.addEventListener('mouseleave', () => {
+                cursor.style.height = '18px';
+                cursor.style.width = '18px';
+            })
+        })
     }
 }
 </script>
@@ -112,6 +158,8 @@ export default {
     }
     &__mail {
         padding-bottom: math-clamp(30);
+        position: relative;
+        z-index: 20;
         a:link, a:visited {
             color: #686868;
             text-decoration: none;
@@ -235,6 +283,18 @@ export default {
             width: calc(80% + math-clamp(38));
             @media (max-width: 768px) {
                 width: calc(72% + math-clamp(38));
+            }
+        }
+        &--submit {
+            width: 30%;
+            border: none;
+            background-color: #181818;
+            color: #D9D9D9;
+            font-size: math-clamp(18);
+            font-weight: 200;
+            padding: math-clamp(9) math-clamp(14);
+            &:hover {
+                cursor: pointer;
             }
         }
     }
