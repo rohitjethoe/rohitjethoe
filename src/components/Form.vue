@@ -48,7 +48,7 @@
                 <div class="form__fields">
                     <div class="form__message">
                         <div class="form__title">
-                            Bericht*
+                            Message*
                         </div>
                         <textarea v-model="message" placeholder="Type your message in here...."></textarea>
                     </div>

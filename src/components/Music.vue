@@ -23,10 +23,9 @@ export default {
 <style lang="scss">
 .music {
     font-family: 'Inter', sans-serif;
-    padding: math-clamp(60) 0;
+    padding: math-clamp(20, 40) 0;
     &__heading {
         font-size: math-clamp(24, 32);
-        padding: math-clamp(20, 40) 0;
         font-weight: 300;
     }
 }
