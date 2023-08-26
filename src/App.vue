@@ -1,11 +1,14 @@
 <template>
-  <AppHeader />
-  <main :class="this.$route.path === '/contact' ? 'contact' : ''">
-    <router-view>
-    </router-view>
-    <div class="cursor"></div>
-  </main>
-  <AppFooter />
+  <div id="filler"></div>
+  <div id="root">
+    <AppHeader />
+    <main :class="this.$route.path === '/contact' ? 'contact' : ''">
+      <router-view>
+      </router-view>
+      <div class="cursor"></div>
+    </main>
+    <AppFooter />
+  </div>
 </template>
 
 <script>
@@ -41,6 +44,28 @@ export default {
       mouseY = e.pageY;
       mouseX = e.pageX;
     });
+
+    const root = document.querySelector('#root');
+    const filler = document.querySelector('#filler');
+    let scrollY = 0;
+    let currentY = 0;
+
+    const scrollAnimation = () => {
+      filler.style.height = `${root.offsetHeight}px`;
+      let distY = currentY - scrollY;
+
+      scrollY = scrollY + (distY * 0.075);
+
+      root.style.transform = `translateY(-${scrollY}px)`;
+      filler.dataset.scrolled = scrollY;
+      window.requestAnimationFrame(scrollAnimation);
+    }
+
+    scrollAnimation();
+
+    document.addEventListener('scroll', () => {
+      currentY = window.scrollY;
+    });
   },
   components: { AppHeader, AppFooter }
 }
@@ -73,5 +98,17 @@ main {
 
 .contact {
   padding-bottom: 0;
+}
+
+#filler {
+  position: relative;
+}
+
+#root {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
 }
 </style>
