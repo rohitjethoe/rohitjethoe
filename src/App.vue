@@ -51,14 +51,19 @@ export default {
     let currentY = 0;
 
     const scrollAnimation = () => {
-      filler.style.height = `${root.offsetHeight}px`;
-      let distY = currentY - scrollY;
+      if (window.innerWidth > 485) {
+        filler.style.height = `${root.offsetHeight}px`;
+        let distY = currentY - scrollY;
 
-      scrollY = scrollY + (distY * 0.075);
+        scrollY = scrollY + (distY * 0.085);
 
-      root.style.transform = `translateY(-${scrollY}px)`;
-      filler.dataset.scrolled = scrollY;
-      window.requestAnimationFrame(scrollAnimation);
+        root.style.transform = `translateY(-${scrollY}px)`;
+        filler.dataset.scrolled = scrollY;
+        window.requestAnimationFrame(scrollAnimation);
+      } else {
+        root.style.position = 'relative';
+        filler.height = '0px';
+      }
     }
 
     scrollAnimation();
