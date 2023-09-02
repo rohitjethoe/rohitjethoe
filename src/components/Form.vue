@@ -251,7 +251,7 @@ export default {
             border: none;
             background-color: #D9D9D9;
             font-size: math-clamp(18);
-            font-weight: 200;
+            font-weight: 300;
             padding: math-clamp(9) math-clamp(14);
             margin-right: math-clamp(10);
             margin-bottom: math-clamp(10);
@@ -291,7 +291,7 @@ export default {
             background-color: #181818;
             color: #D9D9D9;
             font-size: math-clamp(18);
-            font-weight: 200;
+            font-weight: 300;
             padding: math-clamp(9) math-clamp(14);
             &:hover {
                 cursor: pointer;

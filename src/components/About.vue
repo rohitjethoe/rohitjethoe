@@ -24,7 +24,7 @@
                         Languages & Tools
                     </p>
                     <div class="about__column--list">
-                        JavaScript, Vue, Node.js, React, PHP, SQL, CraftCMS, Twig, Tailwind, Sass, Docker, Vite, Git and Figma.
+                        JavaScript, Vue, Node.js, React, PHP, SQL, CraftCMS, Twig, Tailwind, SCSS, Docker, Vite, Git and Figma.
                     </div>
                 </div>
             </div>

@@ -185,8 +185,7 @@ export default {
                 width: math-clamp(498, 664);
             }
             @media (max-width: 768px) {
-                width: 80%;
-                margin-left: 20%;
+                width: 100%;
                 img {
                     width: 100%;
                 }
@@ -254,11 +253,9 @@ export default {
     &__arrow {
         transition: 0.25s all;
         &--top {
-            // transform: rotate(180deg) translateY(math-clamp(-3, -4)) translateX(math-clamp(-1.5, -2));
             transform: translateX(math-clamp(7)) translateY(math-clamp(-3));
         }
         &--bottom {
-            // transform: translateY(math-clamp(-3, -4)) translateX(math-clamp(-1.5, -2));
             transform: translateX(math-clamp(-6)) rotate(180deg) translateY(math-clamp(-3));
         }
     }

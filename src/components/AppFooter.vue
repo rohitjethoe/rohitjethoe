@@ -75,7 +75,7 @@ export default {
 .footer {
     background-color: #000;
     position: relative;
-    font-family: "Inter", sans-serif;
+    font-family: 'Inter', sans-serif;
     color: #fff;
     padding-top: math-clamp(100);
     padding-bottom: math-clamp(50);

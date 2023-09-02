@@ -181,14 +181,12 @@ export default {
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         background-color: rgba(255, 255, 255, 0.5);
-        // border-radius: 32px;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 24px 48px 8px;
         z-index: 30;
         transition: 0.25s opacity;
         pointer-events: none;
         padding-top: 50%;
         ul {
-            // text-align: center;
             padding-left: math-clamp(16);
             li {
                 padding: math-clamp(12) 0;
