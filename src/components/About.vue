@@ -47,7 +47,7 @@
                                     </svg> 
                                 </a>
                             </p>
-                            <span class="about__details--description">Developed and styled interactive web apps at Relay/Monostatic, including their websites. Also developed for many wonderful clients such as VirtuFit and Hodl Finance.</span>
+                            <span class="about__details--description">Developed and styled interactive web apps at Relay/Monostatic, including their websites. Also developed for many wonderful clients such as VirtuFit, Hodl Finance and Green Future.</span>
                         </div>
                     </div>
                     <div class="about__row">
