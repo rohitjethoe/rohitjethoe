@@ -73,7 +73,7 @@ export default {
         border-radius: 100%;
         margin-top: math-clamp(30);
         margin-right: math-clamp(30);
-        z-index: 20;
+        z-index: 10;
         @media (max-width: 768px) {
             margin-top: 0;
             margin-right: 0;
