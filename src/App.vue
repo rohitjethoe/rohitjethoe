@@ -55,7 +55,7 @@ export default {
         filler.style.height = `${root.offsetHeight}px`;
         let distY = currentY - scrollY;
 
-        scrollY = scrollY + (distY * 0.085);
+        scrollY = scrollY + (distY * 0.048);
 
         root.style.transform = `translateY(-${scrollY}px)`;
         filler.dataset.scrolled = scrollY;

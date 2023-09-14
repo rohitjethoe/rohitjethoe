@@ -34,7 +34,7 @@
                         <a href="https://github.com/rohitjethoe" target="_blank">GitHub</a>
                     </li>
                     <li class="footer__map--link">
-                        <a href="mailto:rohitjethoe@proton.me">Mail</a>
+                        <a href="https://pinterest.com/ikbenrohit" target="_blank">Pinterest</a>
                     </li>
                 </ul>
             </div>

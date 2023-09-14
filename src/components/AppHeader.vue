@@ -2,7 +2,7 @@
     <header id="header" class="header">
         <div class="container">
             <div class="header__wrapper">
-                <div class="header__logo">
+                <div class="header__logo" :class="animation ? 'header__logo--animation' : ''">
                     <router-link class="header__logo--link" to="/">
                         Rohit Jethoe
                     </router-link>
@@ -53,7 +53,8 @@ export default {
     name: "AppHeader",
     data() {
         return {
-            navOpened: false
+            navOpened: false,
+            animation: false,
         }
     },
     methods: {
@@ -68,6 +69,10 @@ export default {
         }
     },
     mounted() {
+        setTimeout(() => {
+            this.animation = true;
+        }, 50)
+
         const links = document.querySelectorAll('li');
         const cursor = document.querySelector('.cursor');
 
@@ -82,6 +87,8 @@ export default {
                 cursor.style.width = '18px';
             })
         })
+
+
     }
 }
 </script>
@@ -107,11 +114,18 @@ export default {
     &__logo {
         position: relative;
         z-index: 40;
+        opacity: 0.05;
+        transform: translateY(math-clamp(30));
+        transition: 500ms all;
         &--link {
             background-color: transparent;
             font-size: math-clamp(18);
             color: $primaryColor;
             text-decoration: none;
+        }
+        &--animation {
+            opacity: 1;
+            transform: translateY(0);
         }
     }
     &__nav {
@@ -120,6 +134,7 @@ export default {
         ul {
             display: flex;
             gap: math-clamp(30);
+            list-style-type: none;
             @media (max-width: 768px) {
                 display: none;
             }
