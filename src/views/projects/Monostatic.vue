@@ -1,7 +1,7 @@
 <template>
-    <CoverImage source="/monostatic-mobile.webp" project="true" contain="true" return="true"/>
+    <CoverImage source="/monostatic-mobile.webp" project="1" contain="1" return="1" relayProject="1"/>
     <ProjectDetails title="Monostatic Website" :team="team" :tools="tools" :disciplines="disciplines" description="Crafted a creative agency's online presence through an interactive website with a user-friendly CMS, showcasing their portfolio and services dynamically." />
-    <CoverImage source="/monostatic-website.webp" project="true"/>
+    <CoverImage source="/monostatic-website.webp" project="1"/>
     <Images :images="images"/>
     <Music :songs="songs" />
     <FeaturedProjects :featuredProjects="featuredProjects" />
@@ -11,8 +11,8 @@
 import CoverImage from '@/components/CoverImage.vue';
 import Music from '@/components/Music.vue';
 import ProjectDetails from '@/components/ProjectDetails.vue';
-import Images from '../../components/Images.vue';
-import FeaturedProjects from '../../components/FeaturedProjects.vue';
+import Images from '@/components/Images.vue';
+import FeaturedProjects from '@/components/FeaturedProjects.vue';
 
 export default {
     name: "Monostatic",
