@@ -134,6 +134,7 @@ export default {
             }
         }
         &:hover {
+            z-index: 20;
             svg {
                 mix-blend-mode: normal;
                 transform: scale(0.92);
