@@ -1,6 +1,8 @@
 <template>
     <Heading content="Crafting Digital Experiences, as a Fullstack Developer." width="9" start="0"/>
-    <CoverImage source="/background.webp" contain="true"/>
+    <div class="cover-image__home">
+        <CoverImage source="/background.webp" contain="true"/>
+    </div>
     <section class="work">
         <div class="container grid">
             <div class="work__heading col-16 sm:col-5 sm:col-offset-10">
@@ -83,8 +85,13 @@ import Heading from '@/components/Heading.vue';
 export default {
     name: "Home",
     mounted() {
+        const coverImage = document.querySelector('.cover-image__home');
         const links = document.querySelectorAll('a');
         const cursor = document.querySelector('.cursor');
+
+        setTimeout(() => {
+            coverImage.classList.add('cover-image__home--visible')
+        }, 200)
 
         links.forEach((link) => {
             link.addEventListener('mouseover', () => {
@@ -258,6 +265,19 @@ export default {
         &--bottom {
             transform: translateX(math-clamp(-6)) rotate(180deg) translateY(math-clamp(-3));
         }
+    }
+}
+
+.cover-image__home {
+    // opacity: 0.05;
+    transform: scale(0.98) translateY(math-clamp(30));
+    transition: 250ms all;
+    @media (max-width: 768px) {
+        transform: scale(1) translateY(0);
+    }
+    &--visible {
+        opacity: 1;
+        transform: scale(1) translateY(0);
     }
 }
 </style>

@@ -114,8 +114,8 @@ export default {
     &__logo {
         position: relative;
         z-index: 40;
-        opacity: 0.05;
-        transform: translateY(math-clamp(30));
+        // opacity: 0.5;
+        // transform: translateY(math-clamp(30));
         transition: 500ms all;
         &--link {
             background-color: transparent;

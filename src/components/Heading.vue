@@ -33,11 +33,12 @@ export default {
 .heading {
     font-family: $primaryFont;
     padding-top: math-clamp(160, 200);
-    opacity: 0.05;
+    // opacity: 0.05;
     transform: translateY(math-clamp(30));
     transition: 500ms all;
     @media (max-width: 768px) {
         padding-top: math-clamp(80);
+        transform: translateY(0)
     }
     &__content {
         font-size: math-clamp(48, 64);
