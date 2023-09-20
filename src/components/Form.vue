@@ -39,6 +39,9 @@
                                 <li>
                                     New York <span>{{ newYork.hours < 10 ? `0${newYork.hours}` : newYork.hours }}:{{ newYork.minutes < 10 ? `0${newYork.minutes}` : newYork.minutes }}</span>
                                 </li>
+                                <li>
+                                    London <span>{{ london.hours < 10 ? `0${london.hours}` : london.hours }}:{{ london.minutes < 10 ? `0${london.minutes}` : london.minutes }}</span>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -87,6 +90,10 @@ export default {
             amsterdam: {
                 hours: new Date(new Date().toLocaleString('en-US', { timeZone: 'Europe/Amsterdam' })).getHours(),
                 minutes: new Date(new Date().toLocaleString('en-US', { timeZone: 'Europe/Amsterdam' })).getMinutes()
+            },
+            london: {
+                hours: new Date(new Date().toLocaleString('en-US', { timeZone: 'Europe/London' })).getHours(),
+                minutes: new Date(new Date().toLocaleString('en-US', { timeZone: 'Europe/London' })).getMinutes()
             }
         }
     },
@@ -114,6 +121,8 @@ export default {
             this.amsterdam.hours = new Date(new Date().toLocaleString('en-US', { timeZone: 'Europe/Amsterdam' })).getHours();
             this.newYork.minutes = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/New_York' })).getMinutes();
             this.amsterdam.minutes = new Date(new Date().toLocaleString('en-US', { timeZone: 'Europe/Amsterdam' })).getMinutes()
+            this.london.minutes = new Date(new Date().toLocaleString('en-US', { timeZone: 'Europe/London' })).getMinutes();
+            this.london.hours = new Date(new Date().toLocaleString('en-US', { timeZone: 'Europe/London' })).getHours();
         }, 1000);
 
         const links = document.querySelectorAll('a, button');
