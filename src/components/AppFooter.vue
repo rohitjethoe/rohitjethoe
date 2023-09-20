@@ -31,7 +31,7 @@
                         <a href="https://linkedin.com/in/rohitjethoe" target="_blank">LinkedIn</a>
                     </li>
                     <li class="footer__map--link">
-                        <a href="https://github.com/rohitjethoe" target="_blank">GitHub</a>
+                        <a href="https://instagram.com/rohitjethoe_" target="_blank">Instagram</a>
                     </li>
                     <li class="footer__map--link">
                         <a href="https://pinterest.com/ikbenrohit" target="_blank">Pinterest</a>
