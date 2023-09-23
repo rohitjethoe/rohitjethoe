@@ -3,7 +3,16 @@
     <ProjectDetails title="Monostatic Website" :team="team" :tools="tools" :disciplines="disciplines" description="Crafted a creative agency's online presence through an interactive website with a user-friendly CMS, showcasing their portfolio and services dynamically." />
     <CoverImage source="/monostatic-website.webp" project="1"/>
     <Images :images="images"/>
-    <Music :songs="songs" />
+    <section class="description">
+        <div class="container grid">
+            <div class="description__heading col-15 col-offset-1">
+                Dynamically displayed
+            </div>
+            <div class="description__content col-15 col-offset-1">
+                Monostatic’s portfolio was crafted with the elegance of CraftCMS, enabling us to<br/>create a dynamic and playful design. I had the opportunity to work on the project<br/>commissioned by my employer, <a href="https://www.buildbyrelay.com" target="_blank">Build By Relay</a>, during my time with the company.<br/>I was responsible for its development. 
+            </div>
+        </div>
+    </section>
     <FeaturedProjects :featuredProjects="featuredProjects" />
 </template>
 
@@ -51,3 +60,17 @@ export default {
     components: { CoverImage, ProjectDetails, Music, Images, FeaturedProjects }
 }
 </script>
+
+<style lang="scss" scoped>
+.description {
+    font-family: 'Inter', sans-serif;
+    line-height: math-clamp(23);
+    a:link, a:visited {
+        color: $primaryColor;
+    }
+    &__heading {
+        font-size: math-clamp(24);
+        font-weight: 300;
+    }
+}
+</style>

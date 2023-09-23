@@ -75,12 +75,14 @@
         </div>
     </section>
     <About />
+    <!-- <Blog /> -->
 </template>
 
 <script>
 import About from '@/components/About.vue';
 import CoverImage from '@/components/CoverImage.vue';
 import Heading from '@/components/Heading.vue';
+import Blog from '@/components/Blog.vue';
 
 export default {
     name: "Home",
@@ -105,7 +107,7 @@ export default {
             })
         })
     },
-    components: { Heading, CoverImage, About }
+    components: { Heading, CoverImage, About, Blog }
 }
 </script>
 
