@@ -37,10 +37,10 @@
                                     Amsterdam <span><span>{{ amsterdam.hours < 10 ? `0${amsterdam.hours}` : amsterdam.hours }}:{{ amsterdam.minutes < 10 ? `0${amsterdam.minutes}` : amsterdam.minutes }}</span></span>
                                 </li>
                                 <li>
-                                    New York <span>{{ newYork.hours < 10 ? `0${newYork.hours}` : newYork.hours }}:{{ newYork.minutes < 10 ? `0${newYork.minutes}` : newYork.minutes }}</span>
+                                    London <span>{{ london.hours < 10 ? `0${london.hours}` : london.hours }}:{{ london.minutes < 10 ? `0${london.minutes}` : london.minutes }}</span>
                                 </li>
                                 <li>
-                                    London <span>{{ london.hours < 10 ? `0${london.hours}` : london.hours }}:{{ london.minutes < 10 ? `0${london.minutes}` : london.minutes }}</span>
+                                    New York <span>{{ newYork.hours < 10 ? `0${newYork.hours}` : newYork.hours }}:{{ newYork.minutes < 10 ? `0${newYork.minutes}` : newYork.minutes }}</span>
                                 </li>
                             </ul>
                         </div>
