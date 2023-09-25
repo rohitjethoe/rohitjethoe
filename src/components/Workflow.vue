@@ -42,7 +42,7 @@ export default {
                 0: {
                     index: 1,
                     heading: "Templating",
-                    title: "Design and plan the mission",
+                    title: "",
                     content: ""
                 },
                 1: {
@@ -54,7 +54,7 @@ export default {
                 2: {
                     index: 3,
                     heading: "Launch",
-                    title: "Ready for ascension",
+                    title: "",
                     content: ""
                 },
                 3: {
@@ -98,6 +98,9 @@ export default {
 .workflow {
     font-family: $primaryFont;
     padding: math-clamp(120) 0;
+    @media (min-width: 768px) {
+        padding-top: 0;
+    }
     @media (max-width: 768px) {
         padding: math-clamp(60) 0;
     }

@@ -106,8 +106,8 @@ export default {
   transition: width 0.25s, height 0.25s;
   z-index: 10;
   opacity: 0;
-  margin-left: math-clamp(30);
-  margin-top: math-clamp(36);
+  margin-left: math-clamp(30, 40);
+  margin-top: math-clamp(30, 40);
   @media (max-width: 768px) {
     display: none;
   }

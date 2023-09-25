@@ -133,10 +133,6 @@ export default {
         }
         &:hover {
             z-index: 20;
-            mix-blend-mode: normal;
-            svg {
-                mix-blend-mode: normal;
-            }
         }
     }
 }
