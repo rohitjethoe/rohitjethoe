@@ -114,7 +114,7 @@ export default {
     &__tag {
         position: absolute;
         padding: math-clamp(24);
-        mix-blend-mode: luminosity;
+        z-index: 20;
         @media (min-width: 768px) {
             top: 0;
             left: 0;
@@ -124,12 +124,15 @@ export default {
             transform: translateY(math-clamp(-8));
         }
         svg {
-            mix-blend-mode: luminosity;
+            // mix-blend-mode: luminosity;
             width: math-clamp(48);
             height: auto;
             object-fit: contain;
             transition: 0.5s all;
             transform: scale(1);
+            path {
+                stroke: #222;
+            }
         }
         &:hover {
             z-index: 20;

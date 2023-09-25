@@ -1,5 +1,5 @@
 <template>
-    <CoverImage source="/relay-website.webp" project="1" contain="1" return="1"/>
+    <CoverImage source="/relay-website.webp" project="1" contain="1" return="1" relayProject="1"/>
     <ProjectDetails title="Relay Website" :team="team" :tools="tools" :disciplines="disciplines" description="Crafted a creative agency's online presence through an interactive website with a user-friendly CMS, showcasing their portfolio and services dynamically." />
     <CoverImage source="/relay-mobile.webp" project="true"/>
     <Images :images="images"/>
