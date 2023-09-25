@@ -30,6 +30,9 @@ export default {
         }
         &--marginTop {
             margin-top: math-clamp(120);
+            @media (max-width: 768px) {
+                margin-top: 0;
+            }
         }
     }
 }

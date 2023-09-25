@@ -22,7 +22,7 @@ export default {
     let mouseX = 0;
     let cursorX = 0;
     let cursorY = 0;
-    let speed = 0.15;
+    let speed = 0.048;
 
     const cursor = document.querySelector('.cursor');
 
@@ -45,6 +45,23 @@ export default {
       mouseX = e.pageX;
     });
 
+    let firefoxAgent = navigator.userAgent.indexOf("Firefox") > -1;
+
+    if (firefoxAgent) {
+      document.addEventListener('DOMMouseScroll', (e) => {
+        cursor.style.opacity = 1;
+        mouseY = e.pageY;
+        mouseX = e.pageX;
+        console.log(e.pageX);
+      });
+    } else {
+      document.addEventListener('mousewheel', (e) => {
+        cursor.style.opacity = 1;
+        mouseY = e.pageY;
+        mouseX = e.pageX;
+        console.log(e.pageX);
+      });
+    }
     const root = document.querySelector('#root');
     const filler = document.querySelector('#filler');
     let scrollY = 0;
@@ -78,7 +95,7 @@ export default {
 
 <style lang="scss">
 .cursor {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: math-clamp(18, 24);
@@ -89,6 +106,8 @@ export default {
   transition: width 0.25s, height 0.25s;
   z-index: 10;
   opacity: 0;
+  margin-left: math-clamp(30);
+  margin-top: math-clamp(36);
   @media (max-width: 768px) {
     display: none;
   }
