@@ -131,7 +131,7 @@ export default {
             transition: 0.5s all;
             transform: scale(1);
             path {
-                stroke: #222;
+                stroke: rgba(0, 0, 0, 0.15);
             }
         }
         &:hover {
