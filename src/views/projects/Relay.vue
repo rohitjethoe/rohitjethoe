@@ -3,6 +3,9 @@
     <ProjectDetails title="Relay Website" :team="team" :tools="tools" :disciplines="disciplines" description="Crafted a creative agency's online presence through an interactive website with a user-friendly CMS, showcasing their portfolio and services dynamically." />
     <CoverImage source="/relay-mobile.webp" project="true"/>
     <Images :images="images"/>
+    <section class="logo">
+        <img src="/relay-motion.gif" alt="">
+    </section>
     <TextWithImage :heading="textWithImage[0].heading" :text="textWithImage[0].text" :image="textWithImage[0].image"/>
     <!-- <Music :songs="songs"/> -->
     <FeaturedProjects :featuredProjects="featuredProjects" />
@@ -59,3 +62,20 @@ export default {
     components: { CoverImage, ProjectDetails, Music, Images, TextWithImage, FeaturedProjects }
 }
 </script>
+
+<style lang="scss" scoped>
+.logo {
+    display: flex;
+    justify-content: center;
+    padding: math-clamp(90) 0;
+    @media (max-width: 768px) {
+        padding: math-clamp(60) 0;
+    }
+    img {
+        width: math-clamp(102);
+        @media (max-width: 768px) {
+            width: 16vw;
+        }
+    }
+}
+</style>
