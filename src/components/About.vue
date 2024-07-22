@@ -52,7 +52,7 @@
                     </div>
                     <div class="about__row">
                         <div class="about__date">
-                            <span>Sep</span> 2022 - <span>Present</span> 
+                            <span>Sep</span> 2022 - <span>Jun 2024</span> 
                         </div>
                         <div class="about__details">
                             <p>VWO <span>(Pre-University Education)</span> · Vellesan</p>
