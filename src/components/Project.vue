@@ -46,6 +46,7 @@ const props = defineProps({
         position: absolute;
         bottom: math-clamp(30, 40);
         left: math-clamp(30, 40);
+        font-size: math-clamp(18, 24);
 
         @media (max-width: $sm) {
             display: none;

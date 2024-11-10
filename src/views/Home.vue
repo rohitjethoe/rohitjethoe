@@ -33,7 +33,7 @@ const projects = [
         service: 'Web Application'
     },
     { 
-        title: 'Huistuindesign.com',
+        title: 'Huis&Tuin',
         type:  'Development',
         service: 'E-commerce'
     },
@@ -63,7 +63,7 @@ const projects = [
           September 2024 - <span>now</span>
         </div>
         <div class="qa-introductory__experience">
-          Full-stack Developer at Monostatic Studio <img src="/assets/monostatic.png" />
+          Full-stack Developer at Monostatic Studio <img class="qa-introductory__icon" src="/assets/monostatic.webp" />
         </div>
         <div class="qa-introductory__timeline">
           March 2023 - August 2024
@@ -87,7 +87,7 @@ const projects = [
 	</section>
 
     <Project projectAsset="/assets/monostatic-cover.webp" projectTitle="Monostatic Studio"/>
-    <Project projectAsset="/assets/huistuindesign-cover.webp" projectTitle="Huistuindesign.nl"/>
+    <Project projectAsset="/assets/huistuindesign-cover.webp" projectTitle="Huis&Tuin"/>
     <Project projectAsset="/assets/virtufit-cover.webp" projectTitle="VirtuFit Service Form"/>
     <Project projectAsset="/assets/greenfuture-cover.webp" projectTitle="Green Future"/>
     <Project projectAsset="/assets/buildbyrelay-cover.webp" projectTitle="Build By Relay"/>
@@ -154,6 +154,12 @@ const projects = [
 	&__major, &__experience {
 		margin-bottom: math-clamp(8, 12);
 	}
+
+    &__icon {
+        width: math-clamp(18, 24);
+        height: math-clamp(18, 24);
+        transform: translateY(math-clamp(2, 2.666));
+    }
 }
 
 .qa-contact {
@@ -204,11 +210,16 @@ const projects = [
     font-family: "Projekt Blackbird";
     
     .qa-container {
-        padding-top: math-clamp(30, 40);
+        padding-top: math-clamp(60, 80);
+        
     }
 
     &__title {
         font-size: math-clamp(39, 52);
+
+        @media (max-width: $xs) {
+            font-size: math-clamp(24, 32);
+        }
     }
 
     &__table {
