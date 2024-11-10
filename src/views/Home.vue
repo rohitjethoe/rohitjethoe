@@ -27,6 +27,11 @@ const projects = [
         type:  'Maintenance',
         service: 'Front-end Development'
     },
+    {
+        title: 'HODL Finance Token',
+        type: 'Maintenance',
+        service: 'Front-end Development'
+    },
     { 
         title: 'VirtuFit',
         type:  'Development',
@@ -47,6 +52,16 @@ const projects = [
         type:  'Development',
         service: 'E-commerce'
     },
+    {
+        title: 'Crosswise Works',
+        type: 'Maintenance',
+        service: 'Front-end Development'
+    },
+    {
+        title: 'Marktlink',
+        type: 'Development',
+        service: 'E-mail Templates'
+    }
 ]
 </script>
 
@@ -88,8 +103,10 @@ const projects = [
 
     <Project projectAsset="/assets/monostatic-cover.webp" projectTitle="Monostatic Studio"/>
     <Project projectAsset="/assets/huistuindesign-cover.webp" projectTitle="Huis&Tuin"/>
+    <Project projectAsset="/assets/vadimriver-cover.webp" projectTitle="Vadim River Portfolio"/>
     <Project projectAsset="/assets/virtufit-cover.webp" projectTitle="VirtuFit Service Form"/>
     <Project projectAsset="/assets/greenfuture-cover.webp" projectTitle="Green Future"/>
+    <Project projectAsset="/assets/highsun-cover.webp" projectTitle="High Sun Glasses"/>
     <Project projectAsset="/assets/buildbyrelay-cover.webp" projectTitle="Build By Relay"/>
 
     <section class="qa-overview">
