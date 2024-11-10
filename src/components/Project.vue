@@ -28,6 +28,10 @@ const props = defineProps({
     font-family: "Projekt Blackbird";
     margin-bottom: math-clamp(30, 40);
 
+    @media (max-width: $sm) {
+        margin-bottom: math-clamp(15, 20);
+    }
+
     &__image {
         position: relative;
         width: 100vw;
