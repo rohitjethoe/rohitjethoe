@@ -40,6 +40,7 @@
 
 <style lang="scss" scoped>
 @use "@/styles/functions" as *;
+@use "@/styles/variables" as *;
 
 .qa-introductory {
 	font-family: "Projekt Blackbird";
@@ -52,7 +53,7 @@
 
 	&__major {
 		span {
-			color: #00AEE3;
+			color: $delftPrimary;
 		}
 	}
 
@@ -80,7 +81,7 @@
     &__email {
         margin-bottom: math-clamp(12, 16);
         #{$c}__link {
-            color: #2F40FF;
+            color: $referrerBlue;
         }
     }
 
@@ -95,7 +96,7 @@
             }
 
             &--active {
-                color: #2F40FF;
+                color: $referrerBlue;
             }
 
             &--unactive {
