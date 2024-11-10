@@ -10,7 +10,7 @@ const props = defineProps({
 <template>
     <section class="qa-project">
         <div class="qa-project__image">
-            <img class="qa-project__asset" :src="projectAsset"/>
+            <img class="qa-project__asset" :src="projectAsset" :alt="projectTitle"/>
             <div class="qa-project__textual">
                 {{ projectTitle }}
             </div>
