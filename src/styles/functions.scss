@@ -1,0 +1,27 @@
+@use "sass:math";
+
+// Common variables
+$browser-context: 16;
+$screenWidth: 1440;
+
+@function rem($pixels, $context: $browser-context) {
+	@if (unitless($pixels)) {
+		$pixels: $pixels * 1px;
+	}
+
+	@if (unitless($context)) {
+		$context: $context * 1px;
+	}
+
+	@return math.div($pixels, $context) * 1rem;
+}
+
+@function math-clamp($min-size, $max-size:"") {
+	$val: math.div($min-size, $screenWidth) * 100 * 1vw;
+
+	@if($max-size == "") {
+		$max-size: calc($min-size * 2);
+	}
+
+	@return clamp(#{rem($min-size)}, #{$val}, #{rem($max-size)});
+}
