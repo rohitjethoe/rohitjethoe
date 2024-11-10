@@ -1,5 +1,53 @@
 <script setup>
 import Project from '@/components/Project.vue';
+
+const projects = [
+    { 
+        title: 'Vadim River',
+        type:  'Development',
+        service: 'Web Application'
+    },
+    { 
+        title: 'Monostatic Studio',
+        type:  'Development',
+        service: 'CMS Implementation'
+    },
+    { 
+        title: 'Build By Relay',
+        type:  'Development',
+        service: 'CMS Implementation'
+    },
+    { 
+        title: 'Green Future',
+        type:  'Development',
+        service: 'CMS Implementation'
+    },
+    { 
+        title: 'HODL',
+        type:  'Maintenance',
+        service: 'Front-end Development'
+    },
+    { 
+        title: 'VirtuFit',
+        type:  'Development',
+        service: 'Web Application'
+    },
+    { 
+        title: 'Huistuindesign.com',
+        type:  'Development',
+        service: 'E-commerce'
+    },
+    { 
+        title: 'Sammy',
+        type:  'Development',
+        service: 'Back-end Development'
+    },
+    { 
+        title: 'High Sun Glasses',
+        type:  'Development',
+        service: 'E-commerce'
+    },
+]
 </script>
 
 <template>
@@ -48,6 +96,23 @@ import Project from '@/components/Project.vue';
         <div class="qa-container">
             <div class="qa-overview__title">
                 All Projects
+            </div>
+            <div class="qa-overview__table">
+                <div v-for="project in projects" class="qa-overview__item">
+                    <div class="qa-overview__company">
+                        {{ project.title }}
+                    </div>
+                    <div class="qa-overview__description">
+                        <span>{{ project.type }}, </span>{{ project.service }}
+                    </div>
+                    <div class="qa-overview__reference">
+                        <a :href="project.reference">
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.71206 9.48528H16.9755M16.9755 9.48528L8.49023 1M16.9755 9.48528L8.49023 17.9706" stroke="black" stroke-width="2"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -131,6 +196,56 @@ import Project from '@/components/Project.vue';
             &--unactive {
                 color: #000;
             }
+        }
+    }
+}
+
+.qa-overview {
+    font-family: "Projekt Blackbird";
+    
+    .qa-container {
+        padding-top: math-clamp(30, 40);
+    }
+
+    &__title {
+        font-size: math-clamp(39, 52);
+    }
+
+    &__table {
+        padding-top: math-clamp(24, 32);
+        border-bottom: math-clamp(2, 2.666) solid #000;
+    }
+
+    &__item {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        font-size: math-clamp(21, 28);
+        padding: math-clamp(20, 26.666) 0;
+        border-top: math-clamp(2, 2.666) solid #000;
+
+        @media (max-width: $sm) {
+            display: flex;
+            justify-content: space-between;
+            font-size: math-clamp(19);
+        }
+    }
+
+    &__description {
+        span {
+            @media (max-width: $sm) {
+                display: none;
+            }
+        }
+    }
+
+    &__company {
+        width: 42vw;
+    }
+
+    &__reference {
+        @media (max-width: $sm) {
+            display: none;
         }
     }
 }
