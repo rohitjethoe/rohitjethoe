@@ -1,3 +1,5 @@
+@use "@/styles/functions" as *;
+
 .qa-container {
     padding: 0px math-clamp(30, 40) math-clamp(30, 40) math-clamp(30, 40);
 }
