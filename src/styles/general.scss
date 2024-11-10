@@ -8,3 +8,10 @@
         padding: 0px math-clamp(15, 20) math-clamp(15, 20) math-clamp(15, 20);
     }
 }
+
+#app {
+    @media (min-width: $xl) {
+        width: 1920px;
+        margin: 0 auto;
+    }
+}
