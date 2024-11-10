@@ -1,5 +1,10 @@
 @use "@/styles/functions" as *;
+@use "@/styles/variables" as *;
 
 .qa-container {
     padding: 0px math-clamp(30, 40) math-clamp(30, 40) math-clamp(30, 40);
+
+    @media (max-width: $sm) {
+        padding: 0px math-clamp(15, 20) math-clamp(15, 20) math-clamp(15, 20);
+    }
 }

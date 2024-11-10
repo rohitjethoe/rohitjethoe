@@ -3,28 +3,38 @@
 
 <template>
     <header class="qa-header">
-        <div class="qa-header__name">
-            <a class="qa-header__url" href="/">
-                Rohit Jethoe
-            </a>
-        </div>
-        <div class="qa-header__cv">
-            <a class="qa-header__download" href="/curriculum_vitae.pdf" target="_blank">download c.v.</a>
+        <div class="qa-container">
+            <div class="qa-header__name">
+                <a class="qa-header__url" href="/">
+                    Rohit Jethoe
+                </a>
+            </div>
+            <div class="qa-header__cv">
+                <a class="qa-header__download" href="/curriculum_vitae.pdf" target="_blank">download c.v.</a>
+            </div>
         </div>
     </header>
 </template>
 
 <style scoped lang="scss">
 @use "@/styles/functions" as *;
+@use "@/styles/variables" as *;
 
 .qa-header {
     $h: &;
     
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     font-family: 'Projekt Blackbird';
-    padding: math-clamp(30, 40);
+
+    .qa-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: math-clamp(30, 40);
+        
+        @media (max-width: $sm) {
+            padding-top: math-clamp(15, 20);
+        }
+    }
 
     &__name {
         #{$h}__url {
@@ -50,6 +60,10 @@
                 background-color: #000;
                 color: #fff;    
             }
+        }
+
+        @media (max-width: $sm) {
+            transform: rotate(3deg);
         }
     }
 }

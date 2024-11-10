@@ -10,3 +10,9 @@ import Footer from '@/components/Footer.vue';
   </main>
   <Footer />
 </template>
+
+<style lang="scss" scoped>
+.qa-main {
+	overflow-x: hidden;
+}
+</style>
