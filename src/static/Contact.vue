@@ -1,4 +1,13 @@
 <script setup>
+import { onMounted } from 'vue';
+
+onMounted(() => {
+  const section = document.querySelector('.qa-contact');
+
+  setTimeout(() => {
+    section.classList.add('qa-contact--landed');
+  }, 100);
+})
 </script>
 
 <template>
@@ -29,6 +38,12 @@
     min-height: calc(100vh - math-clamp(234.75, 313) - math-clamp(84, 112));
     display: flex;
     align-items: end;
+    opacity: 0.1;
+    transition: 200ms ease-in opacity;
+
+    &--landed {
+        opacity: 1;
+    }
 
     @media (max-width: $xs) {
         min-height: calc(100svh - math-clamp(312.75) - math-clamp(61.5))

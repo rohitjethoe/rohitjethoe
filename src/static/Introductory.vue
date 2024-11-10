@@ -1,4 +1,13 @@
 <script setup>
+import { onMounted } from 'vue';
+
+onMounted(() => {
+  const section = document.querySelector('.qa-introductory');
+
+  setTimeout(() => {
+    section.classList.add('qa-introductory--landed');
+  }, 100);
+})
 </script>
 
 <template>
@@ -14,7 +23,7 @@
           September 2024 - <span>now</span>
         </div>
         <div class="qa-introductory__experience">
-          Full-stack Developer at <a href="https://monostatic.com/" target="_blank">Monostatic Studio</a> <img class="qa-introductory__icon" src="/assets/monostatic.webp" />
+          Full-stack Developer at <a href="https://monostatic.com/" target="_blank">Monostatic Studio</a> <img class="qa-introductory__icon" src="/assets/monostatic.webp" alt="monostatic logo"/>
         </div>
         <div class="qa-introductory__timeline">
           March 2023 - August 2024
@@ -30,13 +39,19 @@
 .qa-introductory {
 	font-family: "Projekt Blackbird";
 	font-size: math-clamp(19, 25.333);
+  opacity: 0.1;
+  transition: 200ms ease-in opacity;
 
-    .qa-container {
-        padding-top: math-clamp(7, 9.333);
-        @media (max-width: $sm) {
-            padding-top: math-clamp(36, 48);
-        }
-    }
+  &--landed {
+      opacity: 1;
+  }
+
+  .qa-container {
+      padding-top: math-clamp(7, 9.333);
+      @media (max-width: $sm) {
+          padding-top: math-clamp(36, 48);
+      }
+  }
 
 	&__slug {
 		margin-bottom: math-clamp(30, 40);
