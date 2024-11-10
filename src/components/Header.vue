@@ -38,9 +38,9 @@
         transform: rotate(4deg);
         transition: 250ms ease-in background-color;
         #{$h}__download {
-            padding: 10px 15px;
-            border: 1.5px solid #000;
-            border-radius: 18px;
+            padding: math-clamp(10, 13.333) math-clamp(15, 20);
+            border: math-clamp(1.5, 2) solid #000;
+            border-radius: math-clamp(18, 24);
             color: #000;
             text-decoration: none;
             font-size: math-clamp(17, 22.666);
