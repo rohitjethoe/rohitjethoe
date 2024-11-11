@@ -26,7 +26,7 @@ onMounted(() => {
 <template>
     <section class="qa-project" ref="projectRef">
         <div class="qa-project__image">
-            <img class="qa-project__asset" :src="projectAsset" :alt="projectTitle"/>
+            <img class="qa-project__asset" :src="projectAsset" :alt="projectTitle" loading="lazy"/>
             <div class="qa-project__textual">
                 {{ projectTitle }}
             </div>

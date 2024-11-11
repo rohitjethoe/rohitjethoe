@@ -59,6 +59,7 @@ onMounted(() => {
 	}
 
 	&__major {
+    line-height: math-clamp(25);
 		span {
 			color: $delftPrimary;
 		}
