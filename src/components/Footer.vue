@@ -44,7 +44,7 @@ onMounted(() => {
         }
     }
 
-    (async() => {
+    const getPlayingCalls = async () => {
         let bearer = await getAuthToken();
         playingNowData.value = await getPlayingNow(bearer);
         
@@ -57,7 +57,15 @@ onMounted(() => {
             document.querySelector('.qa-footer__artist').innerHTML = '';
             document.querySelector('.qa-footer__divider').innerHTML = '';
         }
+    }
+
+    (async() => {
+        await getPlayingCalls();
     })();
+    
+    setInterval(async () => {
+        await getPlayingCalls();
+    }, 10000);
 })
 </script>
 
@@ -75,7 +83,7 @@ onMounted(() => {
         </div>
         <div class="qa-container qa-footer__bottom">
             <div class="qa-footer__copyright">
-                © 2024 - Rohit Jethoe
+                © {{ new Date().getFullYear() }} - Rohit Jethoe
             </div>
             <div class="qa-footer__spotify">
                 <a class="qa-footer__link" href="https://open.spotify.com/user/rohitftw" target="_blank">
