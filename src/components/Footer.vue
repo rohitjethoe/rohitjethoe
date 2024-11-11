@@ -78,9 +78,9 @@ onMounted(() => {
                 © 2024 - Rohit Jethoe
             </div>
             <div class="qa-footer__spotify">
-                <a class="qa-footer__link" href="https://spotify.com/rohitjethoe" target="_blank">
+                <a class="qa-footer__link" href="https://open.spotify.com/user/rohitftw" target="_blank">
                     <img class="qa-footer__icon" src="@/assets/spotify.svg" alt="spotify"/>
-                    <span class="qa-footer__song">Cry</span> <span class="qa-footer__divider">-</span> <span class="qa-footer__artist">Cigarettes after Sex</span>
+                    <span class="qa-footer__song">Cry</span> <span class="qa-footer__divider">-</span> <span class="qa-footer__artist">Cigarettes After Sex</span>
                 </a>
             </div>
         </div>
