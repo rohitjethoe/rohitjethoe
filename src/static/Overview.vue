@@ -17,34 +17,34 @@ const projects = [
         type:  'Development',
         service: 'Web Application',
         stack: ['JavaScript', 'Vue', 'Firebase'],
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget lacus leo. Aenean mollis id ex nec accumsan. Fusce velit erat, consequat sit amet risus ac, posuere venenatis ligula. Vivamus et ex maximus, iaculis."
+        description: "Vadim River is a tailored digital portfolio project developed for a photographer friend who needed a seamless platform to showcase and manage his collections of images. Upload, organize, and present work in a visually engaging interface."
     },
     { 
         title: 'Monostatic Studio',
         type:  'Development',
         service: 'CMS Implementation',
-        stack: ['JavaScript'],
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget lacus leo. Aenean mollis id ex nec accumsan. Fusce velit erat, consequat sit amet risus ac, posuere venenatis ligula. Vivamus et ex maximus, iaculis."
+        stack: ['JavaScript', 'Docker'],
+        description: "I joined Monostatic as the first employee of their newly established development studio, Build By Relay, marking the beginning of my journey in web development. One of my initial projects was creating the creative agency’s portfolio."
     },
     { 
         title: 'Build By Relay',
         type:  'Development',
         service: 'CMS Implementation',
-        stack: ['JavaScript'],
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget lacus leo. Aenean mollis id ex nec accumsan. Fusce velit erat, consequat sit amet risus ac, posuere venenatis ligula. Vivamus et ex maximus, iaculis."
+        stack: ['JavaScript', 'Docker'],
+        description: "For my Build By Relay portfolio project, I developed a modern, dynamic website using JavaScript and Craft CMS, with Docker handling containerization. This setup ensured a streamlined, efficient development process and smooth, high-performance deployment."
     },
     { 
         title: 'Green Future',
         type:  'Development',
         service: 'CMS Implementation',
-        stack: ['JavaScript'],
+        stack: ['JavaScript', 'Docker'],
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget lacus leo. Aenean mollis id ex nec accumsan. Fusce velit erat, consequat sit amet risus ac, posuere venenatis ligula. Vivamus et ex maximus, iaculis."
     },
     { 
         title: 'HODL',
         type:  'Maintenance',
         service: 'Front-end Development',
-        stack: ['JavaScript'],
+        stack: ['JavaScript', 'Docker'],
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget lacus leo. Aenean mollis id ex nec accumsan. Fusce velit erat, consequat sit amet risus ac, posuere venenatis ligula. Vivamus et ex maximus, iaculis."
     },
     { 
@@ -79,7 +79,7 @@ const projects = [
         title: 'Crosswise Works',
         type: 'Maintenance',
         service: 'Front-end Development',
-        stack: ['JavaScript'],
+        stack: ['JavaScript', 'Docker'],
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget lacus leo. Aenean mollis id ex nec accumsan. Fusce velit erat, consequat sit amet risus ac, posuere venenatis ligula. Vivamus et ex maximus, iaculis."
     }
 ]
@@ -160,6 +160,7 @@ onMounted(() => {
                             {{ project.description }}
                         </div>
                         <div class="qa-overview__stack">
+                            <img v-if="project.stack.includes('Docker')" class="qa-overview__icon" src="@/assets/docker.svg" alt=".vue"/>
                             <img v-if="project.stack.includes('Vue')" class="qa-overview__icon" src="@/assets/vue.svg" alt=".vue"/>
                             <img v-if="project.stack.includes('Shopify')" class="qa-overview__icon" src="@/assets/shopify.svg" alt=".shopify"/>
                             <img v-if="project.stack.includes('Firebase')" class="qa-overview__icon" src="@/assets/firebase.svg" alt=".firebase"/>
@@ -251,6 +252,10 @@ onMounted(() => {
                     transform: rotate(0);
                 }
             }
+        }
+
+        &:hover {
+            cursor: pointer;
         }
 
         @media (max-width: $sm) {
