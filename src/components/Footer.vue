@@ -5,20 +5,19 @@ const playingNowData = ref(null);
 
 onMounted(() => {
     const clientId = import.meta.env.VITE_CLIENT_ID;
-    const clientSecret = import.meta.env.VITE_CLIENT_SECRET;
     const refresh_token = import.meta.env.VITE_REFRESH_TOKEN;
     const TOKEN_ENDPOINT = import.meta.env.TOKEN_ENDPOINT;
 
     const getAuthToken = async () => {
-        let response = await fetch("https://accounts.spotify.com/api/token", {
+        let response = await fetch(TOKEN_ENDPOINT, {
             method: "POST",
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded",
-                Authorization: "Basic " + btoa("d39a4a65f68849c792163cb28588b585:e133cd0cb2914c26ba642744f9dfdb21")
+                Authorization: "Basic " + btoa(clientId)
             },
             body: new URLSearchParams({
                 grant_type: "refresh_token",
-                refresh_token: "AQDPWIm3XwP8JhRQKDVjXeI44zM2tse16DddlKqD4pJm_bPHeztriPFoA7n1NzI6uqf6-5OWf_T_Tvjb1_P8qsGgVYynbnY64mZLxaoDKqZVfmji5l0jX8gbz4HAdpq8IHU"
+                refresh_token: refresh_token
             }).toString()
         });
 
