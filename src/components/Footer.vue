@@ -79,7 +79,7 @@ onMounted(() => {
             </div>
             <div class="qa-footer__spotify">
                 <a class="qa-footer__link" href="https://spotify.com/rohitjethoe" target="_blank">
-                    <img src="@/assets/spotify.svg" alt="spotify"/>
+                    <img class="qa-footer__icon" src="@/assets/spotify.svg" alt="spotify"/>
                     <span class="qa-footer__song">Cry</span> <span class="qa-footer__divider">-</span> <span class="qa-footer__artist">Cigarettes after Sex</span>
                 </a>
             </div>
@@ -107,14 +107,27 @@ onMounted(() => {
 
     &__bottom {
         padding-top: math-clamp(164, 218.666);
+        @media (max-width: $sm) {
+            padding-top: math-clamp(60);
+            flex-direction: column-reverse;
+            gap: 20px;
+        }
     }
 
     &__slug {
         font-size: math-clamp(64, 85.333);
+
+        @media (max-width: $sm) {
+            font-size: math-clamp(32);
+        }
     }
 
     &__copyright {
         font-size: math-clamp(19, 25.333);
+
+        @media (max-width: $sm) {
+            font-size: math-clamp(14);
+        }
     }
 
     &__link {
@@ -124,6 +137,18 @@ onMounted(() => {
         align-items: center;
         gap: math-clamp(12, 16);
         font-size: math-clamp(19, 25.333);
+
+        @media (max-width: $sm) {
+            font-size: math-clamp(14);
+        }
+    }
+
+    &__icon {
+        transform: translateY(math-clamp(-1, -1.333));
+        @media (max-width: $sm) {
+            width: math-clamp(14);
+            height: auto;
+        }
     }
 }
 </style>
