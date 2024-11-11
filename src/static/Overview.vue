@@ -2,6 +2,7 @@
 import { ref, computed, onMounted } from 'vue';
 
 const current = ref("");
+const overviewRef = ref(null);
 
 const setCurrent = (input) => {
     if (input == current.value) {
@@ -82,12 +83,38 @@ const projects = [
         stack: ['JavaScript', 'Docker'],
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget lacus leo. Aenean mollis id ex nec accumsan. Fusce velit erat, consequat sit amet risus ac, posuere venenatis ligula. Vivamus et ex maximus, iaculis."
     }
-]
+];
+
+const handleScroll = () => {
+    const cards = document.querySelectorAll('.qa-overview__card');
+    const title = document.querySelector('.qa-overview__title');
+    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+    cards.forEach((card) => {
+        const rect = card.getBoundingClientRect();
+
+        if (rect.top < windowHeight * 0.84 && rect.bottom > windowHeight * 0.16) {
+            card.style.opacity = '1';
+        }
+    });
+
+    if (title) {
+        const titleRect = title.getBoundingClientRect();
+        const titleHeight = titleRect.height;
+
+        if (titleRect.top < windowHeight - titleHeight * 0.84 && titleRect.bottom > titleHeight * 0.16) {
+            title.style.opacity = '1';
+        } 
+    }
+};
 
 onMounted(() => {
     const cards = document.querySelectorAll('.qa-overview__card');
     const table = document.querySelector('.qa-overview__table');
     let currentCard = null;
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
 
     cards.forEach((card) => {
         card.addEventListener('mouseover', () => {
@@ -130,7 +157,7 @@ onMounted(() => {
             table.classList.remove('qa-overview__table--fade');
         })
     })
-})
+});
 </script>
 
 <template>
@@ -141,11 +168,11 @@ onMounted(() => {
             </div>
             <div class="qa-overview__table">
                 <div v-for="project in projects" class="qa-overview__item">
-                    <div @click="setCurrent(project.title)" :class="current === project.title ? 'qa-overview__card--active' : ''" class="qa-overview__card">
+                    <div ref="overviewRef" @click="setCurrent(project.title)" :class="current === project.title ? 'qa-overview__card--active' : ''" class="qa-overview__card">
                         <div class="qa-overview__company">
                             {{ project.title }}
                         </div>
-                        <div class="qa-overview__description">
+                        <div class="qa-overview__type">
                             <span>{{ project.type }}, </span>{{ project.service }}
                         </div>
                         <div class="qa-overview__reference" :class="(current.value == project.title) ? 'qa-overview__reference--current' : ''">
@@ -189,6 +216,8 @@ onMounted(() => {
 
     &__title {
         font-size: math-clamp(39, 52);
+        opacity: 0.1;
+        transition: opacity 250ms ease-out;
 
         @media (max-width: $xs) {
             font-size: math-clamp(24, 32);
@@ -208,12 +237,12 @@ onMounted(() => {
     &__reference {
         display: flex;
         gap: math-clamp(16, 24);
-        @media (max-width: $sm) {
-            display: none;
-        }
 
         svg {
             transform: rotate(-90deg);
+            path {
+                transition: 250ms ease-out stroke;
+            }
         }
 
         &--current {
@@ -231,12 +260,18 @@ onMounted(() => {
         padding: math-clamp(20, 26.666) 0;
         border-bottom: math-clamp(2, 2.666) solid #000;
         color: #000;
-        transition: border-bottom 250ms ease-out, color 250ms ease-out;
+        transition: border-bottom 250ms ease-out, color 250ms ease-out, opacity 250ms ease-out;
         position: relative;
+        opacity: 0.1;
 
         &--fade {
             border-bottom: math-clamp(2, 2.666) solid $secondaryGray;
             color: $secondaryGray;
+            #{$o}__reference {
+                svg path {
+                    stroke: $secondaryGray;
+                }
+            }
         }
 
         &--bottom {
@@ -279,15 +314,26 @@ onMounted(() => {
         justify-content: space-between;
         padding: math-clamp(20, 26.666) 0;
         border-bottom: math-clamp(2, 2.666) solid #000;
+
+        @media (max-width: $sm) {
+            flex-direction: column;
+            gap: math-clamp(15);
+        }
+    }
+
+    &__type {
+        width: 42vw;
+        font-size: math-clamp(21, 28);
+        @media (max-width: $sm) {
+            display: none;
+        }
     }
 
     &__description {
         width: 42vw;
         font-size: math-clamp(21, 28);
-        span {
-            @media (max-width: $sm) {
-                display: none;
-            }
+        @media (max-width: $sm) {
+            width: 100%;
         }
     }
 
