@@ -55,6 +55,7 @@ onMounted(() => {
             document.querySelector('.qa-footer__link').href = await playingNowData.value.item.external_urls.spotify;
         } else {
             document.querySelector('.qa-footer__song').innerHTML = 'not playing currently...';
+            document.querySelector('.qa-footer__artist').innerHTML = '';
             document.querySelector('.qa-footer__divider').innerHTML = '';
         }
     })();
@@ -105,6 +106,10 @@ onMounted(() => {
         justify-content: space-between;
     }
 
+    @media (max-width: $sm) {
+        padding-top: math-clamp(20);
+    }
+
     &__bottom {
         padding-top: math-clamp(164, 218.666);
         @media (max-width: $sm) {
@@ -140,6 +145,7 @@ onMounted(() => {
 
         @media (max-width: $sm) {
             font-size: math-clamp(14);
+            gap: math-clamp(6);
         }
     }
 
