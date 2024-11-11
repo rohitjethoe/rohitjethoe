@@ -32,56 +32,56 @@ const projects = [
         type:  'Development',
         service: 'CMS Implementation',
         stack: ['JavaScript', 'Docker'],
-        description: "For my Build By Relay portfolio project, I developed a modern, dynamic website using JavaScript and Craft CMS, with Docker handling containerization. This setup ensured a streamlined, efficient development process and smooth, high-performance deployment."
+        description: "For my Build By Relay portfolio project, I built an CMS implementation website using JavaScript and Craft CMS, with Docker handling containerization. This setup ensured a streamlined, efficient development process and smooth, high-performance deployment."
     },
     { 
         title: 'Green Future',
         type:  'Development',
         service: 'CMS Implementation',
         stack: ['JavaScript', 'Docker'],
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget lacus leo. Aenean mollis id ex nec accumsan. Fusce velit erat, consequat sit amet risus ac, posuere venenatis ligula. Vivamus et ex maximus, iaculis."
+        description: "Green Future was a CMS implementation project for a company dedicated to making the world greener through the transformation of waste management."
     },
     { 
         title: 'HODL',
         type:  'Maintenance',
         service: 'Front-end Development',
         stack: ['JavaScript', 'Docker'],
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget lacus leo. Aenean mollis id ex nec accumsan. Fusce velit erat, consequat sit amet risus ac, posuere venenatis ligula. Vivamus et ex maximus, iaculis."
+        description: "A Rotterdam-based portfolio manager leveraging cryptocurrency to generate profits. I handled maintenance by adding a new header menu and implementing graphs to display fund data using JavaScript."
     },
     { 
         title: 'VirtuFit',
         type:  'Development',
         service: 'Web Application',
         stack: ['JavaScript', 'Vue'],
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget lacus leo. Aenean mollis id ex nec accumsan. Fusce velit erat, consequat sit amet risus ac, posuere venenatis ligula. Vivamus et ex maximus, iaculis."
+        description: "VirtuFit combines sports with technology and engineering innovations. I developed the dynamic service form, which was later integrated as a Vue-to-WordPress plugin."
     },
     { 
         title: 'Huis&Tuin',
         type:  'Development',
         service: 'E-commerce',
         stack: ['JavaScript', 'Shopify'],
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget lacus leo. Aenean mollis id ex nec accumsan. Fusce velit erat, consequat sit amet risus ac, posuere venenatis ligula. Vivamus et ex maximus, iaculis."
+        description: "Huis&Tuin is an e-commerce store powered by Shopify, specializing in furniture for the home and garden. It was a friend's project. I designed the brand identity, developed the Shopify template, created some social branding and actively maintain the webshop."
     },
     { 
         title: 'Sammy',
         type:  'Development',
         service: 'Back-end Development',
         stack: ['JavaScript'],
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget lacus leo. Aenean mollis id ex nec accumsan. Fusce velit erat, consequat sit amet risus ac, posuere venenatis ligula. Vivamus et ex maximus, iaculis."
+        description: "A back-end development project where I focused on generating keys and certificates required for implementing Apple Wallet passes."
     },
     { 
         title: 'High Sun Glasses',
         type:  'Development',
         service: 'E-commerce',
         stack: ['JavaScript', 'Vue'],
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget lacus leo. Aenean mollis id ex nec accumsan. Fusce velit erat, consequat sit amet risus ac, posuere venenatis ligula. Vivamus et ex maximus, iaculis."
+        description: "High Sun Glasses is a friend's single-product store, where I created the brand identity, developed an e-commerce solution using Vue.js and Klarna, and actively manage its social media and webshop."
     },
     {
         title: 'Crosswise Works',
         type: 'Maintenance',
         service: 'Front-end Development',
         stack: ['JavaScript', 'Docker'],
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget lacus leo. Aenean mollis id ex nec accumsan. Fusce velit erat, consequat sit amet risus ac, posuere venenatis ligula. Vivamus et ex maximus, iaculis."
+        description: "Crosswise Works focuses on engineering social change through various projects in regions such as Sudan and Ethiopia. I maintained the site by fixing front-end bugs and improving its accessibility."
     }
 ];
 
@@ -334,6 +334,8 @@ onMounted(() => {
         font-size: math-clamp(21, 28);
         @media (max-width: $sm) {
             width: 100%;
+            font-size: math-clamp(17);
+            line-height: math-clamp(23);
         }
     }
 
@@ -344,12 +346,22 @@ onMounted(() => {
     &__stack {
         display: flex;
         gap: math-clamp(16, 24);
-        align-items: baseline;
+        align-items: end;
+        justify-content: start;
+
+        @media (max-width: $sm) {
+            gap: math-clamp(12);
+            flex-direction: row-reverse;
+        }
     }
 
     &__icon {
         width: math-clamp(24, 32);
         height: auto;
+
+        @media (max-width: $sm) {
+            width: math-clamp(20);
+        }
     }
 }
 </style>
