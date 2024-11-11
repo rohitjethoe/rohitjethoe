@@ -5,6 +5,7 @@ const playingNowData = ref(null);
 
 onMounted(() => {
     const clientId = import.meta.env.VITE_CLIENT_ID;
+    const clientSecret = import.meta.env.VITE_CLIENT_SECRET;
     const refresh_token = import.meta.env.VITE_REFRESH_TOKEN;
     const TOKEN_ENDPOINT = import.meta.env.TOKEN_ENDPOINT;
 
@@ -13,7 +14,7 @@ onMounted(() => {
             method: "POST",
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded",
-                Authorization: "Basic " + btoa(clientId)
+                Authorization: "Basic " + btoa(`${clientId}:${clientSecret}`)
             },
             body: new URLSearchParams({
                 grant_type: "refresh_token",
@@ -26,18 +27,16 @@ onMounted(() => {
     }
 
     const getPlayingNow = async (bearer) => {
+        let response = await fetch("https://api.spotify.com/v1/me/player/currently-playing", {
+            headers: {
+                Accept: "application/json",
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${bearer}`
+            }
+        });
+
         try {
-            let response = await fetch("https://api.spotify.com/v1/me/player/currently-playing", {
-                headers: {
-                    Accept: "application/json",
-                    "Content-Type": "application/json",
-                    Authorization: `Bearer ${bearer}`
-                }
-            });
-
             const result = await response.json();
-            console.log(result);
-
             return result;
         } catch(err) {
             return null;
