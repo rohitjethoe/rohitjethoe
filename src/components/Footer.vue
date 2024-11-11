@@ -78,7 +78,20 @@ onMounted(() => {
                 BIG THING.
             </div>
             <div class="qa-footer__socials">
-
+                <div class="qa-footer__heading">
+                    Socials
+                </div>
+                <ul class="qa-footer__list">
+                    <li class="qa-footer__item">
+                        <a href="https://github.com/rohitjethoe" target="_blank">Github</a>
+                    </li>
+                    <li class="qa-footer__item">
+                        <a href="https://linkedin.com/in/rohitjethoe" target="_blank">LinkedIn</a>
+                    </li>
+                    <li class="qa-footer__item">
+                        <a href="mailto:rohitjethoe@proton.me" target="_blank">E-mail</a>
+                    </li>
+                </ul>
             </div>
         </div>
         <div class="qa-container qa-footer__bottom">
@@ -131,6 +144,34 @@ onMounted(() => {
 
         @media (max-width: $sm) {
             font-size: math-clamp(32);
+        }
+    }
+
+    &__heading {
+        padding-bottom: math-clamp(42, 56);
+        font-size: math-clamp(16, 21.333);
+        text-align: right;
+
+        @media (max-width: $sm) {
+            padding-bottom: math-clamp(24);
+            font-size: math-clamp(14);
+        }
+    }
+
+    &__item {
+        padding: math-clamp(6, 8) 0;
+        text-align: right;
+        @media (max-width: $sm) {
+            padding: math-clamp(4) 0;
+        }
+        a:link, a:visited {
+            color: #fff;
+            font-size: math-clamp(19, 25.333);
+            text-decoration: none;
+
+            @media (max-width: $sm) {
+                font-size: math-clamp(17);
+            }
         }
     }
 
