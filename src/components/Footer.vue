@@ -50,6 +50,7 @@ onMounted(() => {
         if (playingNowData.value !== null) {
             document.querySelector('.qa-footer__song').innerHTML = await playingNowData.value.item.name;
             document.querySelector('.qa-footer__artist').innerHTML = await playingNowData.value.item.artists[0].name;
+            document.querySelector('.qa-footer__divider').innerHTML = '-';
             document.querySelector('.qa-footer__link').href = await playingNowData.value.item.external_urls.spotify;
         } else {
             document.querySelector('.qa-footer__song').innerHTML = 'not playing currently...';
