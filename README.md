@@ -1,4 +1,4 @@
-studying computer sciences @ delft university of technology <br />
+studying computer sciences and engineering @ tudelft <br />
 mostly using `.java`, `.js` and sometimes like using `ipynb`.
 
 ❤️‍🔥❤️‍🔥❤️‍🔥
