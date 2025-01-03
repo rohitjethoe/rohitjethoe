@@ -25,28 +25,28 @@ const projects = [
         type:  'Development',
         service: 'CMS Implementation',
         stack: ['JavaScript', 'Docker'],
-        description: "For my Build By Relay portfolio project, I built an CMS implementation website using JavaScript and Craft CMS, with Docker handling containerization. This setup ensured a streamlined, efficient development process and smooth, high-performance deployment."
+        description: "A CMS Implementation built for the daughter company of Monostatic studio."
     },
     { 
         title: 'Huis&Tuin',
         type:  'Development',
         service: 'E-commerce',
         stack: ['JavaScript', 'Shopify'],
-        description: "Huis&Tuin is an e-commerce store powered by Shopify, specializing in furniture for the home and garden. It was a friend's project. I designed the brand identity, developed the Shopify template, created some social branding and actively maintain the webshop."
+        description: "E-commerce Template development, maintenance and design for a home & garden furniture store."
     },
     { 
         title: 'Green Future',
         type:  'Development',
         service: 'CMS Implementation',
         stack: ['JavaScript', 'Docker'],
-        description: "Green Future was a CMS implementation project for a company dedicated to making the world greener through the transformation of waste management."
+        description: "A CMS Implementation built for a company dedicated to making the world greener through the transformation of waste management."
     },
     { 
         title: 'HODL',
         type:  'Maintenance',
         service: 'Front-end Development',
         stack: ['JavaScript', 'Docker'],
-        description: "A Rotterdam-based portfolio manager leveraging cryptocurrency to generate profits. I handled maintenance by adding a new header menu and implementing graphs to display fund data using JavaScript."
+        description: "Maintenance by adding a new header menu and implementing graphs to display fund data using JavaScript."
     },
     { 
         title: 'VirtuFit',
