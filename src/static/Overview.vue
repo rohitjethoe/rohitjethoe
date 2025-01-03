@@ -14,18 +14,11 @@ const setCurrent = (input) => {
 
 const projects = [
     { 
-        title: 'Vadim River',
-        type:  'Development',
-        service: 'Web Application',
-        stack: ['JavaScript', 'Vue', 'Firebase'],
-        description: "Vadim River is a tailored digital portfolio project developed for a photographer friend who needed a seamless platform to showcase and manage his collections of images. Upload, organize, and present work in a visually engaging interface."
-    },
-    { 
         title: 'Monostatic Studio',
         type:  'Development',
         service: 'CMS Implementation',
         stack: ['JavaScript', 'Docker'],
-        description: "I joined Monostatic as the first employee of their newly established development studio, Build By Relay, marking the beginning of my journey in web development. One of my initial projects was creating the creative agency’s portfolio."
+        description: "A CMS Implementation built for visually appealing showcases of clients like Daily Paper, Studiewinkel and HODL."
     },
     { 
         title: 'Build By Relay',
@@ -33,6 +26,13 @@ const projects = [
         service: 'CMS Implementation',
         stack: ['JavaScript', 'Docker'],
         description: "For my Build By Relay portfolio project, I built an CMS implementation website using JavaScript and Craft CMS, with Docker handling containerization. This setup ensured a streamlined, efficient development process and smooth, high-performance deployment."
+    },
+    { 
+        title: 'Huis&Tuin',
+        type:  'Development',
+        service: 'E-commerce',
+        stack: ['JavaScript', 'Shopify'],
+        description: "Huis&Tuin is an e-commerce store powered by Shopify, specializing in furniture for the home and garden. It was a friend's project. I designed the brand identity, developed the Shopify template, created some social branding and actively maintain the webshop."
     },
     { 
         title: 'Green Future',
@@ -56,13 +56,6 @@ const projects = [
         description: "VirtuFit combines sports with technology and engineering innovations. I developed the dynamic service form, which was later integrated as a Vue-to-WordPress plugin."
     },
     { 
-        title: 'Huis&Tuin',
-        type:  'Development',
-        service: 'E-commerce',
-        stack: ['JavaScript', 'Shopify'],
-        description: "Huis&Tuin is an e-commerce store powered by Shopify, specializing in furniture for the home and garden. It was a friend's project. I designed the brand identity, developed the Shopify template, created some social branding and actively maintain the webshop."
-    },
-    { 
         title: 'Sammy',
         type:  'Development',
         service: 'Back-end Development',
@@ -82,7 +75,14 @@ const projects = [
         service: 'Front-end Development',
         stack: ['JavaScript', 'Docker'],
         description: "Crosswise Works focuses on engineering social change through various projects in regions such as Sudan and Ethiopia. I maintained the site by fixing front-end bugs and improving its accessibility."
-    }
+    },
+    { 
+        title: 'Vadim River',
+        type:  'Development',
+        service: 'Web Application',
+        stack: ['JavaScript', 'Vue', 'Firebase'],
+        description: "Vadim River is a tailored digital portfolio project developed for a photographer friend who needed a seamless platform to showcase and manage his collections of images. Upload, organize, and present work in a visually engaging interface."
+    },
 ];
 
 const handleScroll = () => {
