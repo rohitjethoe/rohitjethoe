@@ -53,7 +53,7 @@ const projects = [
         type:  'Development',
         service: 'Web Application',
         stack: ['JavaScript', 'Vue'],
-        description: "VirtuFit combines sports with technology and engineering innovations. I developed the dynamic service form, which was later integrated as a Vue-to-WordPress plugin."
+        description: "Developed a service form in Vue.js as a Single Page Application, which was later integrated as a Wordpress plugin through channeling the hosted Vue app."
     },
     { 
         title: 'Sammy',
@@ -67,21 +67,21 @@ const projects = [
         type:  'Development',
         service: 'E-commerce',
         stack: ['JavaScript', 'Vue'],
-        description: "High Sun Glasses is a friend's single-product store, where I created the brand identity, developed an e-commerce solution using Vue.js and Klarna, and actively manage its social media and webshop."
+        description: "High Sun Glasses is a friend's single-product store, where I developed an e-commerce solution using Vue.js and Stripe API."
     },
     {
         title: 'Crosswise Works',
         type: 'Maintenance',
         service: 'Front-end Development',
         stack: ['JavaScript', 'Docker'],
-        description: "Crosswise Works focuses on engineering social change through various projects in regions such as Sudan and Ethiopia. I maintained the site by fixing front-end bugs and improving its accessibility."
+        description: "Maintained a CMS Implementation by fixing front-end bugs and improving its accessibility."
     },
     { 
         title: 'Vadim River',
         type:  'Development',
         service: 'Web Application',
         stack: ['JavaScript', 'Vue', 'Firebase'],
-        description: "Vadim River is a tailored digital portfolio project developed for a photographer friend who needed a seamless platform to showcase and manage his collections of images. Upload, organize, and present work in a visually engaging interface."
+        description: "Developed a Vue and Firebase portfolio website for photography."
     },
 ];
 
