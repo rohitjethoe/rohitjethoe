@@ -14,53 +14,46 @@ const setCurrent = (input) => {
 
 const projects = [
     { 
-        title: 'Vadim River',
-        type:  'Development',
-        service: 'Web Application',
-        stack: ['JavaScript', 'Vue', 'Firebase'],
-        description: "Vadim River is a tailored digital portfolio project developed for a photographer friend who needed a seamless platform to showcase and manage his collections of images. Upload, organize, and present work in a visually engaging interface."
-    },
-    { 
         title: 'Monostatic Studio',
         type:  'Development',
         service: 'CMS Implementation',
         stack: ['JavaScript', 'Docker'],
-        description: "I joined Monostatic as the first employee of their newly established development studio, Build By Relay, marking the beginning of my journey in web development. One of my initial projects was creating the creative agency’s portfolio."
+        description: "A CMS Implementation built for visually appealing showcases of clients like Daily Paper, Studiewinkel and HODL."
     },
     { 
         title: 'Build By Relay',
         type:  'Development',
         service: 'CMS Implementation',
         stack: ['JavaScript', 'Docker'],
-        description: "For my Build By Relay portfolio project, I built an CMS implementation website using JavaScript and Craft CMS, with Docker handling containerization. This setup ensured a streamlined, efficient development process and smooth, high-performance deployment."
-    },
-    { 
-        title: 'Green Future',
-        type:  'Development',
-        service: 'CMS Implementation',
-        stack: ['JavaScript', 'Docker'],
-        description: "Green Future was a CMS implementation project for a company dedicated to making the world greener through the transformation of waste management."
-    },
-    { 
-        title: 'HODL',
-        type:  'Maintenance',
-        service: 'Front-end Development',
-        stack: ['JavaScript', 'Docker'],
-        description: "A Rotterdam-based portfolio manager leveraging cryptocurrency to generate profits. I handled maintenance by adding a new header menu and implementing graphs to display fund data using JavaScript."
-    },
-    { 
-        title: 'VirtuFit',
-        type:  'Development',
-        service: 'Web Application',
-        stack: ['JavaScript', 'Vue'],
-        description: "VirtuFit combines sports with technology and engineering innovations. I developed the dynamic service form, which was later integrated as a Vue-to-WordPress plugin."
+        description: "A CMS Implementation built for the daughter company of Monostatic studio."
     },
     { 
         title: 'Huis&Tuin',
         type:  'Development',
         service: 'E-commerce',
         stack: ['JavaScript', 'Shopify'],
-        description: "Huis&Tuin is an e-commerce store powered by Shopify, specializing in furniture for the home and garden. It was a friend's project. I designed the brand identity, developed the Shopify template, created some social branding and actively maintain the webshop."
+        description: "E-commerce Template development, maintenance and design for a home & garden furniture store."
+    },
+    { 
+        title: 'Green Future',
+        type:  'Development',
+        service: 'CMS Implementation',
+        stack: ['JavaScript', 'Docker'],
+        description: "A CMS Implementation built for a company dedicated to making the world greener through the transformation of waste management."
+    },
+    { 
+        title: 'HODL',
+        type:  'Maintenance',
+        service: 'Front-end Development',
+        stack: ['JavaScript', 'Docker'],
+        description: "Maintenance by adding a new header menu and implementing graphs to display fund data using JavaScript."
+    },
+    { 
+        title: 'VirtuFit',
+        type:  'Development',
+        service: 'Web Application',
+        stack: ['JavaScript', 'Vue'],
+        description: "Developed a service form in Vue.js as a Single Page Application, which was later integrated as a Wordpress plugin through channeling the hosted Vue app."
     },
     { 
         title: 'Sammy',
@@ -74,15 +67,22 @@ const projects = [
         type:  'Development',
         service: 'E-commerce',
         stack: ['JavaScript', 'Vue'],
-        description: "High Sun Glasses is a friend's single-product store, where I created the brand identity, developed an e-commerce solution using Vue.js and Klarna, and actively manage its social media and webshop."
+        description: "High Sun Glasses is a friend's single-product store, where I developed an e-commerce solution using Vue.js and Stripe API."
     },
     {
         title: 'Crosswise Works',
         type: 'Maintenance',
         service: 'Front-end Development',
         stack: ['JavaScript', 'Docker'],
-        description: "Crosswise Works focuses on engineering social change through various projects in regions such as Sudan and Ethiopia. I maintained the site by fixing front-end bugs and improving its accessibility."
-    }
+        description: "Maintained a CMS Implementation by fixing front-end bugs and improving its accessibility."
+    },
+    { 
+        title: 'Vadim River',
+        type:  'Development',
+        service: 'Web Application',
+        stack: ['JavaScript', 'Vue', 'Firebase'],
+        description: "Developed a Vue and Firebase portfolio website for photography."
+    },
 ];
 
 const handleScroll = () => {
