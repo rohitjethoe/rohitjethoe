@@ -8,9 +8,9 @@ import Overview from '@/static/Overview.vue';
 <template>
     <Introductory />
     <Contact />
-    <Project projectAsset="/assets/monostatic-cover.webp" projectTitle="Monostatic Studio" projectColor="#e9e9e9" />
-    <Project projectAsset="/assets/huistuindesign-cover.webp" projectTitle="Huis&Tuin" projectColor="#ebe3d6"/>
-    <Project projectAsset="/assets/vadimriver-cover.webp" projectTitle="Vadim River Portfolio" projectColor="#a89f7e"/>
+    <Project projectAsset="/assets/monostatic-cover.webp" projectTitle="Monostatic Studio" projectColor="#ebfd55" />
+    <Project projectAsset="/assets/huistuindesign-cover.webp" projectTitle="Huis&Tuin" projectColor="#efe8db"/>
+    <Project projectAsset="/assets/vadimriver-cover.webp" projectTitle="Vadim River Portfolio" projectColor="#fafafa"/>
     <Project projectAsset="/assets/virtufit-cover.webp" projectTitle="VirtuFit Service Form" projectColor="#c0d68f"/>
     <Project projectAsset="/assets/highsun-cover.webp" projectTitle="High Sun Glasses" projectColor="#e8eae7"/>
     <Project projectAsset="/assets/greenfuture-cover.webp" projectTitle="Green Future" projectColor="#36422d"/>
