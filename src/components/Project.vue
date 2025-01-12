@@ -4,48 +4,35 @@ import { defineProps, onMounted, ref } from 'vue';
 const props = defineProps({
     projectTitle: String,
     projectAsset: String,
-    projectColor: String,
-});
+    projectColor: String
+})
 
 const projectRef = ref(null);
 
-import { useIntersectionObserver } from '@vueuse/core';
-
 onMounted(() => {
-    useIntersectionObserver(
-        projectRef,
-        ([{ isIntersecting }]) => {
-            if (isIntersecting) {
-                projectRef.value.style.opacity = 1;
-            } else {
-                projectRef.value.style.opacity = 0;
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                projectRef.value.style.opacity = "0";
             }
-        },
-        {
-            threshold: 0.1,
-        }
-    );
+        });
+    }, { threshold: 0.8 });
+
+    if (projectRef.value) {
+        observer.observe(projectRef.value);
+    }
 });
 </script>
 
 <template>
     <section class="qa-project">
         <div class="qa-project__image">
-            <img 
-                class="qa-project__asset" 
-                :src="projectAsset" 
-                :alt="projectTitle" 
-                loading="lazy" 
-            />
+            <img class="qa-project__asset" :src="projectAsset" :alt="projectTitle" loading="lazy"/>
             <div class="qa-project__textual">
                 {{ projectTitle }}
             </div>
         </div>
-        <div 
-            class="qa-project__overlay" 
-            :style="`background-color: ${projectColor};`" 
-            ref="projectRef"
-        ></div>
+        <div class="qa-project__overlay" :style="`background-color: ${projectColor};`" ref="projectRef"></div>
     </section>
 </template>
 
@@ -54,10 +41,13 @@ onMounted(() => {
 @use "@/styles/variables" as *;
 
 .qa-project {
+    $p: &;
+
     position: relative;
     font-family: "Projekt Blackbird";
     margin-bottom: math-clamp(30, 40);
-    transition: opacity 250ms ease-in;
+    // opacity: 0.1;
+    transition: 250ms ease-in opacity;
 
     @media (max-width: $sm) {
         margin-bottom: math-clamp(15, 20);
@@ -90,8 +80,7 @@ onMounted(() => {
         left: 0;
         height: 100%;
         width: 100%;
-        transition: opacity 500ms ease-out;
-        opacity: 0; 
+        transition: 500ms ease-out opacity;
     }
 }
 </style>
