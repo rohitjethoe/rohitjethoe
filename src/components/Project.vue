@@ -8,6 +8,24 @@ const props = defineProps({
 });
 
 const projectRef = ref(null);
+
+import { useIntersectionObserver } from '@vueuse/core';
+
+onMounted(() => {
+    useIntersectionObserver(
+        projectRef,
+        ([{ isIntersecting }]) => {
+            if (isIntersecting) {
+                projectRef.value.style.opacity = 1;
+            } else {
+                projectRef.value.style.opacity = 0;
+            }
+        },
+        {
+            threshold: 0.1,
+        }
+    );
+});
 </script>
 
 <template>
