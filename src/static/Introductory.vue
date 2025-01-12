@@ -39,12 +39,12 @@ onMounted(() => {
 .qa-introductory {
 	font-family: "Projekt Blackbird";
 	font-size: math-clamp(19, 25.333);
-  opacity: 0.1;
-  transition: 200ms ease-in opacity;
+	opacity: 0.1;
+	transition: 200ms ease-in opacity;
 
-  &--landed {
-      opacity: 1;
-  }
+	&--landed {
+		opacity: 1;
+	}
 
   .qa-container {
       padding-top: math-clamp(7, 9.333);

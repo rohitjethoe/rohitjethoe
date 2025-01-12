@@ -35,7 +35,7 @@ onMounted(() => {
     $c: &;
 
     font-family: "Projekt Blackbird";
-    min-height: calc(100vh - math-clamp(234.75, 313) - math-clamp(84, 112));
+    min-height: calc(50vh - math-clamp(234.75, 313) - math-clamp(84, 112));
     display: flex;
     align-items: end;
     opacity: 0.1;
