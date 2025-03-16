@@ -14,7 +14,7 @@ onMounted(() => {
     <section class="qa-introductory">
       <div class="qa-container">
         <div class="qa-introductory__slug">
-          Crafting pixel-perfect digital experiences, as a full-stack developer besides studying computer science & mathematics.        
+          Crafting pixel-perfect digital experiences, as a full-stack developer besides studying computer science.        
         </div>
         <div class="qa-introductory__major">
           (BSc) Computer Science and Engineering at T<span>U</span> Delft<br />
