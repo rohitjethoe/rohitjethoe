@@ -19,10 +19,3 @@ import Overview from '@/static/Overview.vue';
     </div>
     <!-- <Overview /> -->
 </template>
-
-<style lang="scss" scoped>
-.qa-projects {
-    background-color: #F5F5F7;
-    padding: 30px 0;
-}
-</style>

@@ -45,12 +45,13 @@ onMounted(() => {
 
     position: relative;
     font-family: "Projekt Blackbird";
-    margin-bottom: math-clamp(30, 40);
+    padding-top: math-clamp(30, 40);
+    background-color: #fff;
     // opacity: 0.1;
     transition: 250ms ease-in opacity;
 
     @media (max-width: $sm) {
-        margin-bottom: math-clamp(15, 20);
+        padding-top: math-clamp(15, 20);
     }
 
     &__image {
