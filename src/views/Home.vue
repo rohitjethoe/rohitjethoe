@@ -8,12 +8,21 @@ import Overview from '@/static/Overview.vue';
 <template>
     <Introductory />
     <Contact />
-    <Project projectAsset="/assets/monostatic-cover.webp" projectTitle="Monostatic Studio" projectColor="#ebfd55" />
-    <Project projectAsset="/assets/huistuindesign-cover.webp" projectTitle="Huis&Tuin" projectColor="#efe8db"/>
-    <Project projectAsset="/assets/vadimriver-cover.webp" projectTitle="Vadim River Portfolio" projectColor="#fafafa"/>
-    <Project projectAsset="/assets/virtufit-cover.webp" projectTitle="VirtuFit Service Form" projectColor="#c0d68f"/>
-    <Project projectAsset="/assets/highsun-cover.webp" projectTitle="High Sun Glasses" projectColor="#e8eae7"/>
-    <Project projectAsset="/assets/greenfuture-cover.webp" projectTitle="Green Future" projectColor="#36422d"/>
-    <Project projectAsset="/assets/buildbyrelay-cover.webp" projectTitle="Build By Relay" projectColor="#4dff68"/>
-    <Overview />
+    <div class="qa-projects">
+        <Project projectAsset="/assets/monostatic-cover.webp" projectTitle="Monostatic Studio" projectColor="#ebfd55" />
+        <Project projectAsset="/assets/huistuindesign-cover.webp" projectTitle="Huis&Tuin" projectColor="#efe8db"/>
+        <Project projectAsset="/assets/vadimriver-cover.webp" projectTitle="Vadim River Portfolio" projectColor="#fafafa"/>
+        <Project projectAsset="/assets/virtufit-cover.webp" projectTitle="VirtuFit Service Form" projectColor="#c0d68f"/>
+        <Project projectAsset="/assets/highsun-cover.webp" projectTitle="High Sun Glasses" projectColor="#e8eae7"/>
+        <Project projectAsset="/assets/greenfuture-cover.webp" projectTitle="Green Future" projectColor="#36422d"/>
+        <Project projectAsset="/assets/buildbyrelay-cover.webp" projectTitle="Build By Relay" projectColor="#4dff68"/>
+    </div>
+    <!-- <Overview /> -->
 </template>
+
+<style lang="scss" scoped>
+.qa-projects {
+    background-color: #F5F5F7;
+    padding: 30px 0;
+}
+</style>

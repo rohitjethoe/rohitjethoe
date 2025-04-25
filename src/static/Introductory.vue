@@ -13,21 +13,24 @@ onMounted(() => {
 <template>
     <section class="qa-introductory">
       <div class="qa-container">
-        <div class="qa-introductory__slug">
-          Crafting pixel-perfect digital experiences, as a full-stack developer besides studying computer science.        
+        <div class="qa-title">
+          Freelance Creative Development,
         </div>
-        <div class="qa-introductory__major">
+        <div class="qa-introductory__slug">
+          Crafting pixel-perfect digital experiences, as a frontend developer besides studying computer science.        
+        </div>
+        <!-- <div class="qa-introductory__major">
           (BSc) Computer Science and Engineering at T<span>U</span> Delft<br />
         </div>
         <div class="qa-introductory__timeline">
           September 2024 - <span>now</span>
         </div>
         <div class="qa-introductory__experience">
-          Full-stack Developer at <a href="https://monostatic.com/" target="_blank">Monostatic Studio</a> <img class="qa-introductory__icon" src="/assets/monostatic.webp" alt="monostatic logo"/>
+          Front-end Developer at <a href="https://monostatic.com/" target="_blank">Monostatic Studio</a> <img class="qa-introductory__icon" src="/assets/monostatic.webp" alt="monostatic logo"/>
         </div>
         <div class="qa-introductory__timeline">
           March 2023 - August 2024
-        </div>
+        </div> -->
       </div>
     </section>
 </template>
@@ -46,6 +49,17 @@ onMounted(() => {
 		opacity: 1;
 	}
 
+  .qa-title {
+    font-size: math-clamp(32, 42.666);
+    line-height: math-clamp(80, 106.666);
+
+    @media (max-width: $sm) {
+        font-size: math-clamp(32);
+        line-height: math-clamp(40);
+        margin-bottom: math-clamp(20);
+    }
+  }
+
   .qa-container {
       padding-top: math-clamp(7, 9.333);
       @media (max-width: $sm) {
@@ -54,7 +68,7 @@ onMounted(() => {
   }
 
 	&__slug {
-		margin-bottom: math-clamp(30, 40);
+		margin-bottom: math-clamp(12, 16);
 		color: $secondaryGray;
 	}
 

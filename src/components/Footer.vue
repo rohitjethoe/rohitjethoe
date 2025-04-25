@@ -53,7 +53,7 @@ onMounted(() => {
             document.querySelector('.qa-footer__divider').innerHTML = '-';
             document.querySelector('.qa-footer__link').href = await playingNowData.value.item.external_urls.spotify;
         } else {
-            document.querySelector('.qa-footer__song').innerHTML = 'not playing currently...';
+            document.querySelector('.qa-footer__song').innerHTML = 'Currently Not Playing...';
             document.querySelector('.qa-footer__artist').innerHTML = '';
             document.querySelector('.qa-footer__divider').innerHTML = '';
         }
@@ -95,14 +95,24 @@ onMounted(() => {
             </div>
         </div>
         <div class="qa-container qa-footer__bottom">
-            <div class="qa-footer__copyright">
-                © {{ new Date().getFullYear() }} - Rohit Jethoe
+            <div class="qa-footer__meta">
+                <div class="qa-footer__copyright">
+                    © {{ new Date().getFullYear() }} - Rohit Jethoe
+                </div>
+                <div class="qa-footer__spotify">
+                    <a class="qa-footer__link" href="https://open.spotify.com/user/rohitftw" target="_blank">
+                        <img class="qa-footer__icon" src="@/assets/spotify.svg" alt="spotify"/>
+                        <span class="qa-footer__song">Cry</span> <span class="qa-footer__divider">-</span> <span class="qa-footer__artist">Cigarettes After Sex</span>
+                    </a>
+                </div>
             </div>
-            <div class="qa-footer__spotify">
-                <a class="qa-footer__link" href="https://open.spotify.com/user/rohitftw" target="_blank">
-                    <img class="qa-footer__icon" src="@/assets/spotify.svg" alt="spotify"/>
-                    <span class="qa-footer__song">Cry</span> <span class="qa-footer__divider">-</span> <span class="qa-footer__artist">Cigarettes After Sex</span>
-                </a>
+            <div class="qa-footer__impressum">
+                <div>
+                    KvK: 00000000
+                </div>
+                <div>
+                    BTW: NL000000000B00
+                </div>
             </div>
         </div>
     </footer>
@@ -119,7 +129,6 @@ onMounted(() => {
     background-color: #000;
     color: #fff;
     padding-top: math-clamp(48, 64);
-    margin-top: math-clamp(120, 160);
 
     .qa-container {
         display: flex;
@@ -131,10 +140,15 @@ onMounted(() => {
     }
 
     &__bottom {
+        flex-direction: row;
         padding-top: math-clamp(164, 218.666);
+        align-items: end;
+        font-size: math-clamp(19, 25.333);
+
         @media (max-width: $sm) {
+            font-size: math-clamp(14);
             padding-top: math-clamp(60);
-            flex-direction: column-reverse;
+            flex-direction: row;
             gap: 20px;
         }
     }
@@ -183,6 +197,12 @@ onMounted(() => {
         }
     }
 
+    &__meta {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: math-clamp(16, 21.333);
+    }
+
     &__link {
         color: #fff;
         text-decoration: none;
@@ -202,6 +222,18 @@ onMounted(() => {
         @media (max-width: $sm) {
             width: math-clamp(14);
             height: auto;
+        }
+    }
+
+    &__impressum {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        gap: math-clamp(12, 16);
+        font-size: math-clamp(19, 25.333);
+
+        @media (max-width: $sm) {
+            font-size: math-clamp(14);
         }
     }
 }
