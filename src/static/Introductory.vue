@@ -17,7 +17,7 @@ onMounted(() => {
           Freelance Creative Development,
         </div>
         <div class="qa-introductory__slug">
-          Crafting pixel-perfect digital experiences, as a frontend developer besides studying computer science.        
+          As a Frontend Developer experienced in JavaScript and Content Management Systems. However, as a student interested in things that will always hold true.        
         </div>
         <!-- <div class="qa-introductory__major">
           (BSc) Computer Science and Engineering at T<span>U</span> Delft<br />
@@ -61,14 +61,15 @@ onMounted(() => {
   }
 
   .qa-container {
-      padding-top: math-clamp(7, 9.333);
-      @media (max-width: $sm) {
-          padding-top: math-clamp(36, 48);
-      }
+    padding-top: math-clamp(7, 9.333);
+    @media (max-width: $sm) {
+        padding-top: math-clamp(36, 48);
+    }
   }
 
 	&__slug {
 		margin-bottom: math-clamp(12, 16);
+    line-height: math-clamp(23, 30.666);
 		color: $secondaryGray;
 	}
 

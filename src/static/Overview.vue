@@ -183,6 +183,9 @@ onMounted(() => {
                         <div v-if="current === project.title" class="qa-overview__divider"></div>
                     </div>
                     <div v-if="current === project.title" class="qa-overview__about">
+                        <div class="qa-overview__slug">
+                            <span>{{ project.type }}, </span>{{ project.service }}
+                        </div>
                         <div class="qa-overview__description">
                             {{ project.description }}
                         </div>
@@ -208,6 +211,7 @@ onMounted(() => {
     $o: &;
 
     font-family: "Projekt Blackbird";
+    padding-bottom: math-clamp(40, 53.333);
     
     .qa-container {
         padding-top: math-clamp(60, 80);
@@ -263,7 +267,6 @@ onMounted(() => {
         transition: border-bottom 250ms ease-out, color 250ms ease-out, opacity 250ms ease-out;
         position: relative;
         opacity: 0.1;
-
         &--fade {
             border-bottom: math-clamp(2, 2.666) solid $secondaryGray;
             color: $secondaryGray;
@@ -326,6 +329,15 @@ onMounted(() => {
         font-size: math-clamp(21, 28);
         @media (max-width: $sm) {
             display: none;
+        }
+    }
+
+    &__slug {
+        font-size: math-clamp(21, 28);
+        display: none;
+        @media (max-width: $sm) {
+            padding: math-clamp(8) 0;
+            display: block;
         }
     }
 

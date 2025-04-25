@@ -17,5 +17,5 @@ import Overview from '@/static/Overview.vue';
         <Project projectAsset="/assets/greenfuture-cover.webp" projectTitle="Green Future" projectColor="#36422d"/>
         <Project projectAsset="/assets/buildbyrelay-cover.webp" projectTitle="Build By Relay" projectColor="#4dff68"/>
     </div>
-    <!-- <Overview /> -->
+    <Overview />
 </template>

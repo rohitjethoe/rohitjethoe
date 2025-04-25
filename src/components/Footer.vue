@@ -147,7 +147,7 @@ onMounted(() => {
 
         @media (max-width: $sm) {
             font-size: math-clamp(14);
-            padding-top: math-clamp(60);
+            padding-top: math-clamp(128);
             flex-direction: row;
             gap: 20px;
         }
@@ -201,6 +201,10 @@ onMounted(() => {
         display: flex;
         flex-direction: column-reverse;
         gap: math-clamp(16, 21.333);
+
+        @media (max-width: $sm) {
+            gap: math-clamp(10);
+        }
     }
 
     &__link {
@@ -233,6 +237,7 @@ onMounted(() => {
         font-size: math-clamp(19, 25.333);
 
         @media (max-width: $sm) {
+            gap: math-clamp(10);
             font-size: math-clamp(14);
         }
     }
