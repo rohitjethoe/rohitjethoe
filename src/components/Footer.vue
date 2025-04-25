@@ -157,7 +157,7 @@ onMounted(() => {
         font-size: math-clamp(64, 85.333);
 
         @media (max-width: $sm) {
-            font-size: math-clamp(32);
+            font-size: math-clamp(37);
         }
     }
 
