@@ -54,9 +54,9 @@ onMounted(() => {
     line-height: math-clamp(80, 106.666);
 
     @media (max-width: $sm) {
-        font-size: math-clamp(32);
-        line-height: math-clamp(40);
-        margin-bottom: math-clamp(20);
+      font-size: math-clamp(25);
+      line-height: math-clamp(40);
+      margin-bottom: math-clamp(20);
     }
   }
 

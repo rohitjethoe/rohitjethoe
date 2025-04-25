@@ -46,7 +46,7 @@ onMounted(() => {
     }
 
     @media (max-width: $xs) {
-        min-height: calc(92svh - math-clamp(317.75) - math-clamp(61.5))
+        min-height: calc(96svh - math-clamp(317.75) - math-clamp(61.5))
     }
 
     &__link {
