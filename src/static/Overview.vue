@@ -212,6 +212,7 @@ onMounted(() => {
 
     font-family: "Projekt Blackbird";
     padding-bottom: math-clamp(40, 53.333);
+    background-color: #F5F5F7;
     
     .qa-container {
         padding-top: math-clamp(60, 80);
