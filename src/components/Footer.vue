@@ -107,12 +107,9 @@ onMounted(() => {
                 </div>
             </div>
             <div class="qa-footer__impressum">
-                <div>
-                    KvK: 00000000
-                </div>
-                <div>
-                    BTW: NL000000000B00
-                </div>
+                <!-- <div>
+                    Terms of service
+                </div> -->
             </div>
         </div>
     </footer>
