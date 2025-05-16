@@ -107,9 +107,9 @@ onMounted(() => {
                 </div>
             </div>
             <div class="qa-footer__impressum">
-                <!-- <div>
-                    Terms of service
-                </div> -->
+                <div>
+                    <a class="qa-footer__link" href="/terms">Terms & Privacy</a>
+                </div>
             </div>
         </div>
     </footer>

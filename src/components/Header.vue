@@ -10,7 +10,7 @@
                 </a>
             </div>
             <div class="qa-header__cv">
-                <a class="qa-header__download" href="/curriculum_vitae.pdf" target="_blank">download c.v.</a>
+                <a v-if="this.$route.path === '/'" class="qa-header__download" href="/curriculum_vitae.pdf" target="_blank">download c.v.</a>
             </div>
         </div>
     </header>
