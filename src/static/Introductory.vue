@@ -71,6 +71,14 @@ onMounted(() => {
 		margin-bottom: math-clamp(12, 16);
     line-height: math-clamp(23, 30.666);
 		color: $secondaryGray;
+
+    @media (min-width: $sm) {
+      width: 60%;
+    }
+
+    @media (min-width: $sm) {
+      width: math-clamp(640);
+    }
 	}
 
 	&__major {

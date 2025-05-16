@@ -86,7 +86,7 @@ onMounted(() => {
                         <a href="https://github.com/rohitjethoe" target="_blank">Github</a>
                     </li>
                     <li class="qa-footer__item">
-                        <a href="https://linkedin.com/in/rohitjethoe" target="_blank">LinkedIn</a>
+                        <a href="https://www.linkedin.com/company/rohitjethoe/" target="_blank">LinkedIn</a>
                     </li>
                     <li class="qa-footer__item">
                         <a href="mailto:rohitjethoe@proton.me" target="_blank">E-mail</a>

@@ -58,6 +58,10 @@ onMounted(() => {
         position: relative;
         width: 100vw;
         overflow: hidden;
+
+        @media (min-width: $md) {
+            height: 50vh;
+        }
     }
 
     &__asset {
