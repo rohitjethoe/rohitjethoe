@@ -4,12 +4,14 @@
         <br>
         <strong>Last updated on May 16th</strong>
         <div class="qa-terms__privacy">
+            <h1 class="qa-terms__title">Privacy</h1>
             <br>
             We use Google Analytics on this website to track visitor behavior and improve our website. For more information about how Google uses your data, you can read the <a href="https://policies.google.com/privacy?hl=en">Google Privacy Policy</a> If you don't want your data to be collected, you can use <a href="https://tools.google.com/dlpage/gaoptout">Google Analytics Opt-out Browser Add-on</a>. We only use functional cookies to ensure the website works properly.
-            <br>
+            <br> <br>
             We don't use cookies for advertising or other commercial purposes.
         </div>
         <ol>
+            <h1 class="qa-terms__title">Terms of Service</h1>
             <li class="qa-terms__primary">
                 1. Definitions
                 <ol class="qa-terms__secondary">
@@ -82,6 +84,11 @@
 
     @media screen and (min-width: 1024px) {
         width: 920px;
+    }
+
+    &__title {
+        font-size: 24px;
+        padding-top: 15px;
     }
 
     &__primary {
