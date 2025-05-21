@@ -1,7 +1,5 @@
 <template>
     <div class="qa-terms qa-container">
-        <div>Terms of Service & Privacy</div>
-        <br>
         <strong>Last updated on May 16th</strong>
         <div class="qa-terms__privacy">
             <h1 class="qa-terms__title">Privacy</h1>
@@ -76,7 +74,7 @@
 
 <style lang="scss" scoped>
 .qa-terms {
-    padding: 0px math-clamp(30, 40) math-clamp(30, 40) math-clamp(60, 80);
+    padding-bottom: 40px;
 
     strong {
         color: #666;

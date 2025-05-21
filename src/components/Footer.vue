@@ -190,6 +190,9 @@ onMounted(() => {
 
     &__spotify {
         padding-bottom: math-clamp(42, 56);
+        @media (max-width: $sm) {
+            padding-bottom: math-clamp(24);
+        }
     }
 
     &__copyright {
