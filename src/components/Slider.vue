@@ -9,7 +9,6 @@ const props = defineProps({
 const currentIndex = ref(0)
 const windowWidth = ref(window.innerWidth)
 
-// Detect screen width changes
 function handleResize() {
   windowWidth.value = window.innerWidth
 }
@@ -21,10 +20,12 @@ onBeforeUnmount(() => {
   window.removeEventListener('resize', handleResize)
 })
 
-// Items per view: 2 on mobile, 4 on desktop
-const itemsPerView = computed(() => (windowWidth.value < 768 ? 2 : 4))
+// 1. Items per view: 1.5 on mobile (~2/3 width), 4 on desktop
+const itemsPerView = computed(() => (windowWidth.value < 768 ? 1.5 : 4))
+// 2. Scroll by % of one item
 const scrollStep = computed(() => 100 / itemsPerView.value)
-const maxIndex = computed(() => props.images.length - itemsPerView.value)
+// 3. Limit index so slider doesn't overshoot
+const maxIndex = computed(() => Math.ceil(props.images.length - itemsPerView.value))
 
 function next() {
   if (currentIndex.value < maxIndex.value) currentIndex.value++
@@ -44,7 +45,7 @@ function prev() {
       <div
         v-for="(image, index) in images"
         :key="index"
-        class="w-1/2 md:w-1/4 flex-shrink-0"
+        class="w-[66.6667%] md:w-1/4 flex-shrink-0"
       >
         <div class="font-inter pb-2.5 tracking-tighter">
           {{ titles[index] }}
