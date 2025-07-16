@@ -20,11 +20,9 @@ onBeforeUnmount(() => {
   window.removeEventListener('resize', handleResize)
 })
 
-// 1. Items per view: 1.5 on mobile (~2/3 width), 4 on desktop
+// Responsive items per view
 const itemsPerView = computed(() => (windowWidth.value < 768 ? 1.5 : 4))
-// 2. Scroll by % of one item
 const scrollStep = computed(() => 100 / itemsPerView.value)
-// 3. Limit index so slider doesn't overshoot
 const maxIndex = computed(() => Math.ceil(props.images.length - itemsPerView.value))
 
 function next() {
@@ -34,10 +32,50 @@ function next() {
 function prev() {
   if (currentIndex.value > 0) currentIndex.value--
 }
+
+// Drag / Swipe logic
+let startX = 0
+let deltaX = 0
+let isDragging = ref(false)
+const sliderRef = ref(null)
+
+function onDragStart(e) {
+  isDragging.value = true
+  startX = e.type.includes('mouse') ? e.pageX : e.touches[0].clientX
+}
+
+function onDragMove(e) {
+  if (!isDragging.value) return
+  const x = e.type.includes('mouse') ? e.pageX : e.touches[0].clientX
+  deltaX = x - startX
+}
+
+function onDragEnd() {
+  if (!isDragging.value) return
+  isDragging.value = false
+
+  if (deltaX > 50) {
+    prev()
+  } else if (deltaX < -50) {
+    next()
+  }
+
+  deltaX = 0
+}
 </script>
 
 <template>
-  <div class="relative pt-2.5 md:pt-5 w-full overflow-hidden">
+  <div
+    class="relative pt-2.5 md:pt-5 w-full overflow-hidden select-none"
+    ref="sliderRef"
+    @mousedown="onDragStart"
+    @mousemove="onDragMove"
+    @mouseup="onDragEnd"
+    @mouseleave="onDragEnd"
+    @touchstart="onDragStart"
+    @touchmove="onDragMove"
+    @touchend="onDragEnd"
+  >
     <div
       class="flex gap-2.5 md:gap-5 transition-transform duration-500"
       :style="{ transform: `translateX(-${currentIndex * scrollStep}%)` }"
