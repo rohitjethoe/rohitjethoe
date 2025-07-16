@@ -38,7 +38,7 @@ function prev() {
 <template>
   <div class="relative w-full overflow-hidden">
     <div
-      class="flex gap-5 transition-transform duration-500"
+      class="flex gap-2.5 md:gap-5 transition-transform duration-500"
       :style="{ transform: `translateX(-${currentIndex * scrollStep}%)` }"
     >
       <div

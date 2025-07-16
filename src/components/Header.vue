@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <header class="flex justify-between items-center lg:items-start p-2.5 md:p-5">
+  <header class="flex justify-between items-center lg:items-start p-2.5 pb-0 md:p-5">
     <div class="font-inter font-medium tracking-tighter text-2xl">
       <a href="/">
         Rohit Jethoe
