@@ -4,10 +4,10 @@ import Slider from '@/components/Slider.vue'
 
 <template>
     <main class="p-2.5 pr-0 md:p-5 md:pr-0">
-        <div class="flex justify-between">
+        <div class="flex justify-between lg:hidden">
             <div></div>
 
-            <div class="w-2/3 tracking-tighter block pt-12 pb-14 leading-6 lg:hidden">
+            <div class="w-2/3 tracking-tighter block pt-12 py-14 leading-6 lg:hidden">
                 <h2 class="font-medium">Creative Development</h2>
                 <p class="text-neutral-500">Computer Science student at TU Delft. As a Frontend Developer experienced in JavaScript and Content Management Systems. However, as a student interested in things that will always hold true.</p>
             </div>
@@ -16,5 +16,19 @@ import Slider from '@/components/Slider.vue'
             :images="['/assets/ymi.png', '/assets/monostatic.png', '/assets/vadimriver.png', '/assets/greenfuture.png', '/assets/buildbyrelay.png', '/assets/virtufit.png']"
             :titles="['Young Musicians', 'Monostatic Studio', 'Vadim River', 'Green Future', 'Build by Relay', 'VirtuFit']"
         />
+        <div class="lg:hidden flex py-14">
+            <div class="w-12"></div>
+            <ul>
+                <li class="font-inter font-medium tracking-tighter py-1">
+                    <a href="">Index</a>
+                </li>
+                <li class="font-inter text-neutral-500 tracking-tighter py-1 transition-all hover:text-black">
+                    <a href="">Weekly Journal</a>
+                </li>
+                <li class="font-inter text-neutral-500 tracking-tighter py-1 transition-all hover:text-black">
+                    <a href="">Contact Information</a>
+                </li>
+            </ul>
+        </div>
     </main>
 </template>
