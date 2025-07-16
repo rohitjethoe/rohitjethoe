@@ -3,7 +3,7 @@ import Slider from '@/components/Slider.vue'
 </script>
 
 <template>
-    <main class="p-2.5 md:p-5">
+    <main class="p-2.5 pr-0 md:p-5 md:pr-0">
         <div class="flex justify-between">
             <div></div>
 
@@ -13,8 +13,8 @@ import Slider from '@/components/Slider.vue'
             </div>
         </div>
         <Slider 
-            :images="['/assets/ymi.png', '/assets/monostatic.png', '/assets/vadimriver.png', '/assets/greenfuture.png']"
-            :titles="['Young Musicians', 'Monostatic Studio', 'Vadim River', 'Green Future']"
+            :images="['/assets/ymi.png', '/assets/monostatic.png', '/assets/vadimriver.png', '/assets/greenfuture.png', '/assets/buildbyrelay.png', '/assets/virtufit.png']"
+            :titles="['Young Musicians', 'Monostatic Studio', 'Vadim River', 'Green Future', 'Build by Relay', 'VirtuFit']"
         />
     </main>
 </template>
