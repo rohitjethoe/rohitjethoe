@@ -7,7 +7,7 @@ import Slider from '@/components/Slider.vue'
         <div class="flex justify-between">
             <div></div>
 
-            <div class="w-2/3 tracking-tighter block py-14 leading-6 lg:hidden">
+            <div class="w-2/3 tracking-tighter block pt-12 pb-14 leading-6 lg:hidden">
                 <h2 class="font-medium">Creative Development</h2>
                 <p class="text-neutral-500">Computer Science student at TU Delft. As a Frontend Developer experienced in JavaScript and Content Management Systems. However, as a student interested in things that will always hold true.</p>
             </div>
