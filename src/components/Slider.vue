@@ -92,7 +92,6 @@ function onDragEnd() {
       </div>
     </div>
 
-    <!-- Arrows -->
     <button
       @click="prev"
       class="absolute left-0 top-1/2 -translate-y-1/2 bg-black/0 text-white/0 w-1/2 h-full"
