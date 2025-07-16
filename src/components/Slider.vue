@@ -46,7 +46,7 @@ function prev() {
         :key="index"
         class="w-1/2 md:w-1/4 flex-shrink-0"
       >
-        <div class="font-inter pb-2.5 tracking-tighter text-sm">
+        <div class="font-inter pb-2.5 tracking-tighter">
           {{ titles[index] }}
         </div>
         <img :src="image" class="w-full h-auto object-cover" />
