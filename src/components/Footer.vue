@@ -2,7 +2,7 @@
 
 <template>
     <footer class="tracking-tighter p-2.5 pt-0 md:p-5 md:pt-0 text-sm flex justify-between">
-        <div>
+        <div class="font-medium">
             &copy; {{ new Date().getFullYear() }} - Rohit Jethoe
         </div>
         <div>

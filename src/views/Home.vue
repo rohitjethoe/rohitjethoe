@@ -13,20 +13,17 @@ import Slider from '@/components/Slider.vue'
             </div>
         </div>
         <Slider 
-            :images="['/assets/ymi.webp', '/assets/monostatic.webp', '/assets/vadimriver.webp', '/assets/greenfuture.webp', '/assets/buildbyrelay.webp', '/assets/virtufit.webp']"
-            :titles="['Young Musicians', 'Monostatic Studio', 'Vadim River', 'Green Future', 'Build by Relay', 'VirtuFit']"
+            :images="['/assets/ymi.webp', '/assets/monostatic.webp', '/assets/vadimriver.webp', '/assets/buildbyrelay.webp', '/assets/huistuindesign.webp', '/assets/virtufit.webp', '/assets/greenfuture.webp',]"
+            :titles="['Young Musicians', 'Monostatic Studio', 'Vadim River', 'Build by Relay', 'huistuindesign.com', 'VirtuFit', 'Green Future',]"
         />
         <div class="lg:hidden flex py-14">
             <div class="w-12"></div>
             <ul>
                 <li class="font-inter font-medium tracking-tighter py-1">
-                    <a href="">Index</a>
+                    <a href="/">Index</a>
                 </li>
                 <li class="font-inter text-neutral-500 tracking-tighter py-1 transition-all hover:text-black">
                     <a href="">Weekly Journal</a>
-                </li>
-                <li class="font-inter text-neutral-500 tracking-tighter py-1 transition-all hover:text-black">
-                    <a href="">Contact Information</a>
                 </li>
             </ul>
         </div>
