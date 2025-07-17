@@ -6,12 +6,13 @@
             &copy; {{ new Date().getFullYear() }} - Rohit Jethoe
         </div>
         <div>
-            <ul class="flex gap-2.5 md:gap-5">
+            <ul class="flex gap-1.5 md:gap-2.5">
                 <li>
                     <a class="text-neutral-500 transition-all hover:text-black" href="">
                         Terms of Service
                     </a>
                 </li>
+                <li class="text-neutral-500">•</li>
                 <li>
                     <a class="text-neutral-500 transition-all hover:text-black" href="">
                         Privacy Policy
