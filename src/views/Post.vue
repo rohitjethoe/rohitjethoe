@@ -150,7 +150,7 @@ article :is(table) {
 }
 
 article :is(thead) {
-  border-bottom: 0.5px solid #dee2e6;
+  border-bottom: 1px solid #dee2e6;
 }
 
 article :is(thead th) {
