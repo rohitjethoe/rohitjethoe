@@ -184,7 +184,6 @@ article :is(tbody tr:last-child) {
 
 article :is(tbody td) {
   padding: 0.625rem;
-  /* color: #737373; */
   vertical-align: middle;
 }
 
