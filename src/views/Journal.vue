@@ -24,17 +24,6 @@ const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "
 
 <template>
     <main class="font-inter p-2.5 md:p-5 ">
-        <div class="lg:hidden flex pb-14 pt-6">
-            <div class="w-12"></div>
-            <ul>
-                <li class="font-inter tracking-tighter transition-all hover:text-black py-1" :class="isHome ? 'text-black font-medium' : 'text-neutral-500'">
-                    <a href="/">Index</a>
-                </li>
-                <li class="font-inter tracking-tighter transition-all hover:text-black py-1" :class="isJournal ? 'text-black font-medium' : 'text-neutral-500'">
-                    <a href="/journal">Weekly Journal</a>
-                </li>
-            </ul>
-        </div>
         <div class="tracking-tighter">
             <h2 class="font-medium">Journal</h2>
             <p class="text-neutral-500">Thoughts, stories and ideas.</p>
@@ -52,6 +41,17 @@ const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "
             </div>
         </div>
     </main>
+    <div class="lg:hidden flex py-8">
+        <div class="w-12"></div>
+        <ul>
+            <li class="font-inter tracking-tighter transition-all hover:text-black py-1" :class="isHome ? 'text-black font-medium' : 'text-neutral-500'">
+                <a href="/">Index</a>
+            </li>
+            <li class="font-inter tracking-tighter transition-all hover:text-black py-1" :class="isJournal ? 'text-black font-medium' : 'text-neutral-500'">
+                <a href="/journal">Weekly Journal</a>
+            </li>
+        </ul>
+    </div>
 </template>
 
 <style>

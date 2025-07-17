@@ -9,7 +9,7 @@ const isJournal = computed(() => route.path.startsWith('/journal'))
 </script>
 <template>
     <main class="p-2.5 pr-0 md:p-5 md:pr-0">
-        <div class="flex justify-between lg:hidden">
+        <div class="flex justify-between lg:hidden pr-2.5 md:pr-5">
             <div></div>
 
             <div class="w-2/3 tracking-tighter block pt-12 py-14 leading-6 lg:hidden">

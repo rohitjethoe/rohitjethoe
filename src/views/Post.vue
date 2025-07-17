@@ -97,19 +97,19 @@ const isJournal = computed(() => route.path.startsWith('/journal'))
 
 <template>
   <main class="px-2.5 md:px-5">
-    <div class="lg:hidden flex pt-7.5 pb-10">
-        <div class="w-12"></div>
-        <ul>
-            <li class="font-inter tracking-tighter transition-all hover:text-black py-1" :class="isHome ? 'text-black font-medium' : 'text-neutral-500'">
-                <a href="/">Index</a>
-            </li>
-            <li class="font-inter tracking-tighter transition-all hover:text-black py-1" :class="isJournal ? 'text-black font-medium' : 'text-neutral-500'">
-                <a href="/journal">Weekly Journal</a>
-            </li>
-        </ul>
-    </div>
     <article class="prose lg:prose-xl max-w-none" v-html="content" />
   </main>
+  <div class="lg:hidden flex py-8">
+    <div class="w-12"></div>
+    <ul>
+        <li class="font-inter tracking-tighter transition-all hover:text-black py-1" :class="isHome ? 'text-black font-medium' : 'text-neutral-500'">
+            <a href="/">Index</a>
+        </li>
+        <li class="font-inter tracking-tighter transition-all hover:text-black py-1" :class="isJournal ? 'text-black font-medium' : 'text-neutral-500'">
+            <a href="/journal">Weekly Journal</a>
+        </li>
+    </ul>
+</div>
 </template>
 
 <style>
@@ -122,6 +122,10 @@ article :is(h1, h2, h3, h4, h5, h6, p, ul, ol, li, pre, code, blockquote, table,
 
 article :is(h1, h2, h3, h4, h5, h6, p, li, table) {
     letter-spacing: -0.025em;
+}
+
+article :is(h1, h2, h3, h4, h5, h6) {
+    font-weight: 600;
 }
 
 article :is(a) {
@@ -143,10 +147,10 @@ article :is(ul) {
 article :is(table) {
   width: 100%;
   border-collapse: collapse;
-  margin: 1.5rem 0;
   font-size: 0.95rem;
-  border-radius: 8px;
-  overflow: hidden;
+  margin: 0.625rem 0;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px !important;
 }
 
 article :is(thead) {
@@ -180,7 +184,7 @@ article :is(tbody tr:last-child) {
 
 article :is(tbody td) {
   padding: 0.625rem;
-  color: #737373;
+  /* color: #737373; */
   vertical-align: middle;
 }
 
