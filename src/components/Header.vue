@@ -4,7 +4,7 @@ import { useRoute } from 'vue-router'
 
 const route = useRoute()
 const isHome = computed(() => route.path === '/')
-const isJournal = computed(() => (route.path === '/journal' || route.path.startsWith('/post/')))
+const isJournal = computed(() => route.path.startsWith('/journal'))
 </script>
 
 <template>

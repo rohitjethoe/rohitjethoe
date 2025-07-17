@@ -1,7 +1,12 @@
 <script setup>
+import { computed } from 'vue'
+import { useRoute } from 'vue-router'
 import Slider from '@/components/Slider.vue'
-</script>
 
+const route = useRoute()
+const isHome = computed(() => route.path === '/')
+const isJournal = computed(() => route.path.startsWith('/journal'))
+</script>
 <template>
     <main class="p-2.5 pr-0 md:p-5 md:pr-0">
         <div class="flex justify-between lg:hidden">
@@ -19,11 +24,11 @@ import Slider from '@/components/Slider.vue'
         <div class="lg:hidden flex py-14">
             <div class="w-12"></div>
             <ul>
-                <li class="font-inter font-medium tracking-tighter py-1">
+                <li class="font-inter tracking-tighter transition-all hover:text-black py-1" :class="isHome ? 'text-black font-medium' : 'text-neutral-500'">
                     <a href="/">Index</a>
                 </li>
-                <li class="font-inter text-neutral-500 tracking-tighter py-1 transition-all hover:text-black">
-                    <a href="">Weekly Journal</a>
+                <li class="font-inter tracking-tighter transition-all hover:text-black py-1" :class="isJournal ? 'text-black font-medium' : 'text-neutral-500'">
+                    <a href="/journal">Weekly Journal</a>
                 </li>
             </ul>
         </div>
