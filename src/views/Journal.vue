@@ -23,7 +23,7 @@ const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "
 </script>
 
 <template>
-    <main class="font-inter min-h-screen p-2.5 md:p-5 ">
+    <main class="font-inter p-2.5 md:p-5 ">
         <div class="lg:hidden flex pb-14 pt-6">
             <div class="w-12"></div>
             <ul>
@@ -53,3 +53,15 @@ const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "
         </div>
     </main>
 </template>
+
+<style>
+main {
+    min-height: calc(100vh - 136px);
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        min-height: calc(100vh - 52px);
+    }
+}
+</style>

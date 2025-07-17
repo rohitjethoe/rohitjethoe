@@ -8,14 +8,14 @@
         <div>
             <ul class="flex gap-1.5 md:gap-2.5">
                 <li>
-                    <a class="text-neutral-500 transition-all hover:text-black" href="">
-                        Terms of Service
+                    <a class="text-neutral-500 transition-all hover:text-black" href="https://linkedin.com/company/rohitjethoe" target="_blank">
+                        LinkedIn
                     </a>
                 </li>
                 <li class="text-neutral-500">•</li>
                 <li>
-                    <a class="text-neutral-500 transition-all hover:text-black" href="">
-                        Privacy Policy
+                    <a class="text-neutral-500 transition-all hover:text-black" href="https://github.com/rohitjethoe" target="_blank">
+                        GitHub
                     </a>
                 </li>
             </ul>
