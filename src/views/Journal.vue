@@ -16,7 +16,7 @@ const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "
 </script>
 
 <template>
-    <main class="font-inter min-h-screen p-2.5 md:p-5 md:w-2/3">
+    <main class="font-inter min-h-screen p-2.5 md:p-5 ">
         <div class="tracking-tighter">
             <h2 class="font-medium">Journal</h2>
             <p class="text-neutral-500">Thoughts, stories and ideas.</p>
