@@ -1,4 +1,11 @@
-<script setup></script>
+<script setup>
+import { computed } from 'vue'
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
+const isHome = computed(() => route.path === '/')
+const isJournal = computed(() => (route.path === '/journal' || route.path.startsWith('/post/')))
+</script>
 
 <template>
   <header class="flex justify-between items-center lg:items-start p-2.5 md:p-5">
@@ -9,15 +16,15 @@
     </div>
     <div class="hidden lg:block">
       <ul>
-        <li class="font-inter font-medium tracking-tighter py-1">
-          <a href="">Index</a>
+        <li class="font-inter tracking-tighter transition-all hover:text-black py-1" :class="isHome ? 'text-black font-medium' : 'text-neutral-500'">
+          <a href="/">Index</a>
         </li>
-        <li class="font-inter text-neutral-500 tracking-tighter py-1 transition-all hover:text-black">
-          <a href="">Weekly Journal</a>
+        <li class="hidden font-inter tracking-tighter transition-all hover:text-black py-1" :class="isJournal ? 'text-black font-medium' : 'text-neutral-500'">
+          <a href="/journal">Weekly Journal</a>
         </li>
       </ul>
     </div>
-    <div class="w-1/3 tracking-tighter hidden lg:block">
+    <div class="w-1/3 tracking-tighter hidden lg:block" :class="!isHome ? 'opacity-0' : ''">
       <h2 class="font-medium">Creative Development</h2>
       <p class="text-neutral-500">Computer Science student at TU Delft. As a Frontend Developer experienced in JavaScript and Content Management Systems. However, as a student interested in things that will always hold true.</p>
     </div>
