@@ -19,7 +19,7 @@ const isJournal = computed(() => (route.path === '/journal' || route.path.starts
         <li class="font-inter tracking-tighter transition-all hover:text-black py-1" :class="isHome ? 'text-black font-medium' : 'text-neutral-500'">
           <a href="/">Index</a>
         </li>
-        <li class="hidden font-inter tracking-tighter transition-all hover:text-black py-1" :class="isJournal ? 'text-black font-medium' : 'text-neutral-500'">
+        <li class="font-inter tracking-tighter transition-all hover:text-black py-1" :class="isJournal ? 'text-black font-medium' : 'text-neutral-500'">
           <a href="/journal">Weekly Journal</a>
         </li>
       </ul>
