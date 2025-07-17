@@ -46,6 +46,9 @@ function addLineNumbers() {
   const codeBlocks = document.querySelectorAll('pre code')
   
   codeBlocks.forEach(block => {
+    // Check if already processed
+    if (block.classList.contains('line-numbers-added')) return
+    
     const lines = block.innerHTML.split('\n')
     const numberedLines = lines.map((line, index) => {
       const lineNumber = index + 1
@@ -53,11 +56,12 @@ function addLineNumbers() {
       // Skip empty last line (common in code blocks)
       if (isLastLine && line.trim() === '') return ''
       
-      return `<span class="line-number" data-line="${lineNumber}"></span><span class="line-content">${line}</span>`
-    }).filter(line => line !== '').join('\n')
+      return `<div class="code-line"><span class="line-number">${lineNumber}</span><span class="line-content">${line}</span></div>`
+    }).filter(line => line !== '').join('')
     
     block.innerHTML = numberedLines
-    block.parentElement.classList.add('line-numbers')
+    block.classList.add('line-numbers-added')
+    block.parentElement.classList.add('has-line-numbers')
   })
 }
 
@@ -125,35 +129,34 @@ pre code {
 }
 
 /* Line numbers styling */
-.line-numbers {
+.has-line-numbers {
   position: relative;
-  padding-left: 3.5rem !important;
 }
 
-.line-numbers code {
-  counter-reset: line-number;
+.has-line-numbers code {
+  padding-left: 4rem !important;
+}
+
+.code-line {
+  position: relative;
+  display: block;
+  min-height: 1.5em;
 }
 
 .line-number {
-  display: inline-block;
-  width: 2.5rem;
-  margin-left: -3.5rem;
-  margin-right: 1rem;
+  position: absolute;
+  left: -3.5rem;
+  width: 3rem;
   text-align: right;
   color: #8b949e !important;
   font-weight: 400 !important;
   user-select: none;
-  position: relative;
-}
-
-.line-number::before {
-  content: counter(line-number);
-  counter-increment: line-number;
+  padding-right: 1rem;
 }
 
 .line-content {
   display: inline-block;
-  width: calc(100% - 1rem);
+  width: 100%;
 }
 
 /* Inline code styling */
@@ -168,9 +171,10 @@ pre code {
 }
 
 /* Ensure proper spacing for each line */
-.line-numbers code .line-number + .line-content {
+.code-line {
+  position: relative;
+  display: block;
   min-height: 1.5em;
-  display: inline-block;
 }
 
 /* Handle empty lines */
