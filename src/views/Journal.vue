@@ -23,12 +23,15 @@ const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "
 </script>
 
 <template>
-    <main class="font-inter px-2.5 md:px-5 ">
-        <div class="tracking-tighter">
-            <h2 class="font-medium">Journal</h2>
-            <p class="text-neutral-500">Thoughts, stories and ideas.</p>
+    <main class="font-inter px-2.5 pt-10 md:px-5 ">
+        <div class="tracking-tighter flex flex-row-reverse md:block">
+            <div class="w-20"></div>
+            <div>
+                <h2 class="font-medium">Journal</h2>
+                <p class="text-neutral-500">Thoughts, stories and ideas.</p>
+            </div>
         </div>
-        <div class="pt-5">
+        <div class="pt-10">
             <div v-for="posts in content" class="tracking-tighter">
                 <div class="text-neutral-500 py-5">{{ posts.year }}</div>
                 <div v-for="post in posts.posts">
