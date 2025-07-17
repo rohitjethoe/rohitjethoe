@@ -96,8 +96,8 @@ const isJournal = computed(() => route.path.startsWith('/journal'))
 </script>
 
 <template>
-  <main class="p-2.5 pt-0 md:p-5 md:pt-0">
-    <div class="lg:hidden flex py-8">
+  <main class="px-2.5 md:px-5">
+    <div class="lg:hidden flex pt-7.5 pb-10">
         <div class="w-12"></div>
         <ul>
             <li class="font-inter tracking-tighter transition-all hover:text-black py-1" :class="isHome ? 'text-black font-medium' : 'text-neutral-500'">
