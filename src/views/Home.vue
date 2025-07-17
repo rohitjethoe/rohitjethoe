@@ -13,8 +13,8 @@ import Slider from '@/components/Slider.vue'
             </div>
         </div>
         <Slider 
-            :images="['/assets/ymi.webp', '/assets/monostatic.webp', '/assets/vadimriver.webp', '/assets/buildbyrelay.webp', '/assets/huistuindesign.webp', '/assets/virtufit.webp', '/assets/greenfuture.webp',]"
-            :titles="['Young Musicians', 'Monostatic Studio', 'Vadim River', 'Build by Relay', 'huistuindesign.com', 'VirtuFit', 'Green Future',]"
+            :images="['/assets/ymi.webp', '/assets/monostatic.webp', '/assets/vadimriver.webp', '/assets/buildbyrelay.webp', '/assets/virtufit.webp', '/assets/greenfuture.webp',]"
+            :titles="['Young Musicians', 'Monostatic Studio', 'Vadim River', 'Build by Relay', 'VirtuFit', 'Green Future',]"
         />
         <div class="lg:hidden flex py-14">
             <div class="w-12"></div>
