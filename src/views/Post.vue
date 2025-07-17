@@ -1,4 +1,5 @@
 <script setup>
+import { computed } from 'vue'
 import { ref, onMounted, nextTick } from 'vue'
 import { useRoute } from 'vue-router'
 import { marked } from 'marked'
@@ -89,10 +90,24 @@ onMounted(async () => {
     console.error(err)
   }
 })
+
+const isHome = computed(() => route.path === '/')
+const isJournal = computed(() => route.path.startsWith('/journal'))
 </script>
 
 <template>
   <main class="p-2.5 pt-0 md:p-5 md:pt-0">
+    <div class="lg:hidden flex py-8">
+        <div class="w-12"></div>
+        <ul>
+            <li class="font-inter tracking-tighter transition-all hover:text-black py-1" :class="isHome ? 'text-black font-medium' : 'text-neutral-500'">
+                <a href="/">Index</a>
+            </li>
+            <li class="font-inter tracking-tighter transition-all hover:text-black py-1" :class="isJournal ? 'text-black font-medium' : 'text-neutral-500'">
+                <a href="/journal">Weekly Journal</a>
+            </li>
+        </ul>
+    </div>
     <article class="prose lg:prose-xl max-w-none" v-html="content" />
   </main>
 </template>
@@ -102,7 +117,79 @@ onMounted(async () => {
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 article :is(h1, h2, h3, h4, h5, h6, p, ul, ol, li, pre, code, blockquote, table, img, div.math-block) {
-  padding: 0.625rem 0;
+  padding: 0.3125rem 0;
+}
+
+article :is(h1, h2, h3, h4, h5, h6, p, li, table) {
+    letter-spacing: -0.025em;
+}
+
+article :is(a) {
+    color: blue;
+    text-decoration: underline;
+}
+
+article :is(ol) {
+    list-style-type: decimal;
+    margin-left: 1rem;
+}
+
+article :is(ul) {
+    list-style-type: circle;
+    margin-left: 1rem;
+}
+
+/* Table styling */
+article :is(table) {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+article :is(thead) {
+  border-bottom: 0.5px solid #dee2e6;
+}
+
+article :is(thead th) {
+  padding: 0.625rem;
+  text-align: left;
+  font-weight: 500;
+  color: black;
+  font-size: 0.875rem;
+}
+
+article :is(tbody) {
+  background-color: #ffffff;
+}
+
+article :is(tbody tr) {
+  border-bottom: 1px solid #f1f3f4;
+  transition: background-color 0.2s ease;
+}
+
+article :is(tbody tr:hover) {
+  background-color: #f8f9fa;
+}
+
+article :is(tbody tr:last-child) {
+  border-bottom: none;
+}
+
+article :is(tbody td) {
+  padding: 0.625rem;
+  color: #737373;
+  vertical-align: middle;
+}
+
+article :is(th, td) {
+  border-right: 1px solid #f1f3f4;
+}
+
+article :is(th:last-child, td:last-child) {
+  border-right: none;
 }
 
 /* VSCode-like code block styling */
