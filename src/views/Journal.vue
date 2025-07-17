@@ -48,7 +48,7 @@ const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "
                 <a href="/">Index</a>
             </li>
             <li class="font-inter tracking-tighter transition-all hover:text-black py-1" :class="isJournal ? 'text-black font-medium' : 'text-neutral-500'">
-                <a href="/journal">Weekly Journal</a>
+                <a href="/journal">Technical Journal</a>
             </li>
         </ul>
     </div>
