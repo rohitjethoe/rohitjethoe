@@ -18,8 +18,8 @@ const isJournal = computed(() => route.path.startsWith('/journal'))
             </div>
         </div>
         <Slider 
-            :images="['/assets/ymi.webp', '/assets/monostatic.webp', '/assets/vadimriver.webp', '/assets/buildbyrelay.webp', '/assets/virtufit.webp', '/assets/greenfuture.webp',]"
-            :titles="['Young Musicians', 'Monostatic Studio', 'Vadim River', 'Build by Relay', 'VirtuFit', 'Green Future',]"
+            :images="[ '/assets/monostatic.webp', '/assets/vadimriver.webp', '/assets/buildbyrelay.webp', '/assets/virtufit.webp', '/assets/greenfuture.webp',]"
+            :titles="['Monostatic Studio', 'Vadim River', 'Build by Relay', 'VirtuFit', 'Green Future',]"
         />
         <div class="lg:hidden flex py-14">
             <div class="w-12"></div>
