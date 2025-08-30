@@ -18,8 +18,8 @@ const isJournal = computed(() => route.path.startsWith('/journal'))
             </div>
         </div>
         <Slider 
-            :images="[ '/assets/monostatic.webp', '/assets/vadimriver.webp', '/assets/buildbyrelay.webp', '/assets/virtufit.webp', '/assets/greenfuture.webp',]"
-            :titles="['Monostatic Studio', 'Vadim River', 'Build by Relay', 'VirtuFit', 'Green Future',]"
+            :images="['/assets/ymi.webp', '/assets/monostatic.webp', '/assets/vadimriver.webp', '/assets/buildbyrelay.webp', '/assets/virtufit.webp', '/assets/greenfuture.webp',]"
+            :titles="['Young Musicians International', 'Monostatic Studio', 'Vadim River', 'Build by Relay', 'VirtuFit', 'Green Future',]"
         />
         <div class="lg:hidden flex py-14">
             <div class="w-12"></div>
@@ -27,9 +27,9 @@ const isJournal = computed(() => route.path.startsWith('/journal'))
                 <li class="font-inter tracking-tighter transition-all hover:text-black py-1" :class="isHome ? 'text-black font-medium' : 'text-neutral-500'">
                     <a href="/">Index</a>
                 </li>
-                <li class="font-inter tracking-tighter transition-all hover:text-black py-1" :class="isJournal ? 'text-black font-medium' : 'text-neutral-500'">
+                <!--<li class="font-inter tracking-tighter transition-all hover:text-black py-1" :class="isJournal ? 'text-black font-medium' : 'text-neutral-500'">
                     <a href="/journal">Technical Journal</a>
-                </li>
+                </li>-->
             </ul>
         </div>
     </main>
